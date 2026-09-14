@@ -44,7 +44,7 @@ and
 
 Therefore
 
-    d^2/dt^2 S(U(t))|_{t=0}
+    d^2/dt^2 S(U(t))|_{t=0]
       = 2 beta ||da||^2.
 
 For a transverse 1-cochain at Fourier momentum `(pi,pi,pi,pi)`, the top eigenvalue of `d* d` is 16, so
@@ -174,11 +174,31 @@ There are also two nearby consistency errors:
 1. Eq. (8.37) states `W_k : H_(k+1) -> H_k` but writes `W_k^* T_(k+1) W_k - T_k`; with that stated arrow the composition is not type-correct. Earlier formulas use the type-correct form `V_k^* T_k V_k` on `H_(k+1)`, so this may be a reversed-arrow typo rather than an independent fatal flaw.
 2. Immediately after defining `eta_2(T)=-log lambda_2(T)`, the paper writes `1-eta_2(S)=inf <psi,(I-S)psi>`. The right side is `1-lambda_2(S)`, not `1-eta_2(S)`. The intended gap inequality can be derived directly from the preceding operator inequality, but the displayed identity is incorrect.
 
+### 4.6 Appendix E does not repair the physical Hamiltonian gap; it assumes the missing mass scale
+
+Corollary E.10 converts a transfer-operator comparison
+
+    lambda_(k+1) <= lambda_k + epsilon_k
+
+into the exact generator inequality
+
+    Delta_H(a_(k+1)) >= -(1/a_(k+1)) log(exp(-a_k Delta_H(a_k)) + epsilon_k)
+
+when the logarithm is in its nontrivial range. That conversion is valid. However, the corollary then states that `liminf Delta_H(a_k)>0` whenever `sum epsilon_k<infinity`.
+
+Summability alone does not imply this. A simple abstract sequence can have summable defects while its transfer eigenvalues approach 1 and its physical generator gap approaches 0. The appendix itself ultimately invokes a separate hypothesis `(S2)`, a scale-independent clustering bound, and from that asserts directly that
+
+    Delta_H(a_k) >= m_* > 0
+
+for every `k`. Thus the positive physical mass in the appendix comes from the assumed uniform clustering scale, not from the interlacing/summability statement `(S3)`.
+
+This exposes the same circularity in physical units: earlier in the manuscript uniform temporal clustering is derived from the propagated positive transfer/Hamiltonian gap, while Appendix E uses uniform clustering as the independent input that forces the Hamiltonian gap to stay positive. Unless `(S2)` is established independently of the gap-persistence theorem, Appendix E does not close the continuum mass-gap argument.
+
 ## 5. Current conclusion
 
 - The global Bakry–Émery route is structurally blocked before the continuum regime for standard SU(2) Wilson lattice Yang–Mills.
-- The 2026 Faizal–Shabir claimed complete construction contains multiple explicit internal mathematical inconsistencies, including a load-bearing missing hypothesis in its gap-persistence theorem, and cannot presently revise the Clay open-problem status.
-- A repaired interlacing route would need, at minimum, a proved quantitative estimate `sum epsilon_k < Delta_0` in physical units along the same asymptotically free trajectory, independently of any clustering theorem that itself assumes the propagated gap.
+- The 2026 Faizal–Shabir claimed complete construction contains multiple explicit internal mathematical inconsistencies, including a load-bearing missing hypothesis in its gap-persistence theorem and a circular use of uniform clustering in the physical-unit appendix, so it cannot presently revise the Clay open-problem status.
+- A repaired interlacing route would need, at minimum, a proved quantitative estimate `sum epsilon_k < Delta_0` (or the corresponding generator-scale estimate) along the same asymptotically free trajectory, independently of any clustering theorem that itself assumes the propagated gap.
 - The next viable research direction should either establish such a noncircular quantitative defect bound in a rigorous multiscale construction, or move to a different continuum mechanism that does not rely on global convexity or this unproved gap budget.
 
 ## 6. Sources
