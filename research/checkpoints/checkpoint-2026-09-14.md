@@ -145,11 +145,41 @@ so `g` increases, not decreases. Under a UV step `mu -> b mu`, `g` decreases.
 
 A Wolfram exact symbolic integration reproduced these relations. The manuscript must either reverse its scale convention or reverse the sign/direction of the discrete flow, and the subsequent identification argument must then be rechecked. As written, the claimed asymptotically free trajectory is internally inconsistent.
 
+### 4.5 Gap-persistence theorem is missing the quantitative hypothesis that makes the conclusion positive
+
+Theorem 5.6 assumes
+
+    Delta_(k+1) >= Delta_k - epsilon_k,
+    Delta_0 > 0,
+    sum_k epsilon_k < infinity,
+
+and derives
+
+    Delta_k >= Delta_0 - sum_j epsilon_j.
+
+That telescoping inequality is correct, but the manuscript then declares
+
+    Delta_* := Delta_0 - sum_j epsilon_j > 0
+
+merely because `Delta_0 > 0` and the defect series is finite. This inference is false: a finite nonnegative series can exceed `Delta_0`. The text itself then says that, "if needed," one may assume the additional condition
+
+    sum_j epsilon_j < Delta_0.
+
+That condition is not a consequence of the preceding hypotheses and is exactly what is required to make the claimed uniform lower bound positive. Therefore Theorem 5.6, as stated, does not prove uniform positivity of the transfer-operator gap.
+
+This defect is load-bearing. The subsequent uniform temporal clustering theorem explicitly takes the positive constant `Delta_*` from Theorem 5.6 as its input. Later interlacing estimates in Sections 8–9 use a scale-uniform clustering rate to obtain exponentially small/summable collar errors, and then use those errors again to assert persistence of the gap. Without an independent proof that the total defect is strictly smaller than the starting gap (or a separate noncircular uniform-clustering estimate), the advertised gap-propagation chain is not closed.
+
+There are also two nearby consistency errors:
+
+1. Eq. (8.37) states `W_k : H_(k+1) -> H_k` but writes `W_k^* T_(k+1) W_k - T_k`; with that stated arrow the composition is not type-correct. Earlier formulas use the type-correct form `V_k^* T_k V_k` on `H_(k+1)`, so this may be a reversed-arrow typo rather than an independent fatal flaw.
+2. Immediately after defining `eta_2(T)=-log lambda_2(T)`, the paper writes `1-eta_2(S)=inf <psi,(I-S)psi>`. The right side is `1-lambda_2(S)`, not `1-eta_2(S)`. The intended gap inequality can be derived directly from the preceding operator inequality, but the displayed identity is incorrect.
+
 ## 5. Current conclusion
 
 - The global Bakry–Émery route is structurally blocked before the continuum regime for standard SU(2) Wilson lattice Yang–Mills.
-- The 2026 Faizal–Shabir claimed complete construction contains explicit internal mathematical inconsistencies and cannot presently revise the Clay open-problem status.
-- The next viable route should avoid global convexity and should demand a consistent reflection-positive multiscale construction with a genuinely uniform physical-unit gap along the asymptotically free trajectory.
+- The 2026 Faizal–Shabir claimed complete construction contains multiple explicit internal mathematical inconsistencies, including a load-bearing missing hypothesis in its gap-persistence theorem, and cannot presently revise the Clay open-problem status.
+- A repaired interlacing route would need, at minimum, a proved quantitative estimate `sum epsilon_k < Delta_0` in physical units along the same asymptotically free trajectory, independently of any clustering theorem that itself assumes the propagated gap.
+- The next viable research direction should either establish such a noncircular quantitative defect bound in a rigorous multiscale construction, or move to a different continuum mechanism that does not rely on global convexity or this unproved gap budget.
 
 ## 6. Sources
 
