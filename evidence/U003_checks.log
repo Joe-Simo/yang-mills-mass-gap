@@ -1,0 +1,45 @@
+test_exact_coarse_compression_misses_slow_hidden_state (__main__.RelativeGapChecks.test_exact_coarse_compression_misses_slow_hidden_state) ... ok
+test_exact_infinite_product_schedule_finite_identity (__main__.RelativeGapChecks.test_exact_infinite_product_schedule_finite_identity) ... ok
+test_missing_factor_two_is_rejected (__main__.RelativeGapChecks.test_missing_factor_two_is_rejected) ... ok
+test_relative_mixing_is_quadratic_in_certificate (__main__.RelativeGapChecks.test_relative_mixing_is_quadratic_in_certificate) ... ok
+test_schur_factorization (__main__.RelativeGapChecks.test_schur_factorization) ... ok
+test_two_good_diagonal_blocks_do_not_control_mixing (__main__.RelativeGapChecks.test_two_good_diagonal_blocks_do_not_control_mixing) ... ok
+test_centered_relative_coupling_and_physical_units (__main__.SU2Checks.test_centered_relative_coupling_and_physical_units) ... ok
+test_haar_character_algebra (__main__.SU2Checks.test_haar_character_algebra) ... ok
+test_no_nonempty_small_cycle_support_on_cube (__main__.SU2Checks.test_no_nonempty_small_cycle_support_on_cube) ... ok
+test_trial_dressing_residual_and_derivative_factors (__main__.SU2Checks.test_trial_dressing_residual_and_derivative_factors) ... ok
+test_trial_residual_optimum_on_named_rational_grid (__main__.SU2Checks.test_trial_residual_optimum_on_named_rational_grid) ... ok
+test_vacuum_residual_cannot_be_energy_relative (__main__.SU2Checks.test_vacuum_residual_cannot_be_energy_relative) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.223s
+
+OK
+{
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rationals, radicals, polynomials; no float fits",
+  "tests_run": 12,
+  "all_passed": true,
+  "hidden_mode_parameter_cases": 12,
+  "mixed_mode_parameter_cases": 12,
+  "relative_form_scalar_cases": 24,
+  "product_max_N": 34,
+  "cube_edges": 12,
+  "trial_couplings": [
+    "9/4",
+    "4",
+    "9",
+    "16",
+    "25"
+  ],
+  "trial_parameters_per_coupling": 65,
+  "cube_support_sizes_tested": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "SU2_relative_coefficient_squared": "lambda^2/24 = 2/(3*g^8)",
+  "scope": "auxiliary checks, not continuum construction or formal verification"
+}
