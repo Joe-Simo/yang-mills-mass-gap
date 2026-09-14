@@ -71,7 +71,7 @@ A Wolfram exact check of the chosen mode returned `||da||^2/||a||^2 = 16` and th
 
 Source: M. Faizal, A. Shabir, *Reflection-Positive Construction of a Four-Dimensional SU(N) Yang-Mills Theory with Mass Gap and Confinement*, Fortschritte der Physik 74 (2026), e70097; arXiv:2606.19362v1.
 
-The manuscript makes a complete-solution-level claim. It cannot presently be treated as a verified solution because of at least the following concrete inconsistency.
+The manuscript makes a complete-solution-level claim. It cannot presently be treated as a verified solution because of the following concrete problems.
 
 ### 4.1 Impossible compact-support + positive-Laplace requirement
 
@@ -115,6 +115,35 @@ on `span{Omega,e1,e2}`, with `0 < epsilon < m`, and choose an observable A with 
 although the true spectral gap is `epsilon`. Decay for one observable only controls the spectral measure seen by that observable.
 
 Elsewhere the manuscript gives a density-based argument for **all** local observables, which is a different and potentially repairable statement. Proposition 8.8 as written remains incorrect and is used later for a robustness claim, so those downstream uses require re-audit.
+
+### 4.4 Weak-coupling RG runs opposite to its own scale convention
+
+In the weak-coupling section the manuscript defines the renormalization scale by
+
+    mu_k ~ b^(-k),   b > 1,
+
+so increasing `k` lowers the physical energy scale (moves toward the infrared). It simultaneously writes
+
+    g_(k+1) = g_k - beta0 g_k^3 + higher terms,
+    beta0 > 0,
+
+and concludes `g_k -> 0` as `k -> infinity`.
+
+That is the ultraviolet direction of asymptotic freedom, not the infrared direction corresponding to `mu_k ~ b^(-k)`. The standard one-loop equation
+
+    d g / d log(mu) = - beta0 g^3
+
+integrates to
+
+    1/g(mu)^2 = 1/g(mu0)^2 + 2 beta0 log(mu/mu0).
+
+Therefore under one infrared step `mu -> mu/b`,
+
+    1/g(mu/b)^2 = 1/g(mu)^2 - 2 beta0 log b,
+
+so `g` increases, not decreases. Under a UV step `mu -> b mu`, `g` decreases.
+
+A Wolfram exact symbolic integration reproduced these relations. The manuscript must either reverse its scale convention or reverse the sign/direction of the discrete flow, and the subsequent identification argument must then be rechecked. As written, the claimed asymptotically free trajectory is internally inconsistent.
 
 ## 5. Current conclusion
 
