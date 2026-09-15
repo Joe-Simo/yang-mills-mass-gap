@@ -8,7 +8,17 @@ Private working repository for a rigorous attempt to resolve the Clay Yang–Mil
 
 The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
 
-## Latest checkpoint — U026, 2026-09-15
+## Latest checkpoint — U027, 2026-09-15
+
+Read `research/audits/U027_shared_link_and_patch_scaling.md`. The full two-square physical space retains simultaneous-conjugation mixed states. An exact three-path reduction gives `T=2(C_U+C_V)+R_U.R_V`; the separate-trace subspace contains no nonzero Hamiltonian eigenstate at positive magnetic coupling. The complete fixed-graph weak-coupling gap is `(2sqrt(3)+o(1))/a`, agreeing with the known leading result and smaller than the independent-square gap.
+
+A fixed-rectangle extension gives `lim_{g->0} a Delta_(N,N)=4sqrt(2)sin(pi/[2(N+1)])`, which tends to zero as the planar square patch grows. The proof keeps the weak-coupling and graph-size limits separate; no joint-limit or four-dimensional continuum conclusion is claimed. This rules out an unchanged, graph-size-uniform cell-gap coefficient for these planar models.
+
+Eleven new exact symbolic tests and all nine U026 tests passed. The new checker is `checks/U027_shared_link_checks.py`, with output/provenance in `evidence/U027_checks.json` and `evidence/U027_manifest.json`. Wolfram independently confirmed the shared-link polynomial action. All U026 manifest hashes were preserved. The results are self-reviewed auxiliary proofs, not formal or independent expert verification.
+
+Remaining target: a true-vacuum centered comparison on growing spatial three-dimensional blocks, retaining collective mixed-loop states and controlling weak coupling and size uniformly. Finite-cell gaps, oscillator asymptotics, and Ritz upper bounds cannot replace that estimate.
+
+## Earlier checkpoint — U026, 2026-09-15
 
 Read `research/audits/U026_one_plaquette_true_vacuum_gap.md`. On the COMPLETE physical Hilbert space of an isolated SU(2) square, a comparison proof gives a true-vacuum gap at least `max(1,g^2/2)/a`; its weak-coupling value is `(4+o(1))/a`. This is a cutoff-scale gap, not a finite continuum mass. The radial reduction and leading asymptotic are known after normalization translation; no novelty claim is made.
 

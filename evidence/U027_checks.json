@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "tests_run": 11,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "elapsed_seconds": 1.2345404000000144,
+  "arithmetic": "exact rational and symbolic algebra",
+  "source_sha256": "24c447b4cdaa3fb5f7291c740becb7b5a95cb9767c97f339914c13563d848ce4",
+  "audit_bounds": {
+    "invariant_monomial_degree": 4,
+    "invariant_monomials_checked": 22,
+    "haar_symmetry_degree": 3,
+    "electric_spins_twice": "0..4 on each loop; every admissible total",
+    "rectangles": [
+      [
+        1,
+        1
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        3,
+        2
+      ]
+    ]
+  },
+  "exact_results": {
+    "T_ab": "3*a*b - s/4",
+    "T_s": "-3*a*b/4 + 5*s/2",
+    "mixed_norm_squared": "3/16",
+    "electric_block_eigenvalues": [
+      "9/4",
+      "13/4"
+    ],
+    "quadratic_metric_eigenvalues": [
+      "3/4",
+      "5/4"
+    ]
+  },
+  "analytic_results_proved_in_note_not_by_this_run": {
+    "two_square_gap_over_sqrt_lambda_limit": "sqrt(3)",
+    "two_square_a_times_physical_gap_limit": "2*sqrt(3)",
+    "square_patch_curl_min_eigenvalue": "8*sin(pi/(2*(N+1)))**2"
+  },
+  "nonclaims": [
+    "finite tests do not prove eigenvalue convergence",
+    "no interval certificate for the nonlinear two-plaquette spectrum",
+    "no graph-size-uniform weak-coupling remainder",
+    "no continuum Yang--Mills mass-gap proof"
+  ]
+}

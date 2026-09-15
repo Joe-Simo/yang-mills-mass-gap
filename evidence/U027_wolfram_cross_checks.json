@@ -1,0 +1,25 @@
+{
+  "tool": "Wolfram.WolframLanguageEvaluator",
+  "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "code": "checks/U027_wolfram_cross_checks.wl",
+  "status": "returned exact output without warnings",
+  "output": {
+    "T_x0y0": "3*x0*y0 - (x1*y1)/4 - (x2*y2)/4 - (x3*y3)/4",
+    "T_dot": "(-3*x0*y0)/4 + (5*x1*y1)/2 + (5*x2*y2)/2 + (5*x3*y3)/2",
+    "PerimeterEigenResidual": "0",
+    "OtherEigenResidual": "0",
+    "NormalizedElectricBlockEigenvalues": [
+      "13/4",
+      "9/4"
+    ],
+    "QuadraticMetricEigenvalues": [
+      "5/4",
+      "3/4"
+    ],
+    "PhysicalLeadingGap": "2*Sqrt[3]"
+  },
+  "nonclaims": [
+    "PhysicalLeadingGap is an input expression, not a computed limit.",
+    "This CAS call does not prove nonlinear eigenvalue convergence."
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-15",
+  "base_commit": "09cc3efaad3b139a605b4032c7fcb7909ae997ab",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "model": "complete seven-link two-square SU(2) Hamiltonian; fixed finite planar rectangles for asymptotics",
+  "outcome": "self-reviewed exact reductions and fixed-graph spectral-limit proof; no continuum theorem",
+  "python": "3.13.5",
+  "arithmetic": "SymPy 1.14.0 exact rational and symbolic algebra",
+  "commands": [
+    "python checks/U027_shared_link_checks.py --output evidence/U027_checks.json",
+    "python checks/U026_one_plaquette_certificate.py --test",
+    "python -m compileall -q checks/U027_shared_link_checks.py",
+    "python -m tabnanny checks/U027_shared_link_checks.py"
+  ],
+  "new_tests_passed": 11,
+  "previous_tests_passed": 9,
+  "provenance": "New local files created from the pinned U026 state; no local .git checkout exists.",
+  "preservation": "All seven files in evidence/U026_manifest.json matched their SHA256 hashes.",
+  "not_run": [
+    "Static lint/typecheck: ruff, mypy, pyright unavailable.",
+    "Lean/lake unavailable.",
+    "No interval certificate for the nonlinear two-plaquette eigenvalues.",
+    "U002/U003 historical suites not rerun."
+  ],
+  "source_checks": [
+    "arXiv:2410.14580v1 HTML, Section IV equations (30)-(38), (48)-(51)",
+    "Clay official Yang-Mills problem page"
+  ],
+  "nonclaims": [
+    "No uniform-in-patch-size semiclassical remainder.",
+    "No simultaneous weak-coupling and volume limit.",
+    "No four-dimensional Yang-Mills construction or mass gap."
+  ],
+  "files": [
+    {
+      "path": "research/audits/U027_shared_link_and_patch_scaling.md",
+      "sha256": "25fe143261ef63182ee53dba8a4406a95a4d5362625d57da112951afee20e7dc",
+      "bytes": 22253
+    },
+    {
+      "path": "checks/U027_shared_link_checks.py",
+      "sha256": "24c447b4cdaa3fb5f7291c740becb7b5a95cb9767c97f339914c13563d848ce4",
+      "bytes": 13270
+    },
+    {
+      "path": "checks/U027_wolfram_cross_checks.wl",
+      "sha256": "86bc22e4a1acce392834fa117b735b19fc66a8a51192e38b9bbf1527071a6cbd",
+      "bytes": 858
+    },
+    {
+      "path": "evidence/U027_checks.json",
+      "sha256": "2966703fcc6eb5c3eb2d672a4d3e21c346d6b8242e1b69b13a034adf96416fd4",
+      "bytes": 1395
+    },
+    {
+      "path": "evidence/U027_checks.log",
+      "sha256": "1ed9e9158f7cb6db39df733b1fa5f9d26b29bf303358ca622e406119a955c7b2",
+      "bytes": 2740
+    },
+    {
+      "path": "evidence/U027_previous_tests.log",
+      "sha256": "71787c633f5d3f63a7c746399d10cb0e7090692017488a665d223a51ff3bd9e6",
+      "bytes": 1073
+    },
+    {
+      "path": "evidence/U027_wolfram_cross_checks.json",
+      "sha256": "5f47cc148e03877186c3d04e67f6558fdd8e50bf4956430712aa477c7706117d",
+      "bytes": 776
+    }
+  ]
+}

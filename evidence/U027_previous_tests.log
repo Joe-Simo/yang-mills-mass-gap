@@ -1,0 +1,14 @@
+test_electric_limit_has_gap_three_halves (__main__.CertificateTests.test_electric_limit_has_gap_three_halves) ... ok
+test_endpoint_eigenvalue_is_rejected (__main__.CertificateTests.test_endpoint_eigenvalue_is_rejected) ... ok
+test_internal_zero_in_sturm_chain (__main__.CertificateTests.test_internal_zero_in_sturm_chain) ... ok
+test_invalid_tail_and_parameters (__main__.CertificateTests.test_invalid_tail_and_parameters) ... ok
+test_known_two_by_two_roots (__main__.CertificateTests.test_known_two_by_two_roots) ... ok
+test_lower_upper_direction_control (__main__.CertificateTests.test_lower_upper_direction_control) ... ok
+test_rational_constant_strictly_exceeds_half (__main__.CertificateTests.test_rational_constant_strictly_exceeds_half) ... ok
+test_small_and_weak_coupling_certificates (__main__.CertificateTests.test_small_and_weak_coupling_certificates) ... ok
+test_two_loop_mixed_invariant_norm (__main__.CertificateTests.test_two_loop_mixed_invariant_norm) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.080s
+
+OK
