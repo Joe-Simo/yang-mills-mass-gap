@@ -1,0 +1,16 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 30,
+  "warnings": [],
+  "results": {
+    "nmin_residual": "0",
+    "prob_exponent_residual": "0",
+    "haar_beta4_lower": "2744*beta*Log[beta]^3/3993",
+    "haar_margin_coarse_beta32_log3": "790272/1331",
+    "balanced_fraction_bound": "968/49*Sqrt[Log[beta]/beta]",
+    "relative_nonlinearity": "1/3*Sqrt[Log[beta]/beta]",
+    "union_dominance_limit": "Infinity",
+    "physical_block_limit": "0"
+  },
+  "scope": "Stateless corroboration of submitted algebra/scaling only; not an independent proof of the Wilson transfer theorem."
+}
