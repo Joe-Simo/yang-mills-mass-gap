@@ -1,0 +1,27 @@
+{
+  "tool": "Wolfram.WolframLanguageEvaluator",
+  "timeConstraint_seconds": 30,
+  "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "ZSeries": "1+z^2/8+z^4/192+z^6/9216+z^8/737280+O(z^9)",
+  "LogZSeries": "z^2/8-z^4/384+z^6/9216-z^8/184320+O(z^9)",
+  "LogDerivativeResidual": 0,
+  "QuarticResidual": 0,
+  "WardMomentResiduals": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "SixStapleHessianSpectrumInUnitsBetaRatio": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    0
+  ],
+  "warnings": [],
+  "scope": "Actual returned exact expressions, transcribed from tool output; corroboration, not independent full-proof review."
+}

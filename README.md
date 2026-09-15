@@ -8,7 +8,17 @@ Private working repository for a rigorous attempt to resolve the Clay Yang–Mil
 
 The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
 
-## Latest checkpoint — U028, 2026-09-15
+## Latest checkpoint — U029, 2026-09-15
+
+Read `research/audits/U029_exact_link_marginal_and_gauge_cancellation.md`. Exact SU(2) Wilson-link integration gives `Z(z)=2 I_1(z)/z`, with the regular value `Z(0)=1`, and a gauge-invariant generated-loop action. For every surrounding link configuration, that action is bounded above and below by sums of retained loop deficits, with coefficients independent of lattice size. An extensive noncofacial first elimination layer factorizes exactly; this is a coordinate marginal, NOT a momentum-shell integration or a true-vacuum Hamiltonian comparison.
+
+The marginal Hessian is `E[S'']-Var(S')`. Along a common endpoint-gauge variation the covariance cancels the entire positive averaged curvature, so dropping it would create a spurious gauge mass. Exact noncommutative quartic terms are retained. For two staples the induced action is not linear in the retained Wilson-loop deficit at any positive coupling; further integrations cannot be represented exactly by a single updated Wilson coupling. Frustrated boundary stars can have an exactly Haar conditional law even as the bare coupling parameter grows.
+
+Eleven focused new tests and all thirteen U028 tests passed. Run `python checks/U029_exact_link_integration_checks.py --output evidence/U029_checks.json`. Exact rational positive-series tails enclose the Bessel-ratio coefficients at six nonnegative arguments; separate quadrature and Wolfram results are corroboration only. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. No prior research note or checker was modified; only this README changes an older manifest-covered file, whose earlier version remains in Git and the supplied archive.
+
+Next executable target: control overlapping generated-loop interactions in a second elimination and establish a centered physical-time transfer comparison in the actual vacuum. No mass-gap estimate, repeated-RG bound, continuum construction, or novelty claim follows from this exact first-layer action result.
+
+## Earlier checkpoint — U028, 2026-09-15
 
 Read `research/audits/U028_cubic_constraints_and_small_field_test.md`. The three-dimensional cubical complex retains Bianchi constraints: one cube has five independent curl directions, with positive eigenvalues 4 (three times) and 6 (twice). A tensor proof gives the full transverse spectrum on every open rectangular box. For each fixed N-cube, the full physical weak-coupling gap satisfies `lim_{g->0} a Delta_N=4sqrt(2)sin(pi/[2(N+1)])`; no joint coupling/size limit is inferred.
 

@@ -1,0 +1,94 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "85c188d2e2d966d9471f815146495cb15bdb20ad",
+  "base_tree": "0a1517446967bf068a3aa325e91640e862a14483",
+  "evidence_class": "self-reviewed finite-lattice proofs; exact scalar coefficient certificates; noncertified numerical cross-checks",
+  "new_tests": 11,
+  "prior_tests_rerun": 13,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python checks/U029_exact_link_integration_checks.py --output evidence/U029_checks.json > evidence/U029_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python checks/U028_cubic_and_small_field_checks.py > evidence/U029_previous_tests.log 2>&1",
+    "python -m compileall -q checks/U029_exact_link_integration_checks.py",
+    "python -m tabnanny checks/U029_exact_link_integration_checks.py"
+  ],
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0",
+    "wolfram": "15.0.1"
+  },
+  "arithmetic": "Fraction exact rational tails and SymPy symbolic; mpmath quadratures separately labeled noncertified",
+  "caps": {
+    "certificate_max_terms": 4096,
+    "quadrature_digits": 60,
+    "wolfram_seconds": 30,
+    "thread_caps": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 (cooperative)"
+  },
+  "preserved_u028_files": [
+    "research/audits/U028_cubic_constraints_and_small_field_test.md",
+    "checks/U028_cubic_and_small_field_checks.py",
+    "checks/U028_wolfram_cross_checks.wl",
+    "evidence/U028_checks.json",
+    "evidence/U028_checks.log",
+    "evidence/U028_previous_tests.log",
+    "evidence/U028_validation.log",
+    "evidence/U028_wolfram_cross_checks.json"
+  ],
+  "limits": [
+    "No momentum-shell projection or interacting ground-state distribution computed",
+    "No second decimation, infinite RG construction or physical spectral gap computed",
+    "Geometry enumerated only for (dimension,side)=(3,4),(4,4),(4,6); uniform statement has a written proof",
+    "Rational coefficient intervals at z=0,1/2,2,6,24,96; Ward quadratures at z=1,6,24,96 are not interval certificates",
+    "Static linter/typechecker and Lean unavailable; no such verification claimed",
+    "Manifest is a project provenance record; no executable Mathbox validator used"
+  ],
+  "files": [
+    {
+      "path": "research/audits/U029_exact_link_marginal_and_gauge_cancellation.md",
+      "bytes": 21202,
+      "sha256": "8ec19ce76fcce3c6a96f562759b89ee2e7cbb40b5f6aee80a0b2193ffe3aeb3f"
+    },
+    {
+      "path": "checks/U029_exact_link_integration_checks.py",
+      "bytes": 12441,
+      "sha256": "30da13de27463fad033a9dba1c21620fdca3c2193457cd6c82e15f913c4089ae"
+    },
+    {
+      "path": "checks/U029_wolfram_cross_checks.wl",
+      "bytes": 702,
+      "sha256": "f0afb316d84ec46cca33218e9ec47d9dfecebb513b56b9962452c1aec6739423"
+    },
+    {
+      "path": "evidence/U029_checks.json",
+      "bytes": 3208,
+      "sha256": "e8f005892ffdff9b43d58299c61dc3480a2b529b4d55ff8bfdc6ce73cda6296b"
+    },
+    {
+      "path": "evidence/U029_checks.log",
+      "bytes": 4676,
+      "sha256": "460ff63c16f30ca6c4dc125a178b171a965ad509480fd23b3a88c292f7ad452c"
+    },
+    {
+      "path": "evidence/U029_previous_tests.log",
+      "bytes": 3121,
+      "sha256": "9d20806b33fd5476752bf7adb3ff45c60192d7c3e528b5e73b2e93d4dad2cf6d"
+    },
+    {
+      "path": "evidence/U029_wolfram_cross_checks.json",
+      "bytes": 629,
+      "sha256": "089c979b00d94ad6d78adf9aadd163b9f2cb5f94f2c5d76f922392ccb5c14fbd"
+    },
+    {
+      "path": "evidence/U029_validation.log",
+      "bytes": 665,
+      "sha256": "a1e07b3780e0e275ae82588acf83a66d5370ddbeff5123e7e0ce3bc5aa80ad49"
+    },
+    {
+      "path": "README.md",
+      "bytes": 11551,
+      "sha256": "a9244e3e0f5aeb1805d6e0615f8be959c57c6246c8f218eac73c7c9bc2f8f425"
+    }
+  ]
+}

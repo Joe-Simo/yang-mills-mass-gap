@@ -1,0 +1,114 @@
+test_all_order_ward_identity_coefficient_formula (__main__.ExactLinkTests.test_all_order_ward_identity_coefficient_formula) ... ok
+test_exact_frustration_boundary_is_realizable (__main__.ExactLinkTests.test_exact_frustration_boundary_is_realizable) ... ok
+test_exact_hessian_cancels_common_gauge_direction (__main__.ExactLinkTests.test_exact_hessian_cancels_common_gauge_direction) ... ok
+test_general_log_composition_quartic (__main__.ExactLinkTests.test_general_log_composition_quartic) ... ok
+test_geometric_tail_control_and_input_rejections (__main__.ExactLinkTests.test_geometric_tail_control_and_input_rejections) ... ok
+test_haar_integral_series_coefficients (__main__.ExactLinkTests.test_haar_integral_series_coefficients) ... ok
+test_induced_action_is_not_one_wilson_coupling (__main__.ExactLinkTests.test_induced_action_is_not_one_wilson_coupling) ... ok
+test_nonlinear_pair_quartic_includes_commutator (__main__.ExactLinkTests.test_nonlinear_pair_quartic_includes_commutator) ... ok
+test_quadratic_remainder_constant_algebra (__main__.ExactLinkTests.test_quadratic_remainder_constant_algebra) ... ok
+test_quaternion_staple_and_endpoint_covariance (__main__.ExactLinkTests.test_quaternion_staple_and_endpoint_covariance) ... ok
+test_simultaneous_decimation_has_no_shared_faces (__main__.ExactLinkTests.test_simultaneous_decimation_has_no_shared_faces) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.410s
+
+OK
+{
+  "arithmetic": "integers/Fraction and SymPy symbolic; separate mpmath corroboration",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "mpmath": "1.3.0",
+  "seed": null,
+  "certificates": [
+    {
+      "z": "0",
+      "r_lower": "0.0000000000000000",
+      "r_upper": "0.0000000000000000",
+      "terms_through_k": 0,
+      "internal_width_lt": "1e-24",
+      "method": "exact positive rational series plus decreasing-ratio tail"
+    },
+    {
+      "z": "1/2",
+      "r_lower": "0.1237179282783207",
+      "r_upper": "0.1237179282783208",
+      "terms_through_k": 9,
+      "internal_width_lt": "1e-24",
+      "method": "exact positive rational series plus decreasing-ratio tail"
+    },
+    {
+      "z": "2",
+      "r_lower": "0.4331274267223117",
+      "r_upper": "0.4331274267223118",
+      "terms_through_k": 18,
+      "internal_width_lt": "1e-24",
+      "method": "exact positive rational series plus decreasing-ratio tail"
+    },
+    {
+      "z": "6",
+      "r_lower": "0.7627260757491918",
+      "r_upper": "0.7627260757491919",
+      "terms_through_k": 22,
+      "internal_width_lt": "1e-24",
+      "method": "exact positive rational series plus decreasing-ratio tail"
+    },
+    {
+      "z": "24",
+      "r_lower": "0.9381797688480595",
+      "r_upper": "0.9381797688480596",
+      "terms_through_k": 48,
+      "internal_width_lt": "1e-24",
+      "method": "exact positive rational series plus decreasing-ratio tail"
+    },
+    {
+      "z": "96",
+      "r_lower": "0.9844161198602336",
+      "r_upper": "0.9844161198602337",
+      "terms_through_k": 112,
+      "internal_width_lt": "1e-24",
+      "method": "exact positive rational series plus decreasing-ratio tail"
+    }
+  ],
+  "quadrature_cross_checks": [
+    {
+      "z": 1,
+      "mean": "0.24019372387008974110522064173",
+      "ward_residual": "0.0",
+      "naive_action_hessian": "0.24019372387008974110522064173",
+      "covariance_subtraction": "0.24019372387008974110522064173",
+      "scope": "60-digit numerical corroboration, not a certificate"
+    },
+    {
+      "z": 6,
+      "mean": "0.76272607574919180472401669158",
+      "ward_residual": "0.0",
+      "naive_action_hessian": "4.57635645449515082834410014948",
+      "covariance_subtraction": "4.57635645449515082834410014948",
+      "scope": "60-digit numerical corroboration, not a certificate"
+    },
+    {
+      "z": 24,
+      "mean": "0.938179768848059558067131460231",
+      "ward_residual": "-7.7787691e-62",
+      "naive_action_hessian": "22.5163144523534293936111550456",
+      "covariance_subtraction": "22.5163144523534293936111550456",
+      "scope": "60-digit numerical corroboration, not a certificate"
+    },
+    {
+      "z": 96,
+      "mean": "0.984416119860233651175521957771",
+      "ward_residual": "-7.7787691e-62",
+      "naive_action_hessian": "94.503947506582430512850107946",
+      "covariance_subtraction": "94.503947506582430512850107946",
+      "scope": "60-digit numerical corroboration, not a certificate"
+    }
+  ],
+  "nonclaims": [
+    "No momentum-shell integration",
+    "No interacting vacuum or spectral gap computation",
+    "No infinite RG iteration or continuum construction"
+  ],
+  "tests_passed": 11,
+  "elapsed_seconds": 0.7842249700000821
+}

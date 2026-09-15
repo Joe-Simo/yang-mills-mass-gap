@@ -1,0 +1,12 @@
+U029 validation; actual commands executed in project folder.
+$ /opt/pyvenv/bin/python -m compileall -q checks/U029_exact_link_integration_checks.py
+exit_status=0
+$ /opt/pyvenv/bin/python -m tabnanny checks/U029_exact_link_integration_checks.py
+exit_status=0
+ruff: not installed; no successful check claimed
+mypy: not installed; no successful check claimed
+pyright: not installed; no successful check claimed
+lean: not installed; no successful check claimed
+bun: not installed; no successful check claimed
+All 8 non-README U028 manifest file hashes unchanged.
+README updated intentionally; prior README hash remains recorded in U028 manifest and prior Git revision.

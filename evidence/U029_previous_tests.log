@@ -1,0 +1,155 @@
+test_discrete_hodge_identity_for_interior_curl (__main__.AnalyticChecks.test_discrete_hodge_identity_for_interior_curl) ... ok
+test_gaussian_chernoff_and_spectral_floor (__main__.AnalyticChecks.test_gaussian_chernoff_and_spectral_floor) ... ok
+test_nonlinear_noncommuting_plaquette (__main__.AnalyticChecks.test_nonlinear_noncommuting_plaquette) ... ok
+test_oscillator_ground_and_singlet (__main__.AnalyticChecks.test_oscillator_ground_and_singlet) ... ok
+test_sobolev_scalar_step_and_constant (__main__.AnalyticChecks.test_sobolev_scalar_step_and_constant) ... ok
+test_cell_counts (__main__.CubicalTests.test_cell_counts) ... ok
+test_chain_conditions_and_ranks (__main__.CubicalTests.test_chain_conditions_and_ranks) ... ok
+test_invalid_geometry (__main__.CubicalTests.test_invalid_geometry) ... ok
+test_orientation_reversal_keeps_spectrum (__main__.CubicalTests.test_orientation_reversal_keeps_spectrum) ... ok
+test_planar_control_and_smallest_cubic_values (__main__.CubicalTests.test_planar_control_and_smallest_cubic_values) ... ok
+test_product_formula_against_full_matrix (__main__.CubicalTests.test_product_formula_against_full_matrix) ... ok
+test_single_cube_has_one_face_constraint (__main__.CubicalTests.test_single_cube_has_one_face_constraint) ... ok
+test_tensor_curl_symbol_and_gradient (__main__.CubicalTests.test_tensor_curl_symbol_and_gradient) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 1.499s
+
+OK
+{
+  "base_commit": "8c03d35c20d265e0259c4c8e2be1d48b60e8a8c3",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact integers, rationals, symbolic identities; no random sampling",
+  "tests_run": 13,
+  "passed": true,
+  "runtime_seconds": 1.498893,
+  "boxes_tested": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "cube_face_edge_incidence": [
+    [
+      1,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      1
+    ]
+  ],
+  "cube_bianchi_row": [
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1
+  ],
+  "cube_curl_spectrum": {
+    "0": 1,
+    "4": 3,
+    "6": 2
+  },
+  "general_proof_status": "Written derivations in U028, not inferred from finite tests",
+  "code_sha256": "202aa76ae28893b1a4b52e95f527e3caa94a1232101087c2c8d4141c2fd7ed23",
+  "nonclaims": [
+    "No joint weak-coupling/volume limit",
+    "No true-vacuum probability bound",
+    "No continuum mass gap"
+  ]
+}
