@@ -1,0 +1,196 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "1ce1ba4174db4f9dc568bd14cdb7ad95f0f1e6d4",
+  "base_tree": "ffe14f32416d1fd357367c99cd090f671f01bed5",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed SU(2) fixed-regulator volume-uniform small-spatial-coupling transfer theorem and absolute susceptibility; established block-comparison method; exact finite audits",
+  "new_tests": 12,
+  "prior_tests_rerun": 12,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U036_column_comparison_checks.py --output evidence/U036_checks.json > evidence/U036_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U035_vacuum_cycle_response_checks.py --output evidence/U036_previous_checks.json > evidence/U036_previous_checks.log 2>&1",
+    "python -m compileall -q checks/U036_column_comparison_checks.py",
+    "python -m tabnanny checks/U036_column_comparison_checks.py"
+  ],
+  "exit_codes": {
+    "initial_new_suite": 1,
+    "repaired_new_suite": 0,
+    "prior_U035": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1",
+    "static_and_formal": "ruff/mypy/pyright/Lean executable and module lookup unavailable; not run"
+  },
+  "timing_seconds": {
+    "new_suite": 3.033523821000017,
+    "prior_suite": 5.543829010000081
+  },
+  "caps": {
+    "each_suite_wall_seconds": 45,
+    "wolfram_seconds": 20,
+    "thread_settings": "cooperative OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1",
+    "largest_binary_population": 1024,
+    "spatial_geometry_N": [
+      4,
+      6,
+      8
+    ],
+    "temporal_benchmark_beta": [
+      "1/2",
+      "2",
+      "8",
+      "32",
+      "128"
+    ],
+    "binary_tilt_times": [
+      0,
+      2,
+      4
+    ],
+    "character_tail": "complete geometric series, no representation truncation",
+    "arithmetic": "SymPy symbolic identities and exact Fraction/rational decisions; no simulation or fitted spectrum"
+  },
+  "preservation": "107 missing files restored from U035 archive; two existing mathematical files matched; zero overwrites/conflicts. All seven U035 primary manifest hashes matched. All 109 supplied archive entries matched again before the intentional README update. Earlier mathematical/checker/evidence files remain unchanged. No local Git checkout or executable ledger. No sibling project accessed.",
+  "input_files": [
+    {
+      "path": "research/audits/U035_true_vacuum_cycle_response.md",
+      "bytes": 26334,
+      "sha256": "6be177a9cd283362b510b0618d8435575bc82f2c97a1b56dbbfb8608963de684",
+      "git_blob_sha": "d1c804c77ff2a9534cea79a4449feb8ec1a9afbd"
+    },
+    {
+      "path": "checks/U035_vacuum_cycle_response_checks.py",
+      "bytes": 13118,
+      "sha256": "480716750423e6c23eef84b20efb36d97992a1104c0169442a4b1ea30a7747b3",
+      "git_blob_sha": "fe451ffe590482892e79cf56801babffd89e73d8"
+    },
+    {
+      "path": "evidence/U035_manifest.json",
+      "bytes": 7565,
+      "sha256": "dd6bd7ffdf7aa12180d69899e562b11d9f84c0e18bb2d794288d45fa32867b71",
+      "git_blob_sha": "e9b19cac3c0a46b3afdca2fd9a63e357fb21ee4a"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/audits/U036_column_comparison_and_uniform_lattice_gap.md",
+      "bytes": 24138,
+      "sha256": "bf32af4c926c2cbbf271ff2a8252c59cbc2ec44e848776534414e4fa93eb24b2",
+      "git_blob_sha": "00b95f3e1c4b50198b19c9f9b72b98f4a3d6323e"
+    },
+    {
+      "path": "checks/U036_column_comparison_checks.py",
+      "bytes": 11910,
+      "sha256": "0fce9f7b141c0ba99c4f8132a67892456bfa05d9a87df0ff8c49f08bc3f45e2e",
+      "git_blob_sha": "58239ed40cdf394ba7815de79d7804301187fff4"
+    },
+    {
+      "path": "checks/U036_wolfram_cross_checks.wl",
+      "bytes": 807,
+      "sha256": "47f43016d082d9fe7dd759cec7311ae1d09da1c04dd306344c2b81f6ff7b697a",
+      "git_blob_sha": "8e4325543d2c9215e809f473f40b9764eb573819"
+    },
+    {
+      "path": "evidence/U036_checks.json",
+      "bytes": 1570,
+      "sha256": "be220a85320518b1c3f79c2040e88581dc2d55b910444a720ac9293a0b496da6",
+      "git_blob_sha": "c645ec694be694e950a35565709b340bd365758c"
+    },
+    {
+      "path": "evidence/U036_checker_repair.json",
+      "bytes": 538,
+      "sha256": "7fea7df10f25f4497966b709ad2aa3f26bd28faae06e7fc77af9d03f49717a4e",
+      "git_blob_sha": "fec982cbba0d3d35d3b1ef60fadc1207e7379fa9"
+    },
+    {
+      "path": "evidence/U036_wolfram_cross_checks.json",
+      "bytes": 867,
+      "sha256": "dbc3b15d7dfe296f081aaf124e6f4d8d9f5d2de839cab18f66c1c561203b83ce",
+      "git_blob_sha": "9dac2994a3075446795d16af5f409f1fa4d0f0ea"
+    },
+    {
+      "path": "evidence/U036_validation.log",
+      "bytes": 214,
+      "sha256": "f1e3e85d28801c878d1bc2e0b221bdb06d9e4a79dc50057f7673f4532b65128c",
+      "git_blob_sha": "10c1108938caffd53db0546d0cdb86ce3e3dfe04"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3380,
+      "sha256": "f397f3ad98fba08477c9b4309dc13751333bf01bdc37857ff1557127c4c0378f",
+      "git_blob_sha": "2fd64e2a04968297f9725e48c467ec8990865851"
+    }
+  ],
+  "package_only_logs": [
+    {
+      "path": "evidence/U036_checks.log",
+      "bytes": 2789,
+      "sha256": "e74eebf97bc5e2ca1824da0b79f5400e3bc0d8417ee5aa2d8175cf19434216a0",
+      "git_blob_sha": "915e4c9b4e37b0eb3b708ac87cf60c37bce1250d"
+    },
+    {
+      "path": "evidence/U036_initial_checks.log",
+      "bytes": 3428,
+      "sha256": "6b067916f61272de264192551c88137a2555a1789aa8d07fa3c6eb09aca627b2",
+      "git_blob_sha": "f942c2c91c0fad2e79d13e492a9c1bb5979eb2c5"
+    },
+    {
+      "path": "evidence/U036_initial_checks.json",
+      "bytes": 1570,
+      "sha256": "0ac13921de121d8908f67230e5da7baad94c17cae04ec51a2370eddfc08b0bdb",
+      "git_blob_sha": "8ede9e9a9a94c0789206e7c0bcf57267a4c08cbf"
+    },
+    {
+      "path": "evidence/U036_previous_checks.json",
+      "bytes": 7048,
+      "sha256": "769599fe72db72e09c9f5b0851e36a5afdc15c8a6d45cf816485c48f200214ab",
+      "git_blob_sha": "7e34ddb748f313a73c6ede2ebe4d81cdfab047e9"
+    },
+    {
+      "path": "evidence/U036_previous_checks.log",
+      "bytes": 8734,
+      "sha256": "7ea85338e509c3e4804ec9983106e8658a05ce65a09f610d68d2685c2133c61b",
+      "git_blob_sha": "cad87f785b45329196b58b958862933d1cc14da8"
+    }
+  ],
+  "sources": [
+    {
+      "source": "Rebeschini\u2013van Handel, Comparison Theorems for Gibbs Measures",
+      "identifier": "arXiv:1308.4117v1, 2013-08-19; DOI 10.1007/s10955-014-1087-7",
+      "locator": "Definitions 2.2-2.3, Theorem 2.4, Sections 3.2-3.3",
+      "url": "https://arxiv.org/html/1308.4117v1",
+      "checked": "2026-09-15",
+      "use": "finite coupled block comparison; exact site/block/weight/influence dictionary in Section 6; not a Yang\u2013Mills theorem"
+    },
+    {
+      "source": "NIST DLMF",
+      "locator": "10.32.2 and 10.29.1-2",
+      "urls": [
+        "https://dlmf.nist.gov/10.32",
+        "https://dlmf.nist.gov/10.29"
+      ],
+      "checked": "2026-09-15",
+      "use": "positive-real integral and recurrences for I_nu; all-character inequality separately derived"
+    },
+    {
+      "source": "CMI Yang\u2013Mills current problem page",
+      "url": "https://www.claymath.org/millennium/yang-mills-the-maths-gap/",
+      "checked": "2026-09-15",
+      "use": "still lists unsolved; no publication/contact/submission"
+    }
+  ],
+  "remaining": [
+    "Extend beyond b*s0<=1/192 to an interacting spatial reference with physical-scale control.",
+    "No isotropic weak-coupling continuum trajectory is covered.",
+    "No all-order complex connected logarithmic-vacuum coefficient bound is asserted.",
+    "No infinite-volume state or continuum construction is performed in this unit.",
+    "No group-universal target or nontrivial finite continuum mass proved."
+  ],
+  "review": "self-review and finite Wolfram corroboration only; no independent expert/formal verification and no novelty claim"
+}

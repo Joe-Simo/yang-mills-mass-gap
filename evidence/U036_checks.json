@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 3.033523821000017,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational and symbolic finite decisions; analytic all-character tail",
+  "seed": null,
+  "largest_binary_population": 1024,
+  "spatial_geometry_sizes": [
+    4,
+    6,
+    8
+  ],
+  "character_tail_bound": "709/4394",
+  "scope": "checks support separate written proof; binary fixtures are not Wilson data",
+  "rows": [
+    {
+      "beta_t": "1/2",
+      "block_steps": 3,
+      "allowed_spatial_upper": "1/576",
+      "gap_times_tau_lower": "log(4/3)/3",
+      "weaker_rational_gap_times_tau_lower": "1/12"
+    },
+    {
+      "beta_t": "2",
+      "block_steps": 6,
+      "allowed_spatial_upper": "1/1152",
+      "gap_times_tau_lower": "log(4/3)/6",
+      "weaker_rational_gap_times_tau_lower": "1/24"
+    },
+    {
+      "beta_t": "8",
+      "block_steps": 24,
+      "allowed_spatial_upper": "1/4608",
+      "gap_times_tau_lower": "log(4/3)/24",
+      "weaker_rational_gap_times_tau_lower": "1/96"
+    },
+    {
+      "beta_t": "32",
+      "block_steps": 96,
+      "allowed_spatial_upper": "1/18432",
+      "gap_times_tau_lower": "log(4/3)/96",
+      "weaker_rational_gap_times_tau_lower": "1/384"
+    },
+    {
+      "beta_t": "128",
+      "block_steps": 384,
+      "allowed_spatial_upper": "1/73728",
+      "gap_times_tau_lower": "log(4/3)/384",
+      "weaker_rational_gap_times_tau_lower": "1/1536"
+    }
+  ],
+  "checker_sha256": "0fce9f7b141c0ba99c4f8132a67892456bfa05d9a87df0ff8c49f08bc3f45e2e"
+}

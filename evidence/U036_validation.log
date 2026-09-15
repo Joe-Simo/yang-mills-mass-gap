@@ -1,0 +1,8 @@
+prior_U035_exit=0
+compileall_exit=0
+tabnanny_exit=0
+Python 3.13.5 SymPy 1.14.0
+ruff executable=None module=None
+mypy executable=None module=None
+pyright executable=None module=None
+lean executable=None module=None

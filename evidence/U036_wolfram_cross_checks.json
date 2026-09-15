@@ -1,0 +1,43 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "warnings": [],
+  "output": {
+    "RiccatiRootResidual": "0",
+    "ScaleMonotonicityResidual": "0",
+    "CompleteCharacterTail": "709/4394",
+    "TailBelowQuarter": true,
+    "TiltedBridgeTVUpper": "17/63",
+    "WeightedInfluenceUpper": "1/2",
+    "SusceptibilitySlack": "1024*b/(3*(1+12*b))",
+    "WeightedTimeSum": "-1 - 4*(-1+x^b)/((-1+x)*(-2+x^b))",
+    "BlockBenchmarks": [
+      [
+        "1/2",
+        3,
+        "1/576"
+      ],
+      [
+        "2",
+        6,
+        "1/1152"
+      ],
+      [
+        "8",
+        24,
+        "1/4608"
+      ],
+      [
+        "32",
+        96,
+        "1/18432"
+      ],
+      [
+        "128",
+        384,
+        "1/73728"
+      ]
+    ]
+  },
+  "scope": "corroboration of submitted symbolic expressions, not independent proof review"
+}

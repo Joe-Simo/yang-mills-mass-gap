@@ -4,24 +4,23 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U035, 2026-09-15
+## Latest checkpoint — U036, 2026-09-15
 
-Read `research/audits/U035_true_vacuum_cycle_response.md`.
+Read `research/audits/U036_column_comparison_and_uniform_lattice_gap.md`.
 
-The exact vacuum score under a local spatial source is `(I-K)^(-1)(I+K) w_centered` at every finite background. Differentiating the actual conditional variances retains a second-order projection-response term, and the slab score includes both true-vacuum endpoint contributions. These are response identities, not volume-uniform bounds on their connected correlations.
+For the actual finite SU(2) Wilson transfer, complete conditional time-column comparison gives a gap independent of spatial lattice size in an explicit SMALL-SPATIAL-COUPLING regime. With `b=ceil(3 max(1,beta_t))` and all spatial plaquette couplings `0<=s_p<=s0`, the sufficient condition is `b s0<=1/192`; the full centered physical gap is at least `log(4/3)/(b tau)`. The proof uses the complete character tail, coupled column updates, a block Gibbs-comparison theorem, and an actual-vacuum limit. The auxiliary update sampler is not identified with physical time.
 
-At ZERO spatial coupling, two shared plaquettes generate two exact temporal representation channels, with eigenvalues `r^6` and `r^6 u`, where `r=I_2(beta_t)/I_1(beta_t)` and `u=I_3(beta_t)/I_1(beta_t)`. Their connected logarithmic-vacuum coefficient is `b(z)=(z-r^8)/[(1-r^4)^2(1-z)]`. The mixed loop-orientation response is nonzero for every beta_t>0. Disconnected source supports cancel at every order by exact tensor factorization; this does not bound all connected coefficients.
+Throughout that domain, the absolute sum of connected plaquette correlations over all plaquettes and all times is less than `256b/3` for a fixed plaquette. This controls U035's real susceptibility alternative without a factor equal to the total active volume, including homogeneous nonzero spatial backgrounds. It does NOT prove the all-order complex logarithmic-vacuum coefficient bound.
 
-For a FIXED FINITE set of small spatial sources with all exterior spatial couplings zero, a contour proof gives an exterior-volume-independent analyticity radius, an explicit all-order expectation remainder, and a complete physical-space transfer bound. The radius shrinks as `1/beta_t`; homogeneous activation loses volume through the sum of source sizes. Neither an interacting-exterior uniform bound nor the isotropic weak-coupling/continuum regime is covered.
+The allowed spatial coupling is of order `1/beta_t` at large temporal coupling. The isotropic continuum trajectory instead has `s0=beta_t` growing large and lies outside this theorem. No continuum construction, infinite-volume state construction, all-group theorem, or finite continuum mass is claimed. Restricted lattice gap and block-comparison mechanisms are established mathematics; no novelty claim is made.
 
-Twelve new exact checks and all eleven U034 checks passed. Run `python checks/U035_vacuum_cycle_response_checks.py --output evidence/U035_checks.json`. Six named SU(2) response coefficients use complete rational series tails; weighted finite Markov fixtures test identities, not Wilson data. The manifest records preserved inputs, commands, ranges, outward rounding, and warning/clean Wolfram results. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. Self-review only, with no novelty claim.
+Twelve exact new checks and all twelve U035 checks passed. Run `python checks/U036_column_comparison_checks.py --output evidence/U036_checks.json`. The proof, checker, exact results, repaired expected-denominator error, source dictionary and hashes are recorded in the U036 note and manifest. Binary-chain fixtures are not Wilson data; the all-character and all-volume arguments are written proofs. Compilation and indentation checks passed; ruff/mypy/pyright/Lean are unavailable. Self-review only, not independent expert or formal verification.
 
-Next target: an all-order bound on the surviving connected source-support coefficients, independent of the total active volume and with explicit temporal-coupling dependence. Alternatively, bound the arbitrary-background susceptibility directly in the same vacuum. The entire centered history-variance estimate, continuum construction, nontrivial finite physical mass, and all-group target remain unproved.
+Next target: a conditional transfer comparison for an interacting spatial block retaining physical cycle variables, with constants controlled at physical scales rather than by the entire boundary action. Improving only the conservative constants or extrapolating the product-column smallness condition cannot justify the weak-coupling continuum passage.
 
 ## Preserved nearest dependencies
 
-- U034: `research/audits/U034_history_variance_and_physical_cycles.md` — exact history-variance target, finite density comparison, physical cylinder diagnostic, forest bound.
-- U033: `research/audits/U033_history_conditioned_sparse_slabs.md` — extensive sparse-column memory conditional on retained histories.
-- U032: `research/audits/U032_true_vacuum_local_memory_bound.md` — fixed-set actual-vacuum contraction and all-time memory.
-- U029–U031: unchanged exact integration, connected-memory, and boundary-time records in `research/audits/`.
+- U035: `research/audits/U035_true_vacuum_cycle_response.md` — exact vacuum scores, connected shared-loop response, finite-source analyticity and its limitations.
+- U032–U034: unchanged actual-vacuum conditional-memory, retained-history and physical-cycle records in `research/audits/`.
+- U029–U031: unchanged exact integration, connected-memory and boundary-time records in `research/audits/`.
 - U026–U028 and U003: unchanged restricted small-graph results and conditional gap transport; not a joint-limit Yang–Mills construction.

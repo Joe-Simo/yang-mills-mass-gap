@@ -1,0 +1,8 @@
+{
+  "initial_checker_sha256": "2daf9fbca4338d85bbdfce4dce27de3e4d85111e447c6196231ba57774e7fa6d",
+  "initial_status": "11 passed; one expected susceptibility-identity denominator was mistyped",
+  "failure": "expected 3*(48*b+1), correct denominator 3*(12*b+1)",
+  "impact": "checker expected expression only; the upper bound 256*b/3 is unchanged",
+  "initial_log_sha256": "6b067916f61272de264192551c88137a2555a1789aa8d07fa3c6eb09aca627b2",
+  "repaired_checker_sha256": "0fce9f7b141c0ba99c4f8132a67892456bfa05d9a87df0ff8c49f08bc3f45e2e"
+}
