@@ -1,0 +1,267 @@
+{
+  "base_commit": "1c5e8c2623d6a88336c6b7141f9d7a022a51d818",
+  "python": "3.13.5",
+  "arithmetic": "exact integers and fractions.Fraction",
+  "code_sha256": "7ea79e56e758f27a2350f358400cbac4059f7a9442eb7dd74ad9c56d3eff14d1",
+  "elapsed_seconds": 0.50954870999999,
+  "scope": "isolated SU(2) square, all class-function states; not full Yang-Mills",
+  "method": "min-max with analytic infinite-tail comparison and exact Sturm counts",
+  "records": [
+    {
+      "lambda": "0",
+      "retained_dimension": 16,
+      "bisection_bits": 20,
+      "tail_floor": "144",
+      "tail_cap": "2",
+      "last_diagonal_correction": "0",
+      "eigenvalues": [
+        {
+          "index": 0,
+          "lower_comparison_root": [
+            "-43/134217728",
+            "87/536870912"
+          ],
+          "ritz_root": [
+            "-43/134217728",
+            "87/536870912"
+          ],
+          "infinite_operator_root": [
+            "-43/134217728",
+            "87/536870912"
+          ]
+        },
+        {
+          "index": 1,
+          "lower_comparison_root": [
+            "805306197/536870912",
+            "100663307/67108864"
+          ],
+          "ritz_root": [
+            "805306197/536870912",
+            "100663307/67108864"
+          ],
+          "infinite_operator_root": [
+            "805306197/536870912",
+            "100663307/67108864"
+          ]
+        }
+      ],
+      "gap": [
+        "402653055/268435456",
+        "201326657/134217728"
+      ],
+      "gap_decimal_approximation_not_used_for_certification": [
+        1.4999995194375515,
+        1.5000004842877388
+      ]
+    },
+    {
+      "lambda": "1",
+      "retained_dimension": 18,
+      "bisection_bits": 20,
+      "tail_floor": "180",
+      "tail_cap": "4",
+      "last_diagonal_correction": "1/704",
+      "eigenvalues": [
+        {
+          "index": 0,
+          "lower_comparison_root": [
+            "79688489405/94489280512",
+            "159377095321/188978561024"
+          ],
+          "ritz_root": [
+            "113193849/134217728",
+            "452775727/536870912"
+          ],
+          "infinite_operator_root": [
+            "79688489405/94489280512",
+            "452775727/536870912"
+          ]
+        },
+        {
+          "index": 1,
+          "lower_comparison_root": [
+            "120781115839/47244640256",
+            "483124579867/188978561024"
+          ],
+          "ritz_root": [
+            "1372512849/536870912",
+            "343128295/134217728"
+          ],
+          "infinite_operator_root": [
+            "120781115839/47244640256",
+            "343128295/134217728"
+          ]
+        }
+      ],
+      "gap": [
+        "80936851863/47244640256",
+        "161873830275/94489280512"
+      ],
+      "gap_decimal_approximation_not_used_for_certification": [
+        1.7131435740527443,
+        1.7131449133475227
+      ],
+      "a_times_physical_gap": [
+        "80936851863/23622320128",
+        "161873830275/47244640256"
+      ]
+    },
+    {
+      "lambda": "16",
+      "retained_dimension": 24,
+      "bisection_bits": 20,
+      "tail_floor": "312",
+      "tail_cap": "34",
+      "last_diagonal_correction": "32/139",
+      "eigenvalues": [
+        {
+          "index": 0,
+          "lower_comparison_root": [
+            "398420801167/74625056768",
+            "796841691647/149250113536"
+          ],
+          "ritz_root": [
+            "1433168237/268435456",
+            "5732673591/1073741824"
+          ],
+          "infinite_operator_root": [
+            "398420801167/74625056768",
+            "5732673591/1073741824"
+          ]
+        },
+        {
+          "index": 1,
+          "lower_comparison_root": [
+            "945206061979/74625056768",
+            "1890412213271/149250113536"
+          ],
+          "ritz_root": [
+            "13600087231/1073741824",
+            "6800043937/536870912"
+          ],
+          "infinite_operator_root": [
+            "945206061979/74625056768",
+            "6800043937/536870912"
+          ]
+        }
+      ],
+      "gap": [
+        "1093570494809/149250113536",
+        "136696326519/18656264192"
+      ],
+      "gap_decimal_approximation_not_used_for_certification": [
+        7.327099919057846,
+        7.3271007052750035
+      ],
+      "a_times_physical_gap": [
+        "1093570494809/298500227072",
+        "136696326519/37312528384"
+      ]
+    },
+    {
+      "lambda": "256",
+      "retained_dimension": 48,
+      "bisection_bits": 20,
+      "tail_floor": "1200",
+      "tail_cap": "514",
+      "last_diagonal_correction": "8192/343",
+      "eigenvalues": [
+        {
+          "index": 0,
+          "lower_comparison_root": [
+            "34387749429569/1473173782528",
+            "2456267896837/105226698752"
+          ],
+          "ritz_root": [
+            "50127914607/2147483648",
+            "100255832545/4294967296"
+          ],
+          "infinite_operator_root": [
+            "34387749429569/1473173782528",
+            "100255832545/4294967296"
+          ]
+        },
+        {
+          "index": 1,
+          "lower_comparison_root": [
+            "80593230729035/1473173782528",
+            "5037076990949/92073361408"
+          ],
+          "ritz_root": [
+            "58741421565/1073741824",
+            "234965689591/4294967296"
+          ],
+          "infinite_operator_root": [
+            "80593230729035/1473173782528",
+            "234965689591/4294967296"
+          ]
+        }
+      ],
+      "gap": [
+        "11551370041525/368293445632",
+        "2887842631259/92073361408"
+      ],
+      "gap_decimal_approximation_not_used_for_certification": [
+        31.36458217903548,
+        31.364583491877198
+      ],
+      "a_times_physical_gap": [
+        "11551370041525/2946347565056",
+        "2887842631259/736586891264"
+      ]
+    },
+    {
+      "lambda": "4096",
+      "retained_dimension": 144,
+      "bisection_bits": 20,
+      "tail_floor": "10512",
+      "tail_cap": "8194",
+      "last_diagonal_correction": "2097152/1159",
+      "eigenvalues": [
+        {
+          "index": 0,
+          "lower_comparison_root": [
+            "1637988409537/17179869184",
+            "818994209373/8589934592"
+          ],
+          "ritz_root": [
+            "6551953633415/68719476736",
+            "3275976835269/34359738368"
+          ],
+          "infinite_operator_root": [
+            "1637988409537/17179869184",
+            "3275976835269/34359738368"
+          ]
+        },
+        {
+          "index": 1,
+          "lower_comparison_root": [
+            "478278854123/2147483648",
+            "3826230842193/17179869184"
+          ],
+          "ritz_root": [
+            "15304923343805/68719476736",
+            "239139427827/1073741824"
+          ],
+          "infinite_operator_root": [
+            "478278854123/2147483648",
+            "239139427827/1073741824"
+          ]
+        }
+      ],
+      "gap": [
+        "4376484830699/34359738368",
+        "2188242435695/17179869184"
+      ],
+      "gap_decimal_approximation_not_used_for_certification": [
+        127.3724725091306,
+        127.37247369339457
+      ],
+      "a_times_physical_gap": [
+        "4376484830699/1099511627776",
+        "2188242435695/549755813888"
+      ]
+    }
+  ]
+}

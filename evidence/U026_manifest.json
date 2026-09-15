@@ -1,0 +1,63 @@
+{
+  "date": "2026-09-15",
+  "base_commit": "1c5e8c2623d6a88336c6b7141f9d7a022a51d818",
+  "model": "complete isolated SU(2) square in U003 normalization; not full Yang-Mills",
+  "status": "self-reviewed auxiliary theorem and exact finite certificates with analytically controlled infinite tail",
+  "python": "3.13.5",
+  "tests_passed": 9,
+  "validation": [
+    "focused unittest suite",
+    "compileall",
+    "tabnanny"
+  ],
+  "not_run": [
+    "static lint/typecheck tools unavailable",
+    "U002/U003 historical suites not rerun"
+  ],
+  "independent_checks": [
+    "Wolfram symbolic radial/variational identities",
+    "Wolfram 50-digit Mathieu values",
+    "SciPy tridiagonal eigenvalues"
+  ],
+  "rejected_evidence": [
+    "scipy.special.mathieu_b at lambda=4096 produced energies outside the exact intervals; see floating cross-check record"
+  ],
+  "claimed_population": "all class-function states on one isolated square (analytic theorem); numerical certificates at lambda 0,1,16,256,4096 only",
+  "files": [
+    {
+      "path": "research/audits/U026_one_plaquette_true_vacuum_gap.md",
+      "sha256": "e382893485ab1f101a345eb1234a60817849c6843c1e6fc2504eacfc1b733ff7",
+      "bytes": 18976
+    },
+    {
+      "path": "checks/U026_one_plaquette_certificate.py",
+      "sha256": "7ea79e56e758f27a2350f358400cbac4059f7a9442eb7dd74ad9c56d3eff14d1",
+      "bytes": 10186
+    },
+    {
+      "path": "checks/U026_wolfram_cross_checks.wl",
+      "sha256": "cff5663230581cf8ac2c869a3cde421e8f02f68bfefbbf50783e39693cbe2672",
+      "bytes": 1297
+    },
+    {
+      "path": "evidence/U026_certificates.json",
+      "sha256": "d9e3d214f00a5980ca853b4d88e2ac95472fe60ec8c8340dc47dedd1fbc99517",
+      "bytes": 7178
+    },
+    {
+      "path": "evidence/U026_validation.log",
+      "sha256": "f96f6c2198bb383776aa5e3b77e953f0d78adb20531d5667309aff2a0aa92c87",
+      "bytes": 1110
+    },
+    {
+      "path": "evidence/U026_floating_cross_checks.json",
+      "sha256": "f9f1ed55273f17e86a0313acfe5d71421e185124875235a9b6abcec43c3ca924",
+      "bytes": 2791
+    },
+    {
+      "path": "evidence/U026_wolfram_cross_checks.json",
+      "sha256": "67b26ab4bd70fd84ce225f35f7e5de6e2d4609d37e0c4c22c9b5ab73620e1c11",
+      "bytes": 1173
+    }
+  ]
+}

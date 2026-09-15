@@ -1,0 +1,114 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "scope": "Floating cross-checks only; mathematical certificates use exact rational intervals and an analytic tail comparison.",
+  "discrepancy": "The scipy.special.mathieu_b outputs at lambda=4096 (parameter -16384) contradict the independent exact enclosures, the tridiagonal computation, and the separate Wolfram computation. These routine outputs are rejected as evidence. Root cause not investigated; no claim of a general library failure.",
+  "records": [
+    {
+      "lambda": 0,
+      "retained_dimension": 16,
+      "scipy_eigh_tridiagonal_float64": [
+        0.0,
+        1.5
+      ],
+      "eigh_values_inside_exact_enclosures": [
+        true,
+        true
+      ],
+      "scipy_mathieu_b_float64": [
+        0.0,
+        1.5
+      ],
+      "mathieu_values_inside_exact_enclosures": [
+        true,
+        true
+      ]
+    },
+    {
+      "lambda": 1,
+      "retained_dimension": 18,
+      "scipy_eigh_tridiagonal_float64": [
+        0.8433601283990775,
+        2.5565044112661193
+      ],
+      "eigh_values_inside_exact_enclosures": [
+        true,
+        true
+      ],
+      "scipy_mathieu_b_float64": [
+        0.8433601283990823,
+        2.5565044112661015
+      ],
+      "mathieu_values_inside_exact_enclosures": [
+        true,
+        true
+      ]
+    },
+    {
+      "lambda": 16,
+      "retained_dimension": 24,
+      "scipy_eigh_tridiagonal_float64": [
+        5.338968278216165,
+        12.666068383177535
+      ],
+      "eigh_values_inside_exact_enclosures": [
+        true,
+        true
+      ],
+      "scipy_mathieu_b_float64": [
+        5.338968278216189,
+        12.666068383177562
+      ],
+      "mathieu_values_inside_exact_enclosures": [
+        true,
+        true
+      ]
+    },
+    {
+      "lambda": 256,
+      "retained_dimension": 48,
+      "scipy_eigh_tridiagonal_float64": [
+        23.342629297895805,
+        54.70721229924014
+      ],
+      "eigh_values_inside_exact_enclosures": [
+        true,
+        true
+      ],
+      "scipy_mathieu_b_float64": [
+        23.34262929789577,
+        54.707212299240865
+      ],
+      "mathieu_values_inside_exact_enclosures": [
+        true,
+        true
+      ]
+    },
+    {
+      "lambda": 4096,
+      "retained_dimension": 144,
+      "scipy_eigh_tridiagonal_float64": [
+        95.3434739913815,
+        222.71594709716868
+      ],
+      "eigh_values_inside_exact_enclosures": [
+        true,
+        true
+      ],
+      "scipy_mathieu_b_float64": [
+        5563.53722269564,
+        475.94215933617716
+      ],
+      "mathieu_values_inside_exact_enclosures": [
+        false,
+        false
+      ]
+    }
+  ],
+  "linters_available": {
+    "ruff": false,
+    "mypy": false,
+    "pyright": false
+  }
+}

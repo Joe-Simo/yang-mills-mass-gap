@@ -8,7 +8,17 @@ Private working repository for a rigorous attempt to resolve the Clay Yang–Mil
 
 The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
 
-## Latest checkpoint — U003, 2026-09-14
+## Latest checkpoint — U026, 2026-09-15
+
+Read `research/audits/U026_one_plaquette_true_vacuum_gap.md`. On the COMPLETE physical Hilbert space of an isolated SU(2) square, a comparison proof gives a true-vacuum gap at least `max(1,g^2/2)/a`; its weak-coupling value is `(4+o(1))/a`. This is a cutoff-scale gap, not a finite continuum mass. The radial reduction and leading asymptotic are known after normalization translation; no novelty claim is made.
+
+The unit also proves that independent-square refinement loses bounded-norm positive-time finite-energy content, and exhibits a nonzero mixed two-loop invariant omitted by tensor products of individual class functions. No many-plaquette lower bound follows from the one-square result.
+
+Run `python checks/U026_one_plaquette_certificate.py --test` and `python checks/U026_one_plaquette_certificate.py`. Nine focused tests passed; `evidence/U026_certificates.json` records exact rational enclosures at five couplings, with the omitted infinite tail controlled analytically. Wolfram and a separate tridiagonal computation corroborated the results. A conflicting SciPy Mathieu output at the largest coupling was rejected and retained in the evidence. Compilation and indentation checks passed; static lint/typecheck tools were unavailable. Historical suites were not rerun in U026.
+
+Next executable target: derive and test the complete shared-link kinetic form for two adjacent squares, including simultaneous-conjugation mixed states. Do not multiply independent-plaquette gaps or infer lower gaps from Ritz eigenvalues alone. U026 does not validate the entire older scalar-localization chain; previous records remain preserved for audit.
+
+## Earlier checkpoint — U003, 2026-09-14
 
 Read `research/audits/U003_relative_gap_certificate.md` for the conditional full-space gap-transport theorem, its proof, exact SU(2) initialization tests, source locators, and remaining obligations. This is self-reviewed partial research, not a complete candidate or formal/expert verification.
 
