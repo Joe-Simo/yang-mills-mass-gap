@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "39545b5bae0af2280b6108826cc4551914a10763",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed finite-Wilson interior bad-block transfer insertion theorem; adaptive weak-coupling scaling diagnostic; exact finite audits",
+  "new_tests": 7,
+  "prior_tests_rerun": 10,
+  "commands": [
+    "python checks/U039_interior_transfer_badblock_checks.py --output evidence/U039_checks.json",
+    "python checks/U038_boundary_surface_checks.py --output evidence/U039_previous_checks.json",
+    "python -m compileall -q checks/U039_interior_transfer_badblock_checks.py",
+    "python -m tabnanny checks/U039_interior_transfer_badblock_checks.py"
+  ],
+  "wolfram": "stateless 30-second clean call; exact output copied to evidence/U039_wolfram_cross_checks.json",
+  "files": {
+    "research/audits/U039_interior_defect_transfer_suppression.md": {"sha256": "e469851c5d4fc472243badc1171bcaffedc962691b2798763cff0b747874ce48", "bytes": 11818},
+    "checks/U039_interior_transfer_badblock_checks.py": {"sha256": "e9bed43f2d6a384c45afab36b4385c366cc873a379e82de7117e9c9e0c59c141", "bytes": 4669},
+    "evidence/U039_checks.json": {"sha256": "01fd39138daa806b44953ff2c0c841f88408540bcc51d6d27107f2f1c4f0f69f", "bytes": 253},
+    "evidence/U039_validation.log": {"sha256": "5c892c1ae247958cce9ab362023830b076934dbb10416b19c33912602bdacf52", "bytes": 79},
+    "evidence/U039_wolfram_cross_checks.json": {"sha256": "d498d5dd0b4e896066a2b13f2e20e81910cc6f82f931705ed1672d7e9aa0780a", "bytes": 612},
+    "README.md": {"sha256": "0f0c963f5ac2c69d8d04ed2d37c381d208ddb5f6e3346452597a1b5ce494f000", "bytes": 5809}
+  },
+  "nonclaims": [
+    "no continuum construction",
+    "no physical Yang-Mills mass gap",
+    "no independent expert review",
+    "no novelty claim"
+  ]
+}
