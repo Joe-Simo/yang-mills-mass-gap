@@ -1,0 +1,37 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "warning_messages": [],
+  "returned": {
+    "TwoStepKernel": [
+      [
+        "1+16*t",
+        "4+4*t"
+      ],
+      [
+        "4+4*t",
+        "16+t"
+      ]
+    ],
+    "CrossRatioMargin": "225*(t-1)^2/(64*(1+t)^2)",
+    "EqualWeightPowerCheck": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "TwoColumnsTwoStepsRate": "225/353",
+    "AggregateBoundResidual": "a*b*(a+b)/(1+a*b)",
+    "WeightedTailResiduals": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "scope": "Exact corroboration of submitted finite identities, not independent derivation of the full theorem."
+}

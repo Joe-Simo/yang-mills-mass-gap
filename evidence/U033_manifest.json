@@ -1,0 +1,146 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "e2203c32d70fa7d227e2214c985991ca0399ba94",
+  "base_tree": "a34796f7d8296d03940d282841e3d5ee5a8462c1",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed finite-Wilson history-conditioned slab proof; exact finite checks",
+  "new_tests": 12,
+  "prior_tests_rerun": 12,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U033_history_conditioned_slab_checks.py --output evidence/U033_checks.json > evidence/U033_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U032_conditional_memory_checks.py --output evidence/U033_prior_U032_checks.json > evidence/U033_previous_tests.log 2>&1",
+    "python -m compileall -q checks/U033_history_conditioned_slab_checks.py",
+    "python -m tabnanny checks/U033_history_conditioned_slab_checks.py"
+  ],
+  "exit_codes": {
+    "new_tests": 0,
+    "prior_U032": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1"
+  },
+  "caps": {
+    "suite_wall_seconds": 45,
+    "wolfram_seconds": 20,
+    "threads": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 cooperative",
+    "exact_path_fixture_dimension": 4,
+    "all_path_horizons": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "largest_path_population": 1024,
+    "binary_kernel_dimension_max": 8,
+    "binary_column_count_max": 3,
+    "binary_time_steps_max": 6,
+    "su2_certificate_cases": 10,
+    "positive_series_terms": 160
+  },
+  "preservation": "73 missing files restored from U032 archive, 2 matched, 0 conflicts. All 8 U032 manifest entries matched before update; only README intentionally changed. No prior mathematical or checker file changed.",
+  "input_files": [
+    {
+      "path": "research/audits/U032_true_vacuum_local_memory_bound.md",
+      "bytes": 21326,
+      "sha256": "8554c7d935f1bcb4922440981ca6fae215f72f5ecb9ec23f28491f9556931603",
+      "git_blob_sha": "45892f7c864128a0c80fc2794811541f7f8bc9b2"
+    },
+    {
+      "path": "checks/U029_exact_link_integration_checks.py",
+      "bytes": 12441,
+      "sha256": "30da13de27463fad033a9dba1c21620fdca3c2193457cd6c82e15f913c4089ae",
+      "git_blob_sha": "18facacdc0220a3e35e03f690c183378be284d86"
+    },
+    {
+      "path": "checks/U032_conditional_memory_checks.py",
+      "bytes": 12349,
+      "sha256": "da042f8cb863f15c63c65ae5f6e349996080d6bbd3ea6acc74dbce3cc41a19d5",
+      "git_blob_sha": "5583a5bbbcbd1bb50541365114d946df3a824fd9"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/audits/U033_history_conditioned_sparse_slabs.md",
+      "bytes": 20888,
+      "sha256": "d5f73faf2310ab0a520c1316d690f11b3003715c57d5ea5996cbe5b010650405",
+      "git_blob_sha": "80345698b2e35c340b08c706f3eb38c013b533bc"
+    },
+    {
+      "path": "checks/U033_history_conditioned_slab_checks.py",
+      "bytes": 13270,
+      "sha256": "80abaee6c4add6d06a07e2d2ae7af8c13ca1c9f4be2476d43bace29bfc1bd975",
+      "git_blob_sha": "8b5f5b6bb39b31d14f86a07c7ef230f8fc8d1fb1"
+    },
+    {
+      "path": "checks/U033_wolfram_cross_checks.wl",
+      "bytes": 646,
+      "sha256": "39b5b2c6740964e45a3c1b8e7a37bac56782ef1ae13b27a62da379278465cbf2",
+      "git_blob_sha": "0dd29b649be605c516d0485e84908bd624b57ac9"
+    },
+    {
+      "path": "evidence/U033_checks.json",
+      "bytes": 5728,
+      "sha256": "cf9cc825e8f93e83ebeae13916b53d01e0eaf86dbb3d873e7eb7aee176590787",
+      "git_blob_sha": "179ac115cbfe6634423d8e3d21f51929f8217589"
+    },
+    {
+      "path": "evidence/U033_wolfram_cross_checks.json",
+      "bytes": 699,
+      "sha256": "9e64eb52bb1ce889875d4e5537cefc6e1c553239e7ac381e337796f249556a84",
+      "git_blob_sha": "966c8546267912d5df8f41869f27000e997a4ffd"
+    },
+    {
+      "path": "evidence/U033_validation.log",
+      "bytes": 230,
+      "sha256": "4c35cd8f88fd3f403101ee20f685abe70704dd6074425bde5c62d142f6e418a2",
+      "git_blob_sha": "b76d5ae074ff641300b9ae28c2eff933df3ea4c8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3394,
+      "sha256": "a8fc8f1a2ffdbaf43008753f0bc27ad550972c54ca8af29421588bd2cf003d59",
+      "git_blob_sha": "3b206152f352058108a3ac833574dac7f3a80dc6"
+    }
+  ],
+  "package_only_logs": [
+    {
+      "path": "evidence/U033_checks.log",
+      "bytes": 7161,
+      "sha256": "c09e45048f67e55405ae8ee0e89fecae0828919aa3badda445ac6d92c06c7ed6",
+      "git_blob_sha": "05f2d2af28276f1859d3f763332ee9dc7a56a014"
+    },
+    {
+      "path": "evidence/U033_previous_tests.log",
+      "bytes": 3967,
+      "sha256": "dd93aacd83aa5949d181ccb2467b10526e68ee1f7037d25fc2ef02d9b650c4fb",
+      "git_blob_sha": "64fc5d898e9176743f311c2a944a614a53fa18d2"
+    },
+    {
+      "path": "evidence/U033_prior_U032_checks.json",
+      "bytes": 2331,
+      "sha256": "c2631572b00075a9d66c89960c3c89cbf08f0322a33ae95edee2422ccad3a5b3",
+      "git_blob_sha": "2d441d71a268a779aafe3da5f54e1e4c9d454634"
+    }
+  ],
+  "sources": [
+    {
+      "id": "arXiv:1307.4649v3",
+      "version_date": "2014-11-01",
+      "locator": "Definition 5.5, Theorem 5.6, Corollary 5.7",
+      "checked": "2026-09-15",
+      "use": "Exact Hilbert metric contraction/diameter equality, applied to C(SU(2)) positive integral kernels."
+    }
+  ],
+  "remaining": [
+    "Bound the centered retained-history contribution H_n uniformly in regulator and volume.",
+    "Control correlations between color-layer history algebras; no independence or angle bound assumed.",
+    "Continuum/infinite-volume construction, nontrivial finite physical mass, and all eligible groups."
+  ],
+  "review": "Self-review only; no novelty claim. Static lint/typecheck and Lean unavailable. Bounded tests do not prove the universal target."
+}

@@ -1,0 +1,269 @@
+{
+  "status": "passed",
+  "tests_run": 12,
+  "seconds": 1.5412936599999512,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact integers, Fraction, and SymPy rationals; no fitted spectrum",
+  "seed": null,
+  "binary_rate_table": [
+    {
+      "links": 1,
+      "steps_sufficient": 10,
+      "tolerance": "1/100",
+      "single_step_rate": "3/5",
+      "union_upper_bound": "59049/9765625"
+    },
+    {
+      "links": 2,
+      "steps_sufficient": 11,
+      "tolerance": "1/100",
+      "single_step_rate": "3/5",
+      "union_upper_bound": "354294/48828125"
+    },
+    {
+      "links": 16,
+      "steps_sufficient": 15,
+      "tolerance": "1/100",
+      "single_step_rate": "3/5",
+      "union_upper_bound": "229582512/30517578125"
+    },
+    {
+      "links": 256,
+      "steps_sufficient": 20,
+      "tolerance": "1/100",
+      "single_step_rate": "3/5",
+      "union_upper_bound": "892616806656/95367431640625"
+    },
+    {
+      "links": 4096,
+      "steps_sufficient": 26,
+      "tolerance": "1/100",
+      "single_step_rate": "3/5",
+      "union_upper_bound": "10411482432835584/1490116119384765625"
+    }
+  ],
+  "su2_two_step_certificates": [
+    {
+      "beta": "1/2",
+      "source": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      "cross_ratio_interval": [
+        "1.277619251302354021",
+        "1.277619251302354022"
+      ],
+      "cross_ratio_cap_lower": "2.381097845541815729",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "1/2",
+      "source": [
+        "1/2",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "9/4",
+        "1/4",
+        "1/4",
+        "1/4"
+      ],
+      "cross_ratio_interval": [
+        "1.268822676651678749",
+        "1.268822676651678750"
+      ],
+      "cross_ratio_cap_lower": "2.381097845541815729",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "1/2",
+      "source": [
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "9",
+        "1",
+        "4",
+        "4"
+      ],
+      "cross_ratio_interval": [
+        "1.177429382360428635",
+        "1.177429382360428636"
+      ],
+      "cross_ratio_cap_lower": "2.381097845541815729",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "2",
+      "source": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "16",
+        "16",
+        "0",
+        "0"
+      ],
+      "cross_ratio_interval": [
+        "23.811790021592855524",
+        "23.811790021592855525"
+      ],
+      "cross_ratio_cap_lower": "745.739580626089044313",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "2",
+      "source": [
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "36",
+        "4",
+        "4",
+        "4"
+      ],
+      "cross_ratio_interval": [
+        "12.854795989167165073",
+        "12.854795989167165074"
+      ],
+      "cross_ratio_cap_lower": "745.739580626089044313",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "2",
+      "source": [
+        "8",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "144",
+        "16",
+        "64",
+        "64"
+      ],
+      "cross_ratio_interval": [
+        "1.476351835844780228",
+        "1.476351835844780229"
+      ],
+      "cross_ratio_cap_lower": "745.739580626089044313",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "6",
+      "source": [
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "144",
+        "144",
+        "0",
+        "0"
+      ],
+      "cross_ratio_interval": [
+        "9141903.767140797770804647",
+        "9141903.767140797770804648"
+      ],
+      "cross_ratio_cap_lower": "6622280532.960868073544228374",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "6",
+      "source": [
+        "6",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "324",
+        "36",
+        "36",
+        "36"
+      ],
+      "cross_ratio_interval": [
+        "32838.509072086184525387",
+        "32838.509072086184525388"
+      ],
+      "cross_ratio_cap_lower": "6622280532.960868073544228374",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "6",
+      "source": [
+        "24",
+        "0",
+        "0",
+        "0"
+      ],
+      "squared_Z_arguments": [
+        "1296",
+        "144",
+        "576",
+        "576"
+      ],
+      "cross_ratio_interval": [
+        "1.522304344287861865",
+        "1.522304344287861866"
+      ],
+      "cross_ratio_cap_lower": "6622280532.960868073544228374",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    },
+    {
+      "beta": "2",
+      "source": [
+        "1/2",
+        "1",
+        "0",
+        "-1"
+      ],
+      "squared_Z_arguments": [
+        "73/4",
+        "41/4",
+        "33/4",
+        "309/20"
+      ],
+      "cross_ratio_interval": [
+        "1.514879012140223001",
+        "1.514879012140223002"
+      ],
+      "cross_ratio_cap_lower": "745.739580626089044313",
+      "tail_terms": 160,
+      "both_cross_ratio_directions_verified": true
+    }
+  ],
+  "scope": "finite formula/geometry/path tests; universal proof in the U033 note"
+}

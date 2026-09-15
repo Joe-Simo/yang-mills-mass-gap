@@ -1,0 +1,7 @@
+python -m compileall -q checks/U033_history_conditioned_slab_checks.py
+exit=0
+
+python -m tabnanny checks/U033_history_conditioned_slab_checks.py
+exit=0
+
+Static module availability: {'ruff': False, 'mypy': False, 'pyright': False}
