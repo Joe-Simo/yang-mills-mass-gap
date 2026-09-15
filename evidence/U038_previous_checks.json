@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.1865112849999946,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "Fraction and SymPy exact rational/matrix identities; no floating decisions",
+  "binary_path_population": 1024,
+  "binary_kernel_dimension": 4,
+  "finite_group": "Q8, boundary-gluing identity only; not SU(2) numerical physics",
+  "geometry": [
+    {
+      "block_side": 1,
+      "internal_plaquettes": 0,
+      "crossing_incidence": 9,
+      "influence_incidence": 18
+    },
+    {
+      "block_side": 2,
+      "internal_plaquettes": 6,
+      "crossing_incidence": 42,
+      "influence_incidence": 60
+    },
+    {
+      "block_side": 3,
+      "internal_plaquettes": 36,
+      "crossing_incidence": 99,
+      "influence_incidence": 126
+    },
+    {
+      "block_side": 4,
+      "internal_plaquettes": 108,
+      "crossing_incidence": 180,
+      "influence_incidence": 216
+    }
+  ],
+  "bridge_constant": "19/61",
+  "auxiliary_two_bit_contraction": "15/17",
+  "physical_status": "No continuum mass-gap bound; continuous and all-volume results require written proof"
+}

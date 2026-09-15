@@ -1,0 +1,86 @@
+{
+  "status": "passed",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.4692667150000034,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact Fraction and SymPy; analytic all-configuration proof in U038",
+  "seed": null,
+  "geometries": {
+    "d": [
+      2,
+      3,
+      4
+    ],
+    "n": [
+      1,
+      2,
+      3
+    ]
+  },
+  "flux_witness": {
+    "dimension": 2,
+    "n": 6,
+    "angle": "pi/3",
+    "old_action": "18",
+    "competitor_action": "0"
+  },
+  "strong_coupling_certificates": [
+    {
+      "alpha": "1/8",
+      "n": 256,
+      "delta": "1/64",
+      "haar_ball_lower": "343/1046740992",
+      "entropy_upper": 22,
+      "beta_sufficient": 472,
+      "M": 25971523584,
+      "L": 17381983232,
+      "boundary_faces": 405805056,
+      "certified_negative_log_probability": "383079972864"
+    },
+    {
+      "alpha": "1/2",
+      "n": 64,
+      "delta": "1/16",
+      "haar_ball_lower": "343/16355328",
+      "entropy_upper": 16,
+      "beta_sufficient": 87,
+      "M": 103833600,
+      "L": 70304000,
+      "boundary_faces": 6489600,
+      "certified_negative_log_probability": "1129190400"
+    },
+    {
+      "alpha": "1",
+      "n": 32,
+      "delta": "1/8",
+      "haar_ball_lower": "343/2044416",
+      "entropy_upper": 13,
+      "beta_sufficient": 36,
+      "M": 6690816,
+      "L": 4599936,
+      "boundary_faces": 836352,
+      "certified_negative_log_probability": "60217344"
+    },
+    {
+      "alpha": "2",
+      "n": 16,
+      "delta": "1/4",
+      "haar_ball_lower": "343/255552",
+      "entropy_upper": 10,
+      "beta_sufficient": 15,
+      "M": 443904,
+      "L": 314432,
+      "boundary_faces": 110976,
+      "certified_negative_log_probability": "3329280"
+    }
+  ],
+  "nonclaims": [
+    "no Monte Carlo data",
+    "no full spectral gap",
+    "no continuum construction",
+    "Q8 and binary fixtures do not substitute for SU(2) probability proofs"
+  ]
+}

@@ -1,0 +1,8 @@
+new_U038_exit=0; 10 tests passed after a symbolic structural-equality assertion repair
+prior_U037_exit=0; 10 tests passed
+compileall_exit=0
+tabnanny_exit=0
+Python 3.13.5; SymPy 1.14.0
+ruff/mypy/pyright/lean executable and module lookup: unavailable; not run
+Wolfram 20-second bounded call: no warnings
+No prior proof/checker/evidence file modified; README is the only intentionally changed prior file

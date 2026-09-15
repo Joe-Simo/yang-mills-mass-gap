@@ -1,0 +1,164 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "2b75c79208a48eb8f4cd2770b1b279afc586fdbc",
+  "base_tree": "d3c51866e25583d48155518ff133bb2c1ef82737",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed compact finite-Wilson boundary correction and conditional dense-defect/cluster inequalities; exact finite audits",
+  "new_tests": 10,
+  "prior_tests_rerun": 10,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U038_boundary_surface_checks.py --output evidence/U038_checks.json > evidence/U038_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U037_interacting_block_checks.py --output evidence/U038_previous_checks.json > evidence/U038_previous_checks.log 2>&1",
+    "python -m compileall -q checks/U038_boundary_surface_checks.py",
+    "python -m tabnanny checks/U038_boundary_surface_checks.py"
+  ],
+  "exit_codes": {
+    "initial_new": 1,
+    "repaired_new": 0,
+    "prior_U037": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1",
+    "static_formal": "ruff/mypy/pyright/Lean unavailable"
+  },
+  "preservation": {
+    "archive_entries": 134,
+    "restored_missing": 132,
+    "matched_existing": 2,
+    "conflicts_or_overwrites": 0,
+    "U037_primary_hashes_checked": 10,
+    "old_files_changed": [
+      "README.md"
+    ],
+    "prior_readme_sha256": "db1f375e918f7e4867aa4e56c8c6390f6a9510d49b0fcd40a0081d88fb183072"
+  },
+  "corrected_sources": [
+    {
+      "path": "research/audits/U009_boundary_excess_counterexample.md",
+      "blob_sha": "4bb4365a829726e13b33377bb5d291f8921eda5e",
+      "verdict": "asymptotic boundary no-go withdrawn; original file preserved"
+    },
+    {
+      "path": "research/audits/U008_positive_density_action_entropy.md",
+      "blob_sha": "0741088236012afdb97120899d1e1a4354abe435",
+      "verdict": "exact full open-box counts corrected; leading orders unchanged"
+    }
+  ],
+  "bounds": {
+    "suite_wall_seconds": 45,
+    "wolfram_seconds": 20,
+    "arithmetic": "exact Fraction/SymPy, no floating decisions",
+    "geometry_dimensions": [
+      2,
+      3,
+      4
+    ],
+    "geometry_cell_sides": [
+      1,
+      2,
+      3
+    ],
+    "sixth_root_witness_dimension": 2,
+    "sixth_root_witness_side": 6,
+    "four_dimensional_competitor_side": 256,
+    "four_dimensional_check_method": "closed-form counts, not enumeration",
+    "binary_fixture_states": 16,
+    "Q8_role": "32 evaluations of the local action identity only; not probability data",
+    "seed": null
+  },
+  "source_checks": [
+    {
+      "url": "https://dlmf.nist.gov/10.32",
+      "locator": "10.32.2",
+      "role": "agrees with class-angle normalization; direct elementary integration used"
+    },
+    {
+      "url": "https://www.claymath.org/millennium/yang-mills-the-maths-gap/",
+      "role": "current official status still unsolved"
+    },
+    {
+      "url": "https://arxiv.org/abs/2202.10375",
+      "role": "discovery lead only; finite group scope not imported"
+    }
+  ],
+  "limitations": [
+    "positive-density threshold only; not one-plaquette admissibility",
+    "finite Euclidean conditional measure, not a new complete physical spectral estimate",
+    "probability rarity does not bound indicator operator norm",
+    "no good-sector collective-mode, all-group, or continuum construction",
+    "self-review, no independent expert/formal verification or novelty claim"
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "c2582153237f9cd843fb9a5659fcfffe78bb5ce558b56ae21b876c4404eec7d7",
+      "bytes": 3762,
+      "git_blob_sha": "574b3b57e49acc219dc72aab834e7d5d3f0edc1a"
+    },
+    "research/audits/U038_boundary_surface_correction_and_defect_tail.md": {
+      "sha256": "5471049486db9cff619e36ef511686955075adc5b4d3e9470e4b7cc37460f902",
+      "bytes": 20778,
+      "git_blob_sha": "070257daec9ec9b017d9ba0e029fce65daeba46c"
+    },
+    "checks/U038_boundary_surface_checks.py": {
+      "sha256": "3b6bc841f8b5c8b4810c40950544cf8d203ea07f249b13779fe54f98bff8dde1",
+      "bytes": 11739,
+      "git_blob_sha": "2c5dd49531b248efc2c36b01b0c30b001089049d"
+    },
+    "checks/U038_wolfram_cross_checks.wl": {
+      "sha256": "c46dc4027da667fcc0581f552c67fba25e0744d7a1d124704d6b884683405c19",
+      "bytes": 614,
+      "git_blob_sha": "487128689dc654a51305f3e12b51ddbe7ca9f306"
+    },
+    "evidence/U038_checks.json": {
+      "sha256": "b032d41e43848a623c1cb83f87a764a8c37d9c3d87b9a0dc607cd365fcc2ff1f",
+      "bytes": 1922,
+      "git_blob_sha": "9133f9c9b842bee7133a074f4a620eeefcbb64e9"
+    },
+    "evidence/U038_checks.log": {
+      "sha256": "852b33ae72d421c95fc69f962fab6166b0a1daa5dede52700737dee5d2edb5af",
+      "bytes": 3165,
+      "git_blob_sha": "ee1b4d55c4ab337583f18a9d2bf893493dd88c40"
+    },
+    "evidence/U038_previous_checks.json": {
+      "sha256": "1b1a873f2fbed96baa77821ea4d1c9cc2ce7c99ebdebd1b3a063d54cf4efb57a",
+      "bytes": 1132,
+      "git_blob_sha": "ec0deaaf00e47d18a181734cf9d7597b7ed9456c"
+    },
+    "evidence/U038_previous_checks.log": {
+      "sha256": "219b0c5b5ae3deb8cf9efbaa5761090f71688b8c055ce177eab3ef2fdf53d5b1",
+      "bytes": 1099,
+      "git_blob_sha": "a5f3a0ad04a53c554c7a30f2eed434fd47560c42"
+    },
+    "evidence/U038_initial_checks.json": {
+      "sha256": "6213cab25be6c7de7fd29bd3c3271be9731b196b067399736ca16c34a7aa60c5",
+      "bytes": 1923,
+      "git_blob_sha": "d91dbb16ef22f6786a0f4355ddd09e372d910dba"
+    },
+    "evidence/U038_initial_checks.log": {
+      "sha256": "b5ccd13db6dfc7dd2ec34c2d979cdcf348e3b7eae3effec465d70d7bca01986c",
+      "bytes": 3783,
+      "git_blob_sha": "ce3398536acc277995ae17b098e13c92bd51bbc8"
+    },
+    "evidence/U038_checker_repair.json": {
+      "sha256": "a6419acc4629cf7ec506b0759c7e908fe14791b7d7887235b35360d0bf865d32",
+      "bytes": 502,
+      "git_blob_sha": "612c3163a5659c236d883b332ada6e886804372d"
+    },
+    "evidence/U038_validation.log": {
+      "sha256": "cf5f111ad284f7f9f4182eefc6226e0d3ae46e2e09327eaa02b233d49aa884ea",
+      "bytes": 401,
+      "git_blob_sha": "0f44f9959b2f9ce21168525c6ba581fab833d6ad"
+    },
+    "evidence/U038_wolfram_cross_checks.json": {
+      "sha256": "2b5183cf1c37ce30b180156f197dda4d94ea370d6c84525560f27b676d1f2b30",
+      "bytes": 554,
+      "git_blob_sha": "7b735d20f2ccdfc276ec8bf02ec1e15098494e9a"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+test_01_geometric_partition (__main__.BlockChecks.test_01_geometric_partition) ... ok
+test_02_arbitrary_internal_weight_cancels (__main__.BlockChecks.test_02_arbitrary_internal_weight_cancels) ... ok
+test_03_all_boundary_power_bound (__main__.BlockChecks.test_03_all_boundary_power_bound) ... ok
+test_04_endpoint_messages (__main__.BlockChecks.test_04_endpoint_messages) ... ok
+test_05_exact_interface_tilt_sandwich (__main__.BlockChecks.test_05_exact_interface_tilt_sandwich) ... ok
+test_06_joint_path_marginal_consequence (__main__.BlockChecks.test_06_joint_path_marginal_consequence) ... ok
+test_07_bridge_and_weight_constants (__main__.BlockChecks.test_07_bridge_and_weight_constants) ... ok
+test_08_block_state_is_not_a_tensor_of_singlets (__main__.BlockChecks.test_08_block_state_is_not_a_tensor_of_singlets) ... ok
+test_09_temporal_anisotropy_product (__main__.BlockChecks.test_09_temporal_anisotropy_product) ... ok
+test_10_invalid_inputs (__main__.BlockChecks.test_10_invalid_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.186s
+
+OK

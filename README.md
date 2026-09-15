@@ -4,24 +4,24 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U037, 2026-09-15
+## Latest checkpoint — U038, 2026-09-15
 
-Read `research/audits/U037_interacting_blocks_and_boundary_sectors.md`.
+Read `research/audits/U038_boundary_surface_correction_and_defect_tail.md`.
 
-U036's time-column comparison extends to internally interacting link blocks without approximating their internal Wilson action. If every complete block kernel obeys `d(T_B^b)<=2log(5/3)` and the crossing-interface incidence obeys `bD<=1/16`, the full centered physical gap is at least `log(4/3)/(b tau)`, independent of the number of blocks. Here D sums crossing plaquette couplings with their block multiplicities; internal couplings are absent from D. A complete positive-kernel certificate permits arbitrary finite internal couplings, but its b grows exponentially with block size times temporal coupling.
+**Historical correction:** U009's claimed arbitrary-boundary obstruction to volume-density action excess is withdrawn. A permitted identity-interior configuration pays only surface action, so a fixed positive density of large plaquette deficits has volume-order excess for sufficiently large blocks, uniformly in boundary links. U008's exact complete open-box counts were also wrong; the four-dimensional counts are `M=6n^2(n+1)^2` and `L=4n(n+1)^3`. Older files are preserved unchanged; this correction supersedes those claims, not all of their downstream auxiliary mathematics.
 
-An explicit periodic cubical tiling has influence count `12m^2+6m` per block of side m; uniform crossing coupling must be at most `1/[16b(12m^2+6m)]`. This covers an extensive strongly interacting interior with weak connections, not isotropic weak coupling. The susceptibility bound is independent of total volume but retains block-size dependence. No all-order complex expansion or continuum construction is proved.
+For the original finite Euclidean SU(2) Wilson measure with a common inverse coupling beta, conditioning on every exterior link gives `Pr(A_block>=alpha M | exterior)<=exp(-beta alpha M/4)` under the explicit sufficient thresholds in U038. Strong interfaces and arbitrary surrounding fields are allowed. The proof pays both a surface action cost and the Haar-volume denominator cost; it does not assume independent plaquettes or a Gaussian vacuum.
 
-The gluing audit retains every necessary boundary gauge representation: separate regional singlet projections can delete globally physical Wilson-loop states. An exact circle diagnostic identifies a lost fundamental-character channel. A necessary anisotropic coefficient match gives `beta_t beta_s -> 16/g^4`; temporal refinement alone cannot rescue U036's small-product condition. These diagnostics are not four-dimensional mass-gap counterexamples.
+Uniform conditional bounds also control joint bad-block events and connected clusters without independence. A positive density of strongly frustrated link stars implies the required volume action, providing another concrete event covered by the estimate. These are defect probabilities, not a bound on the complete centered quantum transfer or a proof that all remaining fields are perturbatively small.
 
-Ten new exact checks and all twelve U036 checks passed on their first local runs. Run `python checks/U037_interacting_block_checks.py --output evidence/U037_checks.json`. Binary and Q8 fixtures test finite algebra, not Wilson measurements. The proof, complete-state-space restrictions, source dictionary, actual commands and hashes are in the U037 note and manifest. Compilation and indentation checks passed; static lint/typecheck and Lean are unavailable. The initial Wolfram symbol warning and clean rerun are preserved. Self-review only, with no novelty or independent/formal verification claim.
+Ten exact new checks and all ten U037 checks passed. Run `python checks/U038_boundary_surface_checks.py --output evidence/U038_checks.json`. The checker includes a continuous-SU(2) compact-flux boundary witness, exact geometry and conservative parameter certificates; binary/Q8 fixtures are explicitly not Wilson samples. One symbolic structural-equality assertion was repaired, with its initial outputs retained. Wolfram corroborated finite algebra without warnings; compilation and indentation checks passed. Static lint/typecheck and Lean were unavailable. Self-review only, with no independent expert/formal verification or novelty claim.
 
-Next target: control the connected boundary response in the full boundary-representation space, improving the product of block mixing time and interface influence for strong interfaces. An isolated block's singlet gap or an increasing fraction of strong internal plaquettes cannot replace that estimate. No scale-uniform physical continuum mass bound is established.
+Next target: convert the corrected defect-probability input into an energy-relative boundary/transfer estimate while retaining all physical sectors and controlling the collective modes on its complement. A rare event still has an indicator operator of norm one; the required relative estimate remains unproved. No continuum construction or scale-uniform physical mass bound is established.
 
 ## Preserved nearest dependencies
 
-- U036: `research/audits/U036_column_comparison_and_uniform_lattice_gap.md` — the homogeneous small-spatial-coupling benchmark and complete character-tail/comparison proof.
-- U035: `research/audits/U035_true_vacuum_cycle_response.md` — true-vacuum responses and connected shared-loop terms.
-- U032–U034: unchanged actual-vacuum memory, full-history and physical-cycle records.
-- U029–U031: unchanged integration, temporal-memory and boundary-time records.
-- U026–U028 and U003: unchanged restricted small-graph results and conditional gap transport; not a joint-limit Yang–Mills construction.
+- U037: `research/audits/U037_interacting_blocks_and_boundary_sectors.md` — internally interacting blocks with weak interfaces, complete boundary representations, and the unresolved strong-interface response.
+- U036: `research/audits/U036_column_comparison_and_uniform_lattice_gap.md` — volume-uniform gap only in the restricted small-spatial-coupling domain.
+- U029–U035: unchanged exact integration, true-vacuum response, temporal-memory and history-variance records.
+- U008–U009: historical records in Git; their stated boundary obstruction and complete-box counts are corrected by U038.
+- U026–U028 and U003: unchanged restricted small-graph results and conditional gap transport; not a joint-limit construction.

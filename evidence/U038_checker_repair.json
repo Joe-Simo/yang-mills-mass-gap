@@ -1,0 +1,10 @@
+{
+  "initial_sha256": "4adabca099ea160c097ee10207626e4584f27fc7c363d427312b01855a362d13",
+  "initial_result": "9 tests passed, 1 failed on symbolic structural equality",
+  "failure": "Expanded rational polynomial compared structurally with factored rational polynomial",
+  "repair": "Compare exact simplified difference with zero; no mathematical formula or test population changed",
+  "initial_output_preserved": [
+    "evidence/U038_initial_checks.json",
+    "evidence/U038_initial_checks.log"
+  ]
+}
