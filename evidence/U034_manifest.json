@@ -1,0 +1,194 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "8f76fad21d6c07fd391f1393f46d96a4915aa37b",
+  "base_tree": "5917027a1af515c245ee54aa5a311716780ed261",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed finite-regulator history-variance/forest proofs; restricted 2D Wilson-cylinder diagnostic; exact finite checks",
+  "new_tests": 11,
+  "prior_tests_rerun": 12,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U034_history_variance_and_cycle_checks.py --output evidence/U034_checks.json > evidence/U034_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U033_history_conditioned_slab_checks.py --output evidence/U034_prior_U033_checks.json > evidence/U034_previous_tests.log 2>&1",
+    "python -m compileall -q checks/U034_history_variance_and_cycle_checks.py",
+    "python -m tabnanny checks/U034_history_variance_and_cycle_checks.py"
+  ],
+  "exit_codes": {
+    "final_new_tests": 0,
+    "prior_U033": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1"
+  },
+  "caps": {
+    "suite_wall_seconds": 45,
+    "wolfram_seconds": 20,
+    "threads": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 cooperative",
+    "path_states": 4,
+    "all_path_horizons": [
+      1,
+      2,
+      3
+    ],
+    "largest_path_population": 256,
+    "spatial_geometry_N": [
+      4,
+      6
+    ],
+    "noncommutative_cylinder_L": [
+      3,
+      4
+    ],
+    "finite_group": "Q8",
+    "finite_group_complete_population": 4096,
+    "su2_certificate_cases": 12,
+    "certificate_beta": [
+      "0",
+      "1/2",
+      "2",
+      "8",
+      "32",
+      "128"
+    ],
+    "certificate_circumferences": [
+      4,
+      16
+    ],
+    "max_ratio_series_terms_used": 136
+  },
+  "preservation": "84 missing files restored from U033 archive, 2 matched, 0 conflicts. All seven U033 manifest entries matched before work. Only README is intentionally changed among prior manifest entries; earlier mathematical and checker files remain unchanged.",
+  "input_files": [
+    {
+      "path": "research/audits/U033_history_conditioned_sparse_slabs.md",
+      "bytes": 20888,
+      "sha256": "d5f73faf2310ab0a520c1316d690f11b3003715c57d5ea5996cbe5b010650405",
+      "git_blob_sha": "80345698b2e35c340b08c706f3eb38c013b533bc"
+    },
+    {
+      "path": "research/audits/U032_true_vacuum_local_memory_bound.md",
+      "bytes": 21326,
+      "sha256": "8554c7d935f1bcb4922440981ca6fae215f72f5ecb9ec23f28491f9556931603",
+      "git_blob_sha": "45892f7c864128a0c80fc2794811541f7f8bc9b2"
+    },
+    {
+      "path": "checks/U029_exact_link_integration_checks.py",
+      "bytes": 12441,
+      "sha256": "30da13de27463fad033a9dba1c21620fdca3c2193457cd6c82e15f913c4089ae",
+      "git_blob_sha": "18facacdc0220a3e35e03f690c183378be284d86"
+    },
+    {
+      "path": "checks/U032_conditional_memory_checks.py",
+      "bytes": 12349,
+      "sha256": "da042f8cb863f15c63c65ae5f6e349996080d6bbd3ea6acc74dbce3cc41a19d5",
+      "git_blob_sha": "5583a5bbbcbd1bb50541365114d946df3a824fd9"
+    },
+    {
+      "path": "checks/U033_history_conditioned_slab_checks.py",
+      "bytes": 13270,
+      "sha256": "80abaee6c4add6d06a07e2d2ae7af8c13ca1c9f4be2476d43bace29bfc1bd975",
+      "git_blob_sha": "8b5f5b6bb39b31d14f86a07c7ef230f8fc8d1fb1"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/audits/U034_history_variance_and_physical_cycles.md",
+      "bytes": 22164,
+      "sha256": "2d419630ce9588d4c241236dc8a8c6a51585829be1111e1c7d091a8400f252bf",
+      "git_blob_sha": "207645f75a36dac5eca64be3af44692927cbbc0d"
+    },
+    {
+      "path": "checks/U034_history_variance_and_cycle_checks.py",
+      "bytes": 12034,
+      "sha256": "899ccb2f9dd749654e86fac89b37f5bf8da74879a91ff9e7b3ae19e83f036097",
+      "git_blob_sha": "f93409d7c6c7705e4b7326cd5b7e7ce5910db1a8"
+    },
+    {
+      "path": "checks/U034_wolfram_cross_checks.wl",
+      "bytes": 781,
+      "sha256": "8a66481e40a964e8a8efdbc061604ccbe4ad2f61e41e348169a5ccc689f74fb5",
+      "git_blob_sha": "460544680142d42f13997f609af66653cba1113d"
+    },
+    {
+      "path": "evidence/U034_checks.json",
+      "bytes": 4707,
+      "sha256": "2733a7aa4a351a8a79f1a650b4de944781d670f756b7d8689f96dd80f6313e79",
+      "git_blob_sha": "2be1b1b6d634f37bbf9808bb0dae9a57b9c4eedd"
+    },
+    {
+      "path": "evidence/U034_checker_repair.json",
+      "bytes": 1237,
+      "sha256": "39884d5c87bf334436bd810980ad33c544de4c64d5864418c56bf9897ac09bd8",
+      "git_blob_sha": "14ce0fb421e1b39e3fe8a9ba0557940111a576ed"
+    },
+    {
+      "path": "evidence/U034_wolfram_cross_checks.json",
+      "bytes": 551,
+      "sha256": "efb636d7a05169441d32c08f038607a4e34019a8cb86ada5eba78c329805c69a",
+      "git_blob_sha": "a03d0a269708f5bf12d314c174a94ceac8ee0bfa"
+    },
+    {
+      "path": "evidence/U034_validation.log",
+      "bytes": 104,
+      "sha256": "9d2ae17e5733350a29e353cf291b9a51286a9a1d37695f82b4bf3d52a8b97b65",
+      "git_blob_sha": "9144791d7228b742006e8b63c92efe35c1357688"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3651,
+      "sha256": "f1c00981ad4ee5d64af8fc800e67c70ca3bbb34151631727047ca3661b91b99e",
+      "git_blob_sha": "28eac1b94d30258456aa6350a690cdadf94120dc"
+    }
+  ],
+  "package_only_logs": [
+    {
+      "path": "evidence/U034_checks.log",
+      "bytes": 6076,
+      "sha256": "2066f49a29e589fd8ad462947a3274adcfa22e7d55e6376df473be4b3b0f2c8a",
+      "git_blob_sha": "eb8619fe3f8ba59e74754032c6fb67ea008f4423"
+    },
+    {
+      "path": "evidence/U034_previous_tests.log",
+      "bytes": 7161,
+      "sha256": "9b5feec8c64c210283f3d7ca38ff0ac07b4d4359df03075d03c356a32e89a528",
+      "git_blob_sha": "6525868c9d05098d27efda2d8f44df620dbe041f"
+    },
+    {
+      "path": "evidence/U034_prior_U033_checks.json",
+      "bytes": 5728,
+      "sha256": "1f23bde36ca1b2419fae12e52a2d6f0a53496fc7dabcaf8eba3c52e5c1739018",
+      "git_blob_sha": "792cbea941c7eee55aaab14e81023f18687afa75"
+    }
+  ],
+  "sources": [
+    {
+      "id": "NIST DLMF 10.32.2; 10.29; 10.40.1",
+      "checked": "2026-09-15",
+      "use": "SU(2) normalization and fixed-order positive-axis ratio asymptotic; fixed cylinder circumference only"
+    },
+    {
+      "id": "arXiv:2107.14149v1",
+      "version_date": "2021-07-29",
+      "locator": "Section 2.2 (2.15)-(2.16); Appendix A (A.1)-(A.9)",
+      "checked": "2026-09-15",
+      "use": "Normalized character expansion/convolution dictionary, not numerical tensor-network or continuum input"
+    },
+    {
+      "id": "arXiv:1509.04033v2",
+      "version_date": "2015-12-06",
+      "locator": "Section III",
+      "checked": "2026-09-15",
+      "use": "Tree versus loop/Gauss-law context only; the forest transitivity argument is proved directly"
+    }
+  ],
+  "remaining": [
+    "A useful actual-vacuum endpoint-restricted collective variance coefficient uniformly in regulator/volume.",
+    "An overlapping physical-cycle response or substitute controlling centered collective states.",
+    "Compatible continuum/infinite-volume construction, nontrivial finite physical mass, and all eligible groups."
+  ],
+  "review": "Self-review only. Two structural polynomial-equality checker failures were repaired without changing identities or constants; details in U034_checker_repair.json. No formal or independent expert verification. Static lint/typecheck and Lean unavailable. Manifest hash checking does not prove a theorem."
+}

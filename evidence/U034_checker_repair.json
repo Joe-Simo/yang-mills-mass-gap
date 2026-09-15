@@ -1,0 +1,8 @@
+{
+  "initial_sha256": "7948f8d3815cfc82fbafdcbada1f9197aa3959e66b808c1320fa87fed32d6f4a",
+  "initial_status": "one symbolic-structure comparison failed; ten tests passed",
+  "failure_text": "FAIL: test_cylinder_physical_angle_identity (__main__.VarianceChecks.test_cylinder_physical_angle_identity)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/mnt/data/yang-mills-mass-gap/checks/U034_history_variance_and_cycle_checks.py\", line 172, in test_cylinder_physical_angle_identity\n    self.assertEqual(sp.factor((sp.ones(1,2)*gram*op*sp.ones(2,1))[0]),\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n                     2*(1-rho)*(1+rho))\n                     ^^^^^^^^^^^^^^^^^^\nAssertionError: -2*(rho - 1)*(rho + 1) != (2 - 2*rho)*(rho + 1)\n\n----------------------------------------------------------------------\n",
+  "repair": "Compare expanded zero residual, not differently factored expressions. No theorem or coefficient changed.",
+  "final_sha256": "899ccb2f9dd749654e86fac89b37f5bf8da74879a91ff9e7b3ae19e83f036097",
+  "second_failure": "Same structural equality mistake for det(Gram)=1-rho^2; changed to expanded residual."
+}

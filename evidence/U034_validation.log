@@ -1,0 +1,4 @@
+prior_U033_exit=0
+compileall_exit=0
+tabnanny_exit=0
+static lint/typecheck and Lean unavailable; not run

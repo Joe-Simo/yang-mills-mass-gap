@@ -4,23 +4,25 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U033, 2026-09-15
+## Latest checkpoint — U034, 2026-09-15
 
-Read `research/audits/U033_history_conditioned_sparse_slabs.md`.
+Read `research/audits/U034_history_variance_and_physical_cycles.md`.
 
-For an extensive spatial link set I with no two links on one plaquette, conditioning on the ENTIRE retained time history makes the discarded interior links factor into separate time chains. Actual correlated vacuum endpoint weights are preserved. Birkhoff contraction gives endpoint maximal correlation at most `theta_n=tanh(sum_e atanh(tanh(beta_e)^n))`, hence at most `|I| r^n` with `r=max_e tanh(beta_e)`. At fixed coupling, slab depth sufficient for fixed conditional accuracy grows logarithmically in |I|. This is not an improved one-step U032 projection bound.
+The six-color retained-history decomposition now has an explicit sufficient collective-variance coefficient on the ENTIRE centered physical endpoint algebra. A lower bound on this coefficient gives a physical-time transfer bound without assuming independent history layers or replacing history operators by powers of a reduced transfer. A direct bounded-density comparison proves a positive finite-Wilson coefficient, but the bound deteriorates exponentially in space-time volume and coupling.
 
-On the true stationary path space, let Pi_n retain that history and J_t embed endpoint functions. Then `K^n=H_n+E_n`, where `H_n=J_0* Pi_n J_n` and `||E_n||<=theta_n`. There is an explicit all-time weighted remainder bound. The history operators H_n are not asserted to be powers of a reduced transfer. A full gap would still require a uniform bound on the entire centered physical retained-history contribution; an exact slow-retained-state example shows why that term cannot be deleted.
+An exactly integrated two-dimensional Wilson cylinder has a centered, gauge-invariant boundary-loop observable with conditional-variance eigenvalue `1-[I_2(beta)/I_1(beta)]^L`, tending to zero at fixed circumference L as beta increases. The conditional algebras still intersect exactly at constants. This is a diagnostic Wilson model, NOT the four-dimensional vacuum or a counterexample to its mass gap.
 
-Twelve new exact checks and all twelve U032 checks passed. The checker `checks/U033_history_conditioned_slab_checks.py` includes actual spatial selection geometry, exact weighted path enumeration, arbitrary correlated endpoint factors, and ten continuous-SU(2) two-step cross-ratio certificates with complete rational series tails. Wolfram corroborated finite identities. Compilation and indentation checks passed; ruff/mypy/pyright/Lean are unavailable. Evidence, commands, domains and hashes are in `evidence/U033_manifest.json`. This is self-reviewed restricted mathematics, not formal/expert verification or a novelty claim.
+Retaining a forest at ONE TIME leaves only constants among physical retained observables, for any gauge-invariant vacuum measure. Combining this with U032 proves a full finite-regulator gap lower bound `-log(tanh(sum_cotree beta_e))/tau`; for a periodic spatial N-cube the uniform-coupling cotree count is `2N^3+1`. The bound is too weak in growing volume. The forest argument does not remove the full retained TIME HISTORY.
 
-Next target: bound the overlap of retained-history conditional-expectation ranges for multiple spatial color layers in the same Wilson vacuum, and connect it to the centered operator H_n. Exact intersection at constants is insufficient without a quantitative angle/variance estimate. No continuum construction or physical Yang–Mills mass bound is established.
+Eleven new exact checks and all twelve U033 checks passed. Run `python checks/U034_history_variance_and_cycle_checks.py --output evidence/U034_checks.json`. The checker includes exact weighted path enumeration, noncommuting SU(2) cylinder geometry, twelve all-tail Bessel-ratio certificates, and a finite-group forest control. The note and manifest distinguish these populations from the universal arguments. Two structural polynomial-equality test defects were repaired and recorded. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. Results are self-reviewed, not formal/expert verification or a novelty claim.
+
+Next target: an actual-vacuum conditional-variance response for overlapping physical cycle algebras, with connected-correlation control independent of the external volume and appropriate physical scaling. Trivial intersection, gauge invariance alone, and the finite cotree gap do not discharge this estimate. No continuum construction or scale-uniform physical Yang–Mills mass bound is established.
 
 ## Preserved nearest dependencies
 
-- U032: `research/audits/U032_true_vacuum_local_memory_bound.md` — fixed-set true-vacuum contraction, all-time Schur-memory tail, and non-tensorization control.
+- U033: `research/audits/U033_history_conditioned_sparse_slabs.md` — extensive noncofacial columns, actual endpoint weights, full-history contraction and the retained-history obligation.
+- U032: `research/audits/U032_true_vacuum_local_memory_bound.md` — fixed-set actual-vacuum contraction and all-time memory tail.
 - U031: `research/audits/U031_boundary_time_and_weighted_memory.md` — finite Wilson slabs and finite-moment limitations.
-- U030: `research/audits/U030_overlapping_decimation_and_transfer_memory.md` — overlapping integration and temporal-memory identities.
-- U029: `research/audits/U029_exact_link_marginal_and_gauge_cancellation.md` — exact link integration, gauge cancellation, and generated interactions.
-- U026–U028: unchanged small-graph results and limitations; not a joint-limit or volume-uniform physical mass theorem.
+- U029–U030: unchanged exact link/overlapping integration and temporal-memory records.
+- U026–U028: unchanged small-graph results and their nonuniform-limit limitations.
 - U003: conditional full-space gap transport, not an established Yang–Mills construction.
