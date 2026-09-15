@@ -1,0 +1,71 @@
+{
+  "date": "2026-09-15",
+  "base_commit": "8c03d35c20d265e0259c4c8e2be1d48b60e8a8c3",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "arithmetic": "SymPy 1.14.0 exact symbolic/rational; Wolfram 15.0.1 exact corroboration",
+  "new_tests": 13,
+  "prior_tests": 20,
+  "commands": [
+    "python checks/U028_cubic_and_small_field_checks.py --output evidence/U028_checks.json",
+    "python checks/U027_shared_link_checks.py",
+    "python checks/U026_one_plaquette_certificate.py --test",
+    "python -m compileall -q checks/U028_cubic_and_small_field_checks.py",
+    "python -m tabnanny checks/U028_cubic_and_small_field_checks.py"
+  ],
+  "preservation": "All seven U026 and all seven U027 manifest hashes unchanged",
+  "limits": [
+    "Full spectral/rank checks on four enumerated 3D boxes; an additional (3,3,3) box only tests a compactly supported Hodge identity",
+    "Fixed-graph spectral limit is a written self-reviewed proof, not uniform in size",
+    "Nonlinear comparison is potential-only on a specified interior Coulomb slice",
+    "Probability bound is Gaussian-reference-only",
+    "No static linter/typechecker or Lean available; none claimed"
+  ],
+  "files": [
+    {
+      "path": "research/audits/U028_cubic_constraints_and_small_field_test.md",
+      "bytes": 17726,
+      "sha256": "a9307849da0f17bed6383d45aa14d6bc756e17a403e41570630962ad7c9ff982"
+    },
+    {
+      "path": "checks/U028_cubic_and_small_field_checks.py",
+      "bytes": 11433,
+      "sha256": "202aa76ae28893b1a4b52e95f527e3caa94a1232101087c2c8d4141c2fd7ed23"
+    },
+    {
+      "path": "checks/U028_wolfram_cross_checks.wl",
+      "bytes": 894,
+      "sha256": "bd6a330843265aed78e209398eca93f4f350d895d6bdd253192106e34f8fe06c"
+    },
+    {
+      "path": "evidence/U028_checks.json",
+      "bytes": 1655,
+      "sha256": "2f74dfe04eae5ff40fbfb0e1fb087ff5dc1d479eded8589ca64b762e3c30666a"
+    },
+    {
+      "path": "evidence/U028_checks.log",
+      "bytes": 3121,
+      "sha256": "7c1b67e9ce19887d6e8cdbfe5d1e074b70cdf9fb863e0ffb9381db0375495c01"
+    },
+    {
+      "path": "evidence/U028_previous_tests.log",
+      "bytes": 3813,
+      "sha256": "8ff7a57f503f3cacf6a27821d6dee1a6c78bac23b4ef2c285ec077f6c5059a30"
+    },
+    {
+      "path": "evidence/U028_validation.log",
+      "bytes": 447,
+      "sha256": "1c903d960da1fdc4cd1b636e1c6148636b584fba2fc84c4a584ac8b64a725124"
+    },
+    {
+      "path": "evidence/U028_wolfram_cross_checks.json",
+      "bytes": 504,
+      "sha256": "ad3198741451d9aaade0cac4897157a04c214ef027ea8b3d0081e6abb0391319"
+    },
+    {
+      "path": "README.md",
+      "bytes": 9504,
+      "sha256": "1f739d14a9fd8dc19c1c2e632bd72d8e37edd4869a7f647990c33ade8ada3e2c"
+    }
+  ]
+}

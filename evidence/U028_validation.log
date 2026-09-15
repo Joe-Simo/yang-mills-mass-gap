@@ -1,0 +1,19 @@
+$ python -m compileall -q checks/U028_cubic_and_small_field_checks.py
+exit=0
+
+$ python -m tabnanny checks/U028_cubic_and_small_field_checks.py
+exit=0
+
+U026: all 7 manifest file hashes unchanged.
+
+U027: all 7 manifest file hashes unchanged.
+
+New tests: 13 passed; prior U027: 11 passed; prior U026: 9 passed.
+
+ruff: None (not run when absent)
+
+mypy: None (not run when absent)
+
+pyright: None (not run when absent)
+
+lean: None (not run when absent)

@@ -1,0 +1,137 @@
+{
+  "base_commit": "8c03d35c20d265e0259c4c8e2be1d48b60e8a8c3",
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact integers, rationals, symbolic identities; no random sampling",
+  "tests_run": 13,
+  "passed": true,
+  "runtime_seconds": 1.581415,
+  "boxes_tested": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      2,
+      1,
+      1
+    ],
+    [
+      2,
+      2,
+      1
+    ],
+    [
+      2,
+      2,
+      2
+    ]
+  ],
+  "cube_face_edge_incidence": [
+    [
+      1,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      -1,
+      0,
+      -1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      -1,
+      0,
+      0,
+      -1,
+      1
+    ]
+  ],
+  "cube_bianchi_row": [
+    -1,
+    1,
+    1,
+    -1,
+    -1,
+    1
+  ],
+  "cube_curl_spectrum": {
+    "0": 1,
+    "4": 3,
+    "6": 2
+  },
+  "general_proof_status": "Written derivations in U028, not inferred from finite tests",
+  "code_sha256": "202aa76ae28893b1a4b52e95f527e3caa94a1232101087c2c8d4141c2fd7ed23",
+  "nonclaims": [
+    "No joint weak-coupling/volume limit",
+    "No true-vacuum probability bound",
+    "No continuum mass gap"
+  ]
+}

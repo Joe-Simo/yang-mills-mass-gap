@@ -8,7 +8,19 @@ Private working repository for a rigorous attempt to resolve the Clay Yang–Mil
 
 The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
 
-## Latest checkpoint — U027, 2026-09-15
+## Latest checkpoint — U028, 2026-09-15
+
+Read `research/audits/U028_cubic_constraints_and_small_field_test.md`. The three-dimensional cubical complex retains Bianchi constraints: one cube has five independent curl directions, with positive eigenvalues 4 (three times) and 6 (twice). A tensor proof gives the full transverse spectrum on every open rectangular box. For each fixed N-cube, the full physical weak-coupling gap satisfies `lim_{g->0} a Delta_N=4sqrt(2)sin(pi/[2(N+1)])`; no joint coupling/size limit is inferred.
+
+An exact nonlinear Wilson-potential comparison has constants independent of support size on a specified, compactly supported linear-Coulomb slice: with `alpha=(32/sqrt(3))||Q||_3<1`, the potential lies between `(1-alpha)^2||curl A||^2/2` and `(1+alpha)^2||curl A||^2/2`. This is not a global nonlinear gauge choice, a kinetic estimate, or a true-vacuum gap bound.
+
+The next probability test rejects treating that global bare small-norm region as a dominant Gaussian sector: in the transverse quadratic vacuum, its probability tends to zero when `g_N N` grows without bound, including the defined test sequence `g_N^2=1/log(N+1)`. The proof treats correlated link fields through independent normal coordinates; it makes no probability claim for the true interacting vacuum.
+
+Thirteen new exact tests, all eleven U027 tests and all nine U026 tests passed. Run `python checks/U028_cubic_and_small_field_checks.py --output evidence/U028_checks.json`; the derivations, test scopes, Wolfram corroboration and hashes are recorded in `evidence/U028_manifest.json`. Earlier manifest-covered files were preserved. Compilation and indentation checks passed; no static lint/typecheck or Lean success is claimed. Results are self-reviewed auxiliary mathematics, not formal or independent expert verification.
+
+Next executable target: integrate short modes conditional on a retained low background and check gauge constraints on induced terms, with explicit remainder/volume control. A globally small bare field, a fixed-graph oscillator gap, or classical potential coercivity cannot substitute for a centered true-vacuum estimate in the joint limit.
+
+## Earlier checkpoint — U027, 2026-09-15
 
 Read `research/audits/U027_shared_link_and_patch_scaling.md`. The full two-square physical space retains simultaneous-conjugation mixed states. An exact three-path reduction gives `T=2(C_U+C_V)+R_U.R_V`; the separate-trace subspace contains no nonzero Hamiltonian eigenstate at positive magnetic coupling. The complete fixed-graph weak-coupling gap is `(2sqrt(3)+o(1))/a`, agreeing with the known leading result and smaller than the independent-square gap.
 

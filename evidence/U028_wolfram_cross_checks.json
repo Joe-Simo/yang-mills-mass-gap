@@ -1,0 +1,13 @@
+{
+  "version": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "CubeRank": 5,
+  "BianchiResidual": "zero 1 by 12 matrix",
+  "CubeFaceCharacteristicPolynomial": "t*(t-4)^3*(t-6)^2",
+  "CurlSymbolResidual": "zero 3 by 3 matrix",
+  "GaussianVariance": "1/(4*z)",
+  "LoopCount": "3*n^2+2*n^3",
+  "SobolevWilsonConstantSquared": "1024/3",
+  "ChernoffAuxDerivative": "-(t-1)^2/t",
+  "warnings": [],
+  "scope": "Algebraic corroboration with supplied incidence matrix, not independent construction or proof"
+}
