@@ -1,0 +1,78 @@
+{
+  "scope": "finite conditional-link identities and abstract transfer memory; NOT a physical Yang-Mills gap",
+  "tests_run": 11,
+  "tests_passed": true,
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "mpmath": "1.3.0"
+  },
+  "arithmetic": "Fraction and SymPy exact; mpmath quadrature explicitly noncertified",
+  "endpoint_correlation_certificates": [
+    {
+      "beta": "0",
+      "terms": 0,
+      "endpoint_correlation_lower": "0.0000000000000000000000",
+      "endpoint_correlation_upper": "0.0000000000000000000000"
+    },
+    {
+      "beta": "1",
+      "terms": 17,
+      "endpoint_correlation_lower": "0.0576930249865809182773",
+      "endpoint_correlation_upper": "0.0576930249865809182774"
+    },
+    {
+      "beta": "6",
+      "terms": 30,
+      "endpoint_correlation_lower": "0.5817510666277618748399",
+      "endpoint_correlation_upper": "0.5817510666277618748400"
+    },
+    {
+      "beta": "24",
+      "terms": 48,
+      "endpoint_correlation_lower": "0.8801812786757984635944",
+      "endpoint_correlation_upper": "0.8801812786757984635945"
+    },
+    {
+      "beta": "96",
+      "terms": 112,
+      "endpoint_correlation_lower": "0.9690750970406779063868",
+      "endpoint_correlation_upper": "0.9690750970406779063869"
+    }
+  ],
+  "fourfold_convolution_checks": [
+    {
+      "a": "1",
+      "c": "1",
+      "beta": "1",
+      "degree": "5",
+      "lower": "1.013335255186407790",
+      "upper": "1.013335255186407791",
+      "quadrature_noncertificate": "1.01333525518640779062890194257130090038106",
+      "uniform_tail_upper": "0.000000000000000000004527"
+    },
+    {
+      "a": "2",
+      "c": "3",
+      "beta": "4",
+      "degree": "9",
+      "lower": "1.461133778593301856",
+      "upper": "1.461133778593301857",
+      "quadrature_noncertificate": "1.46113377859330185658257517748735246500462",
+      "uniform_tail_upper": "0.000000000000000000002883"
+    },
+    {
+      "a": "4",
+      "c": "4",
+      "beta": "8",
+      "degree": "13",
+      "lower": "2.580261641528957091",
+      "upper": "2.580261641528957092",
+      "quadrature_noncertificate": "2.5802616415289570915255491373546962983998",
+      "uniform_tail_upper": "0.000000000000000000001491"
+    }
+  ],
+  "aligned_trace_correlation_limit": "1/1225 (analytic fixed-three-link Laplace limit)",
+  "memory_two_step_defect": "1/64 on the normalized coarse centered vector",
+  "elapsed_seconds": 0.5431183590000046
+}

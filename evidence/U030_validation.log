@@ -1,0 +1,14 @@
+$ python -m compileall -q checks/U030_overlap_and_transfer_checks.py
+exit=0
+
+
+$ python -m tabnanny checks/U030_overlap_and_transfer_checks.py
+exit=0
+
+
+ruff: executable=None, module=False
+mypy: executable=None, module=False
+pyright: executable=None, module=False
+lean: executable=None, module=False
+Preserved all eight non-README U029 manifest hashes; README intentionally updated, original retained in base Git commit and U029 archive.
+No static linter, typechecker, or Lean runtime was available; compilation and indentation checks are not substitutes.

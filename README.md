@@ -8,7 +8,19 @@ Private working repository for a rigorous attempt to resolve the Clay Yang–Mil
 
 The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
 
-## Latest checkpoint — U029, 2026-09-15
+## Latest checkpoint — U030, 2026-09-15
+
+Read `research/audits/U030_overlapping_decimation_and_transfer_memory.md`. An actual three-link cluster gives an exact second conditional integration, including overlapping first-layer factors. With zero central external source its full character expansion has explicit all-tail rational certificates. This is a finite coordinate marginal, not an extensive second RG layer or a physical transfer construction.
+
+Realizable cancelling boundary staples give endpoint trace correlation `[I_2(beta)/I_1(beta)]^2`, approaching one at weak bare coupling. Completely aligned boundaries instead give the fixed-three-link scalar correlation limit `1/1225`. Neither result supplies the probability of those surroundings in the full measure; connected terms cannot simply be deleted because beta is large.
+
+A separate bounded-transfer argument gives the exact memory identity `P S^2 P-(P S P)^2=(Q S P)* (Q S P)`. A positive, symmetric four-state Markov example shows a compressed transfer can overstate the gap. Retaining the temporal memory returns the problem to a centered, true-vacuum Schur bound; reflection positivity of a static marginal alone is not a memoryless transfer theorem.
+
+Eleven new tests and all eleven U029 tests passed. Run `python checks/U030_overlap_and_transfer_checks.py --output evidence/U030_checks.json`. The package records exact character tails, rational correlation intervals, noncertified quadrature corroboration, and Wolfram symbolic checks. Compilation and indentation checks passed; no static lint/typecheck, formal verification, independent expert review, or novelty claim is made. Earlier proof and checker files remain unchanged.
+
+Next target: retain a block/slab boundary-time algebra and bound `B[(1-delta)I-D]^{-1}B*` in the actual vacuum, without assuming a uniform discarded-sector gap. No many-block RG estimate, continuum construction, or physical Yang–Mills mass bound has been obtained.
+
+## Earlier checkpoint — U029, 2026-09-15
 
 Read `research/audits/U029_exact_link_marginal_and_gauge_cancellation.md`. Exact SU(2) Wilson-link integration gives `Z(z)=2 I_1(z)/z`, with the regular value `Z(0)=1`, and a gauge-invariant generated-loop action. For every surrounding link configuration, that action is bounded above and below by sums of retained loop deficits, with coefficients independent of lattice size. An extensive noncofacial first elimination layer factorizes exactly; this is a coordinate marginal, NOT a momentum-shell integration or a true-vacuum Hamiltonian comparison.
 
