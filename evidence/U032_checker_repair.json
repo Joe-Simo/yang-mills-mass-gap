@@ -1,0 +1,9 @@
+{
+  "initial_code_sha256": "62783b7c7dfe2baf77fefde237aa7937e7f462851231874e2de56557260ab434",
+  "initial_log_sha256": "dc09db367c04afd4c0909d5664f5e646e7478058de028585f540054ad216da77",
+  "initial_tests": 12,
+  "initial_failures": 1,
+  "cause": "SymPy structural equality compared algebraically equal but differently expanded rational expressions.",
+  "change": "Compare the exact simplified difference with zero; mathematical assertion unchanged.",
+  "final_code_sha256": "da042f8cb863f15c63c65ae5f6e349996080d6bbd3ea6acc74dbce3cc41a19d5"
+}

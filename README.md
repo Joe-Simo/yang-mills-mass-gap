@@ -1,99 +1,35 @@
 # Yang–Mills Existence and Mass Gap Research
 
-Private working repository for a rigorous attempt to resolve the Clay Yang–Mills existence and mass gap problem.
+Private working repository. **No complete verified solution.**
 
-## Status
+The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-**No complete verified solution.**
+## Latest checkpoint — U032, 2026-09-15
 
-The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
+Read `research/audits/U032_true_vacuum_local_memory_bound.md`.
 
-## Latest checkpoint — U031, 2026-09-15
+For the actual finite Wilson transfer and conditional expectation in its TRUE vacuum measure, discarding a fixed link set I gives `||K Q_I|| <= tanh(sum_(e in I) beta_(t,e))`. The coefficient is independent of the retained lattice volume and spatial coupling, not of the number of discarded links or their temporal couplings. The proof uses conditional cross ratios: unknown positive vacuum weights cancel, without replacing the vacuum by Haar or a Gaussian.
 
-Read `research/audits/U031_boundary_time_and_weighted_memory.md`. Complete finite SU(2) spatial boundary kernels glue exactly into physical-time slabs; their elementary true-vacuum minorization bound is positive but deteriorates exponentially with lattice volume and bare coupling. No continuum bound follows.
+This yields an all-time weighted-memory tail. With `r=tanh(sum beta_t)`, `N_k=B D^k B*`, and `r<q<1`, the tail after k=0,...,m is at most `(r/q)^(m+1) N_0/(q-r)`. Consequently `A+(M_2-A^2)/(q-r)<=qI` on the ENTIRE centered retained algebra is a sufficient full-transfer certificate. That retained inequality remains unproved uniformly in volume and regulator. Powers of D are not unprojected physical-time powers.
 
-A retained-time block-Hankel criterion is exact only at all depths and on the retained cyclic space. For any finite prescribed moment horizon, two explicit positive cyclic spectral models have identical data but arbitrarily different lower mass edges. A separate strictly positive four-state reversible Markov family has total unweighted memory tending to zero while its actual gap collapses.
+An exact correlated-endpoint example shows why independent temporal factors do not give an unchanged single-link coefficient for many discarded links. The example belongs to the broader positive-kernel class, not pure Wilson Yang–Mills. No extensive-block gap, continuum construction, or physical mass estimate is claimed.
 
-A weighted all-time memory criterion controls the full centered transfer when all discarded states are detectable, without assuming a strict discarded-sector separation from the target edge. An auxiliary infinite-dimensional example verifies the boundary case with a rigorous polynomial tail bound; it is not Yang–Mills. Actual vacuum-weighted tails and retained-algebra completeness uniformly in regulator and volume remain unproved.
+Run `python checks/U032_conditional_memory_checks.py --output evidence/U032_checks.json`. Twelve exact tests passed, and all thirteen U031 checks were rerun. The new note and `evidence/U032_manifest.json` record domains, rational Bessel/exponential tails for four named SU(2) benchmarks, the repaired structural-equality checker defect, clean Wolfram algebra corroboration, and limitations. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. This is self-reviewed auxiliary mathematics, not formal/expert verification or a novelty claim.
 
-Thirteen exact new checks and eleven rerun U030 checks passed. Run `python checks/U031_boundary_moment_checks.py --output evidence/U031_checks.json`; the note records scopes, three repaired pre-promotion checker defects, clean Wolfram corroboration, and limits. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. Earlier mathematical files are unchanged; only README is intentionally updated relative to earlier manifests. Results are self-reviewed, with no formal/expert verification or novelty claim.
+Next target: a retained-algebra Schur bound or a Wilson-specific collective conditional-variance estimate that improves the discarded-set dependence, in the same vacuum and physical-time representation. Local contraction alone does not protect slow collective retained states.
 
-Next executable target: derive a weighted long-time tail for a gauge-invariant reduced Wilson slab in its actual vacuum, or prove an adequate substitute for all-depth positivity, while controlling every discarded slow sector. A finite correlation list, small unweighted memory, and the compact finite-volume gap cannot replace this estimate.
+## Preserved nearest dependencies
 
-## Earlier checkpoint — U030, 2026-09-15
+- U031: `research/audits/U031_boundary_time_and_weighted_memory.md` — finite Wilson slabs, finite-moment and unweighted-memory obstructions, and the conditional all-time certificate.
+- U030: `research/audits/U030_overlapping_decimation_and_transfer_memory.md` — exact overlapping integration and the projection-memory identity.
+- U029: `research/audits/U029_exact_link_marginal_and_gauge_cancellation.md` — exact first link layer, gauge cancellation, non-Wilson generated interactions.
+- U026–U028: complete small-graph results, shared-link/cubic constraints, and the failed global Gaussian small-field hypothesis; see their unchanged files in `research/audits/`.
+- U003: `research/audits/U003_relative_gap_certificate.md` — conditional centered full-space gap transport, not an established Yang–Mills construction.
 
-Read `research/audits/U030_overlapping_decimation_and_transfer_memory.md`. An actual three-link cluster gives an exact second conditional integration, including overlapping first-layer factors. With zero central external source its full character expansion has explicit all-tail rational certificates. This is a finite coordinate marginal, not an extensive second RG layer or a physical transfer construction.
+All older mathematical notes and checkers are preserved. The longer prior status entries remain in the parent revision's README at commit `aee6a18c4ccdb392fcfc412b128e36b545c92cf2`; this current-status view is compacted rather than duplicating those entries indefinitely. An earlier status label is not automatic validation of its proof. U032 does not rely on the disputed older scalar-localization sequence.
 
-Realizable cancelling boundary staples give endpoint trace correlation `[I_2(beta)/I_1(beta)]^2`, approaching one at weak bare coupling. Completely aligned boundaries instead give the fixed-three-link scalar correlation limit `1/1225`. Neither result supplies the probability of those surroundings in the full measure; connected terms cannot simply be deleted because beta is large.
+## Normalizations and non-claims
 
-A separate bounded-transfer argument gives the exact memory identity `P S^2 P-(P S P)^2=(Q S P)* (Q S P)`. A positive, symmetric four-state Markov example shows a compressed transfer can overstate the gap. Retaining the temporal memory returns the problem to a centered, true-vacuum Schur bound; reflection positivity of a static marginal alone is not a memoryless transfer theorem.
+The Euclidean Wilson transfer uses spatial and temporal inverse couplings beta_s and beta_t. The earlier Hamiltonian parameter `lambda=4/g^4` is distinct. In the U002 curvature notation, `beta_W=4 beta_S`, so `beta_W=4/g0^2` corresponds to `beta_S=1/g0^2`; the direction `1-32 beta_S` is not in beta_W units.
 
-Eleven new tests and all eleven U029 tests passed. Run `python checks/U030_overlap_and_transfer_checks.py --output evidence/U030_checks.json`. The package records exact character tails, rational correlation intervals, noncertified quadrature corroboration, and Wolfram symbolic checks. Compilation and indentation checks passed; no static lint/typecheck, formal verification, independent expert review, or novelty claim is made. Earlier proof and checker files remain unchanged.
-
-Next target: retain a block/slab boundary-time algebra and bound `B[(1-delta)I-D]^{-1}B*` in the actual vacuum, without assuming a uniform discarded-sector gap. No many-block RG estimate, continuum construction, or physical Yang–Mills mass bound has been obtained.
-
-## Earlier checkpoint — U029, 2026-09-15
-
-Read `research/audits/U029_exact_link_marginal_and_gauge_cancellation.md`. Exact SU(2) Wilson-link integration gives `Z(z)=2 I_1(z)/z`, with the regular value `Z(0)=1`, and a gauge-invariant generated-loop action. For every surrounding link configuration, that action is bounded above and below by sums of retained loop deficits, with coefficients independent of lattice size. An extensive noncofacial first elimination layer factorizes exactly; this is a coordinate marginal, NOT a momentum-shell integration or a true-vacuum Hamiltonian comparison.
-
-The marginal Hessian is `E[S'']-Var(S')`. Along a common endpoint-gauge variation the covariance cancels the entire positive averaged curvature, so dropping it would create a spurious gauge mass. Exact noncommutative quartic terms are retained. For two staples the induced action is not linear in the retained Wilson-loop deficit at any positive coupling; further integrations cannot be represented exactly by a single updated Wilson coupling. Frustrated boundary stars can have an exactly Haar conditional law even as the bare coupling parameter grows.
-
-Eleven focused new tests and all thirteen U028 tests passed. Run `python checks/U029_exact_link_integration_checks.py --output evidence/U029_checks.json`. Exact rational positive-series tails enclose the Bessel-ratio coefficients at six nonnegative arguments; separate quadrature and Wolfram results are corroboration only. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. No prior research note or checker was modified; only this README changes an older manifest-covered file, whose earlier version remains in Git and the supplied archive.
-
-Next executable target: control overlapping generated-loop interactions in a second elimination and establish a centered physical-time transfer comparison in the actual vacuum. No mass-gap estimate, repeated-RG bound, continuum construction, or novelty claim follows from this exact first-layer action result.
-
-## Earlier checkpoint — U028, 2026-09-15
-
-Read `research/audits/U028_cubic_constraints_and_small_field_test.md`. The three-dimensional cubical complex retains Bianchi constraints: one cube has five independent curl directions, with positive eigenvalues 4 (three times) and 6 (twice). A tensor proof gives the full transverse spectrum on every open rectangular box. For each fixed N-cube, the full physical weak-coupling gap satisfies `lim_{g->0} a Delta_N=4sqrt(2)sin(pi/[2(N+1)])`; no joint coupling/size limit is inferred.
-
-An exact nonlinear Wilson-potential comparison has constants independent of support size on a specified, compactly supported linear-Coulomb slice: with `alpha=(32/sqrt(3))||Q||_3<1`, the potential lies between `(1-alpha)^2||curl A||^2/2` and `(1+alpha)^2||curl A||^2/2`. This is not a global nonlinear gauge choice, a kinetic estimate, or a true-vacuum gap bound.
-
-The next probability test rejects treating that global bare small-norm region as a dominant Gaussian sector: in the transverse quadratic vacuum, its probability tends to zero when `g_N N` grows without bound, including the defined test sequence `g_N^2=1/log(N+1)`. The proof treats correlated link fields through independent normal coordinates; it makes no probability claim for the true interacting vacuum.
-
-Thirteen new exact tests, all eleven U027 tests and all nine U026 tests passed. Run `python checks/U028_cubic_and_small_field_checks.py --output evidence/U028_checks.json`; the derivations, test scopes, Wolfram corroboration and hashes are recorded in `evidence/U028_manifest.json`. Earlier manifest-covered files were preserved. Compilation and indentation checks passed; no static lint/typecheck or Lean success is claimed. Results are self-reviewed auxiliary mathematics, not formal or independent expert verification.
-
-Next executable target: integrate short modes conditional on a retained low background and check gauge constraints on induced terms, with explicit remainder/volume control. A globally small bare field, a fixed-graph oscillator gap, or classical potential coercivity cannot substitute for a centered true-vacuum estimate in the joint limit.
-
-## Earlier checkpoint — U027, 2026-09-15
-
-Read `research/audits/U027_shared_link_and_patch_scaling.md`. The full two-square physical space retains simultaneous-conjugation mixed states. An exact three-path reduction gives `T=2(C_U+C_V)+R_U.R_V`; the separate-trace subspace contains no nonzero Hamiltonian eigenstate at positive magnetic coupling. The complete fixed-graph weak-coupling gap is `(2sqrt(3)+o(1))/a`, agreeing with the known leading result and smaller than the independent-square gap.
-
-A fixed-rectangle extension gives `lim_{g->0} a Delta_(N,N)=4sqrt(2)sin(pi/[2(N+1)])`, which tends to zero as the planar square patch grows. The proof keeps the weak-coupling and graph-size limits separate; no joint-limit or four-dimensional continuum conclusion is claimed. This rules out an unchanged, graph-size-uniform cell-gap coefficient for these planar models.
-
-Eleven new exact symbolic tests and all nine U026 tests passed. The new checker is `checks/U027_shared_link_checks.py`, with output/provenance in `evidence/U027_checks.json` and `evidence/U027_manifest.json`. Wolfram independently confirmed the shared-link polynomial action. All U026 manifest hashes were preserved. The results are self-reviewed auxiliary proofs, not formal or independent expert verification.
-
-Remaining target: a true-vacuum centered comparison on growing spatial three-dimensional blocks, retaining collective mixed-loop states and controlling weak coupling and size uniformly. Finite-cell gaps, oscillator asymptotics, and Ritz upper bounds cannot replace that estimate.
-
-## Earlier checkpoint — U026, 2026-09-15
-
-Read `research/audits/U026_one_plaquette_true_vacuum_gap.md`. On the COMPLETE physical Hilbert space of an isolated SU(2) square, a comparison proof gives a true-vacuum gap at least `max(1,g^2/2)/a`; its weak-coupling value is `(4+o(1))/a`. This is a cutoff-scale gap, not a finite continuum mass. The radial reduction and leading asymptotic are known after normalization translation; no novelty claim is made.
-
-The unit also proves that independent-square refinement loses bounded-norm positive-time finite-energy content, and exhibits a nonzero mixed two-loop invariant omitted by tensor products of individual class functions. No many-plaquette lower bound follows from the one-square result.
-
-Run `python checks/U026_one_plaquette_certificate.py --test` and `python checks/U026_one_plaquette_certificate.py`. Nine focused tests passed; `evidence/U026_certificates.json` records exact rational enclosures at five couplings, with the omitted infinite tail controlled analytically. Wolfram and a separate tridiagonal computation corroborated the results. A conflicting SciPy Mathieu output at the largest coupling was rejected and retained in the evidence. Compilation and indentation checks passed; static lint/typecheck tools were unavailable. Historical suites were not rerun in U026.
-
-Next executable target: derive and test the complete shared-link kinetic form for two adjacent squares, including simultaneous-conjugation mixed states. Do not multiply independent-plaquette gaps or infer lower gaps from Ritz eigenvalues alone. U026 does not validate the entire older scalar-localization chain; previous records remain preserved for audit.
-
-## Earlier checkpoint — U003, 2026-09-14
-
-Read `research/audits/U003_relative_gap_certificate.md` for the conditional full-space gap-transport theorem, its proof, exact SU(2) initialization tests, source locators, and remaining obligations. This is self-reviewed partial research, not a complete candidate or formal/expert verification.
-
-The new estimate controls retained states, all discarded states, and their mixed quadratic form at one fixed physical time. Relative errors with a summable squared mixing coefficient preserve a positive product margin under the explicitly stated hypotheses. Those hypotheses have not been established for a continuum Yang–Mills construction.
-
-The raw Haar/electric reference fails a concrete small-relative-magnetic-perturbation test already on two gauge-invariant SU(2) plaquette characters. A follow-up positive one-plaquette trial state also fails a small global residual-oscillation test; weighted or energy-relative estimates remain possible. Neither failure is a counterexample to Yang–Mills.
-
-Run `python checks/U003_relative_gap_checks.py` in an environment with SymPy. The actual Python 3.13.5 / SymPy 1.14.0 output is in `evidence/U003_checks.log`: **12 tests passed**. The preceding U002 tests also passed when rerun. Finite tests do not establish the infinite-dimensional or continuum claims; the conditional theorems use the written proofs.
-
-Next executable step: derive a weighted or energy-relative residual estimate for the positive trial state, then test the shared-link terms for two adjacent plaquettes without assuming independent plaquettes or a pre-existing infinite-volume gap.
-
-### Correction to the inherited coupling notation
-
-The initial record below used `beta` for two different conventions. For exponent `2 beta_S Tr(U_p)` versus ordinary SU(2) Wilson exponent `(beta_W/2) Tr(U_p)`, one has `beta_W=4 beta_S`. Thus `beta_W=4/g0^2` corresponds to `beta_S=1/g0^2`. The curvature direction is `1-32 beta_S`, with failure of strict global positivity at `beta_S>=1/32`. Both inverse couplings diverge along the proposed weak-coupling continuum trajectory. This correction was derived in U002 and is retained in U003; the original wording below is historical, not the current normalization.
-
-## Initial research state — preserved historical wording
-
-1. Strong-coupling lattice results are relevant partial inputs but do not directly reach the continuum scaling trajectory.
-2. A direct SU(2), d=4 calculation gives a configuration/direction where the Bakry–Émery curvature of the Wilson lattice measure equals `1 - 32 beta`; hence any proof requiring globally positive Bakry–Émery curvature of this standard form fails for `beta > 1/32`, while the Wilson continuum trajectory has `beta = 4/g0^2 -> infinity`.
-3. A 2026 published/arXiv claim of a complete reflection-positive construction (Faizal–Shabir, arXiv:2606.19362) is under audit. A concrete internal inconsistency has been identified: several sections simultaneously require a compactly supported spectral cutoff and a positive heat-kernel/Laplace representation, which is impossible for a nonzero completely monotone function. Other sections of the same manuscript explicitly acknowledge this impossibility and switch to non-compact completely monotone profiles. This must be resolved before the paper can be treated as a valid proof.
-
-See `research/checkpoints/checkpoint-2026-09-14.md` for the historical derivations and source details, and `research/audits/U002_transfer_limit_audit.md` for subsequent corrections and the conditional physical-time bridge.
+No public posting, prize submission, researcher contact, paid computation, or unattended process is authorized by this repository status. A commit, a finite test, and a self-review are not a complete Yang–Mills proof.

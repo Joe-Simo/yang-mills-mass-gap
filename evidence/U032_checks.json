@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "tests_run": 12,
+  "seconds": 0.18091920000006212,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational/polynomial decisions; outward-rounded displayed certificates",
+  "seed": null,
+  "matrix_scope": "two-bit positive product-temporal kernels, not Wilson measurements",
+  "endpoint_weights": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      5
+    ],
+    [
+      1000,
+      1,
+      1,
+      1000
+    ]
+  ],
+  "single_coordinate_rate_beta_log2": "3/5",
+  "batch_sharp_limit_two_coordinates": "15/17",
+  "memory_powers_checked": [
+    0,
+    6
+  ],
+  "weighted_tail_prefixes_checked": [
+    0,
+    5
+  ],
+  "su2_fundamental_benchmarks": [
+    {
+      "beta": "1/2",
+      "bessel_terms": 9,
+      "exp_terms": 100,
+      "fundamental_transfer_interval": [
+        "0.000234277486316028",
+        "0.000234277486316029"
+      ],
+      "tanh_bound_interval": [
+        "0.462117157260009758",
+        "0.462117157260009759"
+      ],
+      "strict_inequality_by_exact_rationals": true
+    },
+    {
+      "beta": "1",
+      "bessel_terms": 17,
+      "exp_terms": 100,
+      "fundamental_transfer_interval": [
+        "0.003328485132102250",
+        "0.003328485132102251"
+      ],
+      "tanh_bound_interval": [
+        "0.761594155955764888",
+        "0.761594155955764889"
+      ],
+      "strict_inequality_by_exact_rationals": true
+    },
+    {
+      "beta": "2",
+      "bessel_terms": 18,
+      "exp_terms": 100,
+      "fundamental_transfer_interval": [
+        "0.035193522791114849",
+        "0.035193522791114850"
+      ],
+      "tanh_bound_interval": [
+        "0.964027580075816883",
+        "0.964027580075816884"
+      ],
+      "strict_inequality_by_exact_rationals": true
+    },
+    {
+      "beta": "6",
+      "bessel_terms": 22,
+      "exp_terms": 100,
+      "fundamental_transfer_interval": [
+        "0.338434303522538636",
+        "0.338434303522538637"
+      ],
+      "tanh_bound_interval": [
+        "0.999987711650795570",
+        "0.999987711650795571"
+      ],
+      "strict_inequality_by_exact_rationals": true
+    }
+  ],
+  "nonclaims": [
+    "No full Yang--Mills gap",
+    "No simulation of the true vacuum",
+    "No extensive-decimation rate independent of removed-set size",
+    "No universal proof by finite tests"
+  ]
+}

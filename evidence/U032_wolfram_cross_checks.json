@@ -1,0 +1,36 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "clean_call_cap_seconds": 20,
+  "clean_output": {
+    "BatchEigenResidual": [
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "BatchExcessOverSingle": "24 (t-1)/(5 (8+17t))",
+    "WeightedReversibilityResidual": "zero 4 by 4 matrix",
+    "MemoryNotTruePowerResidual": "zero 4 by 4 matrix",
+    "MemoryDifferenceTrace": "2947989749200/13420834693761683",
+    "SingleRateRational": "3/5",
+    "BatchRateRational": "15/17"
+  },
+  "initial_call_cap_seconds": 30,
+  "initial_messages": [
+    "Infinity::indet: 0*Infinity",
+    "Power::infy: 1/0"
+  ],
+  "initial_returned_expressions": {
+    "LikelihoodInequalityResidual": "0",
+    "SingleCoordinateRate": "3/5",
+    "BatchEigenResidual": "zero 4-vector",
+    "BatchExcessOverSingle": "24(t-1)/(5(8+17t))",
+    "BatchLimit": "15/17",
+    "WeightedReversibilityResidual": "zero 4 by 4 matrix",
+    "MemoryNotTruePowerResidual": "zero 4 by 4 matrix",
+    "MemoryDifferenceTrace": "2947989749200/13420834693761683",
+    "TailFormulaResidual": "0",
+    "SmallTimeRateLimit": "2"
+  },
+  "interpretation": "Initial warned expressions are not certificates; clean algebra corroborates only stated finite identities. Universal proof is self-reviewed in the note."
+}

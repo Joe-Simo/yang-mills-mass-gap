@@ -1,0 +1,150 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "aee6a18c4ccdb392fcfc412b128e36b545c92cf2",
+  "base_tree": "5a4a457d751f6528ecece4a22ab171b1085f0889",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed finite-Wilson fixed-coordinate-set proof with exact finite algebra checks",
+  "new_tests": 12,
+  "prior_tests_rerun": 13,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U032_conditional_memory_checks.py --output evidence/U032_checks.json > evidence/U032_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U031_boundary_moment_checks.py --output evidence/U032_prior_U031_checks.json > evidence/U032_previous_tests.log 2>&1",
+    "python -m compileall -q checks/U032_conditional_memory_checks.py",
+    "python -m tabnanny checks/U032_conditional_memory_checks.py"
+  ],
+  "exit_codes": {
+    "final_new_tests": 0,
+    "prior_U031": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1"
+  },
+  "caps": {
+    "new_suite_wall_seconds": 45,
+    "prior_suite_wall_seconds": 45,
+    "wolfram_initial_seconds": 30,
+    "wolfram_clean_seconds": 20,
+    "threads": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 cooperative",
+    "matrix_dimension_max": 4,
+    "memory_power_max": 6,
+    "tail_prefix_max": 5,
+    "exponential_terms": 100,
+    "bessel_terms_recorded_in_checks": true
+  },
+  "preservation": "All eight U031 manifest hashes matched on entry. All seven non-README entries still match. All 62 restored archive files compared; only README intentionally changed. Prior status text remains in parent Git revision; mathematical files unchanged.",
+  "input_files": [
+    {
+      "path": "research/audits/U031_boundary_time_and_weighted_memory.md",
+      "bytes": 28354,
+      "sha256": "93c4950996fcc3681e2685fafd05e455065799d36f5d3744f4f34754e4a9b156",
+      "git_blob_sha": "682f1353b0b29bdc173a0dc3b8ff9c7060c9b9ef"
+    },
+    {
+      "path": "checks/U029_exact_link_integration_checks.py",
+      "bytes": 12441,
+      "sha256": "30da13de27463fad033a9dba1c21620fdca3c2193457cd6c82e15f913c4089ae",
+      "git_blob_sha": "18facacdc0220a3e35e03f690c183378be284d86"
+    },
+    {
+      "path": "checks/U031_boundary_moment_checks.py",
+      "bytes": 15680,
+      "sha256": "c8f53d98ff0028b43440c3c8fb21e7cd27b4a43c403665365ce86d25abd56fdf",
+      "git_blob_sha": "1b6b7cc5e26b0d24bb93c931d168366ab69534d6"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/audits/U032_true_vacuum_local_memory_bound.md",
+      "bytes": 21326,
+      "sha256": "8554c7d935f1bcb4922440981ca6fae215f72f5ecb9ec23f28491f9556931603",
+      "git_blob_sha": "45892f7c864128a0c80fc2794811541f7f8bc9b2"
+    },
+    {
+      "path": "checks/U032_conditional_memory_checks.py",
+      "bytes": 12349,
+      "sha256": "da042f8cb863f15c63c65ae5f6e349996080d6bbd3ea6acc74dbce3cc41a19d5",
+      "git_blob_sha": "5583a5bbbcbd1bb50541365114d946df3a824fd9"
+    },
+    {
+      "path": "checks/U032_wolfram_cross_checks.wl",
+      "bytes": 945,
+      "sha256": "0a9e26805fcfb860ca90068218763c1652969e2b086b14a98189d062b5373f20",
+      "git_blob_sha": "309a39d7fdf12c15dd1791dd4833a608b822a3b7"
+    },
+    {
+      "path": "evidence/U032_checks.json",
+      "bytes": 2331,
+      "sha256": "98f979d0349d115c8dbe9ad3362d5620b1748e31346f3950b1d61a93bffb6ad9",
+      "git_blob_sha": "38b71ff825510d5be258f3ca31f7692fa00f4607"
+    },
+    {
+      "path": "evidence/U032_checker_repair.json",
+      "bytes": 543,
+      "sha256": "91cf8c689401e3a7e5bbd8dd26043bd6539ce4eac8ef8efbd5dca97be7f05695",
+      "git_blob_sha": "499da77f79d84ed108bdaf72d51ae9d831c4b1f3"
+    },
+    {
+      "path": "evidence/U032_wolfram_cross_checks.json",
+      "bytes": 1272,
+      "sha256": "06d225f5dad8c0dcb390981ba631d97bf4a3789bb7dfca814a579a998db647db",
+      "git_blob_sha": "5d8d17d473699530d5f2ae9683b72d8e3ab826e4"
+    },
+    {
+      "path": "evidence/U032_validation.log",
+      "bytes": 190,
+      "sha256": "c975813b6018db30a6c238eab9fca66fa852d7330d675074d091d29b61f4ac7d",
+      "git_blob_sha": "d77411c4011581eab1174a99ac45ae931870d6a5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4414,
+      "sha256": "fe803004409756e370870fe4b53adb8885849e6b78cc886fc8ccc54bccc61305",
+      "git_blob_sha": "2c8d6c0db92fc38daa5b1be930396783811985c1"
+    }
+  ],
+  "package_only_logs": [
+    {
+      "path": "evidence/U032_checks.log",
+      "bytes": 3967,
+      "sha256": "e5084cb70582b61866f52b706881d028b078434c214a82671a3af510f0866c77",
+      "git_blob_sha": "0d1e343f5f30355483fadf8af674e73a825b9f67"
+    },
+    {
+      "path": "evidence/U032_previous_tests.log",
+      "bytes": 3765,
+      "sha256": "2feb410a086bd4b807b2127f7ee44f05d82b1e58d687a64627210a66c4eec7fb",
+      "git_blob_sha": "bc9379e72f41fbe960244fc11e892aa89308b654"
+    },
+    {
+      "path": "evidence/U032_prior_U031_checks.json",
+      "bytes": 1868,
+      "sha256": "514f387a572e6adfbff27ce216169a74f5d058a0a9cd64df106afe0c657b7c2c",
+      "git_blob_sha": "e675d257bd98097e51d4441a79f2a5178001d9a2"
+    },
+    {
+      "path": "evidence/U032_initial_failure.log",
+      "bytes": 3305,
+      "sha256": "dc09db367c04afd4c0909d5664f5e646e7478058de028585f540054ad216da77",
+      "git_blob_sha": "64065efb05491f68a55ba6a3768b40fa19f24c95"
+    }
+  ],
+  "stored_evidence": "Core files are versioned remotely; raw logs and prior rerun JSON named package_only_logs are in the downloadable package, not claimed as remote files.",
+  "static_or_formal_tools": "ruff/mypy/pyright/Lean/Bun unavailable; compilation and indentation are not substitutes for static typechecking or formal proof.",
+  "failed_initial_check": "One structural-expression equality failure repaired before promotion; mathematical statement unchanged. Initial log/hash and clean final output retained.",
+  "source_versions": [
+    "Gaubert-Qu arXiv:1307.4649v3 (2014-11-01), Theorem 5.6 / Corollary 5.7",
+    "Polyanskiy-Wu arXiv:1508.06025v4 (2016-07-28), Section 2.1"
+  ],
+  "remaining_obligations": [
+    "Retained Schur inequality on the complete actual-vacuum algebra uniformly in volume/cutoff.",
+    "Useful collective bound when the number of discarded links grows, without assuming endpoint independence.",
+    "Repeated-decimation physical-time dictionary, continuum construction and nontrivial finite physical mass for every target group."
+  ],
+  "self_review": "No independent expert or formal verification; no novelty claim."
+}
