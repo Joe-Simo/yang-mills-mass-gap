@@ -1,0 +1,158 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "2bcf36ad370b7ca2392da001d284e5dd9434e1ac",
+  "base_tree": "203a3435d466bcc21275775a6dc1f13d47d1f0e2",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed finite-SU(2) interacting-block comparison with full boundary sectors and weak interfaces; established methods; exact finite audits",
+  "new_tests": 10,
+  "prior_tests_rerun": 12,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U037_interacting_block_checks.py --output evidence/U037_checks.json > evidence/U037_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U036_column_comparison_checks.py --output evidence/U037_previous_checks.json > evidence/U037_previous_checks.log 2>&1",
+    "python -m compileall -q checks/U037_interacting_block_checks.py",
+    "python -m tabnanny checks/U037_interacting_block_checks.py"
+  ],
+  "exit_codes": {
+    "new_suite_first_run": 0,
+    "prior_U036": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1",
+    "static_and_formal": "ruff/mypy/pyright/Lean unavailable; not run"
+  },
+  "timing_seconds": {
+    "new_suite": 0.15042351100004225,
+    "prior_suite": 1.7722624970000425
+  },
+  "bounds": {
+    "suite_wall_seconds": 45,
+    "wolfram_seconds_each_call": 20,
+    "thread_settings": "cooperative OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1",
+    "binary_kernel_dimension": 4,
+    "binary_path_population": 1024,
+    "binary_internal_weights": [
+      1,
+      16,
+      10000
+    ],
+    "matrix_powers": [
+      1,
+      2,
+      4,
+      12
+    ],
+    "tilings_N_m": [
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        2
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        8,
+        4
+      ]
+    ],
+    "finite_group": "Q8 only as an algebra fixture",
+    "arithmetic": "exact Fraction and SymPy; no floating decisions",
+    "seed": null
+  },
+  "preservation": {
+    "restored_missing": 121,
+    "matched_existing": 2,
+    "overwritten_or_conflicting": 0,
+    "prior_primary_hashes_checked": 8,
+    "old_archive_entries": 123,
+    "changed_relative_to_archive": [
+      "README.md"
+    ],
+    "unchanged_prior_note_checker_evidence": true,
+    "prior_readme_sha256": "f397f3ad98fba08477c9b4309dc13751333bf01bdc37857ff1557127c4c0378f"
+  },
+  "sources": [
+    {
+      "source": "Rebeschini-van Handel arXiv:1308.4117v1",
+      "url": "https://arxiv.org/html/1308.4117v1",
+      "locators": "Definitions 2.2-2.3, Theorem 2.4, Corollary 2.8 and Section 3.2",
+      "use": "load-bearing block comparison with explicit Wilson update dictionary"
+    },
+    {
+      "source": "Donnelly arXiv:1109.0036v2",
+      "url": "https://arxiv.org/html/1109.0036v2",
+      "locators": "Section II equations 8-9,13-14,18",
+      "use": "contextual boundary-representation overlap; own gluing proof uses a stated convention"
+    },
+    {
+      "source": "NIST DLMF 10.40.1",
+      "url": "https://dlmf.nist.gov/10.40",
+      "use": "fixed-order positive-axis asymptotics only"
+    },
+    {
+      "source": "CMI current Yang-Mills problem page",
+      "url": "https://www.claymath.org/millennium/yang-mills-the-maths-gap/",
+      "use": "status check only; still unsolved"
+    }
+  ],
+  "limitations": [
+    "weak-interface regime, not isotropic weak coupling",
+    "intrinsic all-boundary b may grow exponentially with block size/coupling",
+    "no unjustified independent regional singlet projection",
+    "no joint ultraviolet/infinite-volume construction or all-group theorem",
+    "binary/Q8 results are not Wilson measurements",
+    "self-review, no formal or independent expert verification, no novelty claim"
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "db1f375e918f7e4867aa4e56c8c6390f6a9510d49b0fcd40a0081d88fb183072",
+      "bytes": 3615
+    },
+    "research/audits/U037_interacting_blocks_and_boundary_sectors.md": {
+      "sha256": "056c12715f2d8297e64978d3005ffc71d0d8b5c6d8f6f5ab2d7558188a476c6a",
+      "bytes": 27157
+    },
+    "checks/U037_interacting_block_checks.py": {
+      "sha256": "c3d138bbcf94ba0f95450741c43c52fe1a8d2d1d924268ff0ca5249b65f19af7",
+      "bytes": 9895
+    },
+    "checks/U037_wolfram_cross_checks.wl": {
+      "sha256": "fd94a1d0482d2bae47c4e704c805e8528b055fab65f6cd0417182ad4a2b33799",
+      "bytes": 658
+    },
+    "evidence/U037_checks.json": {
+      "sha256": "6bf2d4acc13f8fda069882484eb994348de6ac8e76ff5ce2173189f2c45d8635",
+      "bytes": 1133
+    },
+    "evidence/U037_checks.log": {
+      "sha256": "3cca35f439526f4b890ce0ca313536e2eab6edd1463a833babd2d9e8d27dde99",
+      "bytes": 1099
+    },
+    "evidence/U037_previous_checks.json": {
+      "sha256": "07ab8f0052666e280cf5c343ba4ad7afc6cfa8b733ff5090e65f85deef06cccf",
+      "bytes": 1571
+    },
+    "evidence/U037_previous_checks.log": {
+      "sha256": "d999482dcbc6940b158342b6530bd8e5ae83f4fb9eb3bbbbe872c0b2ff7bfbc3",
+      "bytes": 2790
+    },
+    "evidence/U037_wolfram_cross_checks.json": {
+      "sha256": "7a6b02dd2e5b77a7804d23d9e70c72e4ebb1f267c5134b8f7ec59dee27e9e5dc",
+      "bytes": 2169
+    },
+    "evidence/U037_validation.log": {
+      "sha256": "1b285233b4d7903bd8b9ec4d5ce10e205477c4096369ff6b234db1bf92850a59",
+      "bytes": 401
+    }
+  }
+}
