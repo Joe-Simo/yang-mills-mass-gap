@@ -1,0 +1,190 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "bbc252a65a7156fe8c40b721c1794d5a85e594a7",
+  "base_tree": "2cae3319c6d526654c299db21d2986304707e0a8",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed finite-Wilson vacuum-response identities; zero-spatial-reference connected coefficients; restricted finite-source analytic bounds",
+  "new_tests": 12,
+  "prior_tests_rerun": 11,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U035_vacuum_cycle_response_checks.py --output evidence/U035_checks.json > evidence/U035_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 timeout 45s python checks/U034_history_variance_and_cycle_checks.py --output evidence/U035_previous_checks.json > evidence/U035_previous_checks.log 2>&1",
+    "python -m compileall -q checks/U035_vacuum_cycle_response_checks.py",
+    "python -m tabnanny checks/U035_vacuum_cycle_response_checks.py"
+  ],
+  "exit_codes": {
+    "new_suite": 0,
+    "prior_U034": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1"
+  },
+  "timing_seconds": {
+    "new_suite": 4.68491904199999,
+    "prior_suite": 0.17407564899997396
+  },
+  "caps": {
+    "suite_wall_seconds": 45,
+    "wolfram_seconds": 20,
+    "threads": "cooperative OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1",
+    "fixture_states": 4,
+    "path_horizons": [
+      1,
+      2,
+      3
+    ],
+    "largest_path_population": 256,
+    "spatial_geometry_N": [
+      4,
+      6
+    ],
+    "su2_beta_t": [
+      "0",
+      "1/2",
+      "2",
+      "8",
+      "32",
+      "128"
+    ],
+    "positive_series_cap": 4096,
+    "ratio_rational_width_decimal_digits": 52,
+    "display_decimal_places": 22,
+    "display_rounding": "outward from exact rational endpoints"
+  },
+  "preservation": "96 missing files restored from U034 archive; 2 matched; 0 conflicts. All eight U034 manifest files matched before work and before intentional README replacement. Prior mathematical/checker/evidence files remain unchanged. No local Git checkout or executable ledger.",
+  "input_files": [
+    {
+      "path": "research/audits/U034_history_variance_and_physical_cycles.md",
+      "bytes": 22164,
+      "sha256": "2d419630ce9588d4c241236dc8a8c6a51585829be1111e1c7d091a8400f252bf",
+      "git_blob_sha": "207645f75a36dac5eca64be3af44692927cbbc0d"
+    },
+    {
+      "path": "research/audits/U032_true_vacuum_local_memory_bound.md",
+      "bytes": 21326,
+      "sha256": "8554c7d935f1bcb4922440981ca6fae215f72f5ecb9ec23f28491f9556931603",
+      "git_blob_sha": "45892f7c864128a0c80fc2794811541f7f8bc9b2"
+    },
+    {
+      "path": "checks/U029_exact_link_integration_checks.py",
+      "bytes": 12441,
+      "sha256": "30da13de27463fad033a9dba1c21620fdca3c2193457cd6c82e15f913c4089ae",
+      "git_blob_sha": "18facacdc0220a3e35e03f690c183378be284d86"
+    },
+    {
+      "path": "checks/U030_overlap_and_transfer_checks.py",
+      "bytes": 15567,
+      "sha256": "69f8cab2a767be38383461fa6457b4a9ab76e55be34ffa3b21a5369c3ad0d96a",
+      "git_blob_sha": "9d801d9da5c5f5a7645456f367d5845aa26ec0f0"
+    },
+    {
+      "path": "checks/U032_conditional_memory_checks.py",
+      "bytes": 12349,
+      "sha256": "da042f8cb863f15c63c65ae5f6e349996080d6bbd3ea6acc74dbce3cc41a19d5",
+      "git_blob_sha": "5583a5bbbcbd1bb50541365114d946df3a824fd9"
+    },
+    {
+      "path": "checks/U034_history_variance_and_cycle_checks.py",
+      "bytes": 12034,
+      "sha256": "899ccb2f9dd749654e86fac89b37f5bf8da74879a91ff9e7b3ae19e83f036097",
+      "git_blob_sha": "f93409d7c6c7705e4b7326cd5b7e7ce5910db1a8"
+    }
+  ],
+  "files": [
+    {
+      "path": "research/audits/U035_true_vacuum_cycle_response.md",
+      "bytes": 26334,
+      "sha256": "6be177a9cd283362b510b0618d8435575bc82f2c97a1b56dbbfb8608963de684",
+      "git_blob_sha": "d1c804c77ff2a9534cea79a4449feb8ec1a9afbd"
+    },
+    {
+      "path": "checks/U035_vacuum_cycle_response_checks.py",
+      "bytes": 13118,
+      "sha256": "480716750423e6c23eef84b20efb36d97992a1104c0169442a4b1ea30a7747b3",
+      "git_blob_sha": "fe451ffe590482892e79cf56801babffd89e73d8"
+    },
+    {
+      "path": "checks/U035_wolfram_cross_checks.wl",
+      "bytes": 1057,
+      "sha256": "8d13e403955f456b8d176c52e286f75e14a7ad6e6916e68b8610d7f0f8f51c96",
+      "git_blob_sha": "d17b8152fe56bc01ed9af162dc25df43ef5d4cac"
+    },
+    {
+      "path": "evidence/U035_checks.json",
+      "bytes": 7047,
+      "sha256": "d903614578f707155a683e59451dba4a5198c8ba1fd678828dedb4800b384f67",
+      "git_blob_sha": "fbf6a32052221f3bd137dfeab5d3ea3e989a2cc9"
+    },
+    {
+      "path": "evidence/U035_wolfram_cross_checks.json",
+      "bytes": 1216,
+      "sha256": "7312f4e6448384368eb9e3837d87b3c2a3ec139ee144678e988eceb1f6515447",
+      "git_blob_sha": "a4cafd791039774df1620d836527e78210ea44b6"
+    },
+    {
+      "path": "evidence/U035_validation.log",
+      "bytes": 233,
+      "sha256": "e616fbc92a0d4d418bedeaf1b0f47daaafa24888748a32c011d011929be3d8cf",
+      "git_blob_sha": "c13d7580b91358f103fb9b78776beb95b7076a7b"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3504,
+      "sha256": "08e4a063c081144d51681e840d8eee18015e40819820e726b622d6a08ecddc23",
+      "git_blob_sha": "ba7940080b97819ebd62a52fe5ac95f769c53a6a"
+    }
+  ],
+  "package_only_logs": [
+    {
+      "path": "evidence/U035_checks.log",
+      "bytes": 8733,
+      "sha256": "184a0053e655f6acb559476ef8a773200006e60aa51a20cb9cd79ef2fff53206",
+      "git_blob_sha": "bfcd71387a6dbd6d5b7ecc239063fd26d4d450ff"
+    },
+    {
+      "path": "evidence/U035_previous_checks.log",
+      "bytes": 6076,
+      "sha256": "9ff9ddbcdcf5855de42db35198e0ed93c7e99409dc4c88e219ff0ff660130c9b",
+      "git_blob_sha": "a49eea4b6db533320285e1ec40308ab7f3721ba0"
+    },
+    {
+      "path": "evidence/U035_previous_checks.json",
+      "bytes": 4707,
+      "sha256": "f72c02247dc983aab86ea0d43084b5324318c879abee590d900ed23fc43d154f",
+      "git_blob_sha": "a1a761e5a073b8865f628617506c5a4213adbd6f"
+    }
+  ],
+  "sources": [
+    {
+      "id": "NIST DLMF 10.32.2; 10.29.1-2; 10.40.1",
+      "checked": "2026-09-15",
+      "scope": "normalized convolution and order ratios; fixed-order positive-axis asymptotics; exact certificates use positive series"
+    },
+    {
+      "id": "arXiv:1903.00785v2",
+      "version_date": "2019-06-03",
+      "checked": "2026-09-15",
+      "locator": "Theorem 2 (7)-(8); Section 3.3",
+      "scope": "matrix perturbation/contour method context; compact-operator estimate proved directly"
+    },
+    {
+      "id": "arXiv:2107.14149v1",
+      "checked": "2026-09-15",
+      "locator": "Section 2.2; Appendix A (A.7)-(A.12)",
+      "scope": "Haar/Peter-Weyl/character dictionary only, no tensor truncation or 2D mass input"
+    }
+  ],
+  "remaining": [
+    "Useful arbitrary-interacting-background response bounds uniformly in regulator/volume.",
+    "All-order summable connected-coefficient estimates, not only cancellation of disconnected supports.",
+    "The complete centered history-variance coefficient in the joint limits.",
+    "Continuum existence, axioms, nontrivial finite physical mass, and all eligible groups."
+  ],
+  "review": "Self-review only. Main checker passed first run. First Wolfram limit call warned; exact-rational cancellation gave a clean corroborating rerun. No independent expert/formal review or novelty claim. Static lint/typecheck and Lean unavailable. Hash verification is not proof validation."
+}

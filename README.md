@@ -4,25 +4,24 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U034, 2026-09-15
+## Latest checkpoint — U035, 2026-09-15
 
-Read `research/audits/U034_history_variance_and_physical_cycles.md`.
+Read `research/audits/U035_true_vacuum_cycle_response.md`.
 
-The six-color retained-history decomposition now has an explicit sufficient collective-variance coefficient on the ENTIRE centered physical endpoint algebra. A lower bound on this coefficient gives a physical-time transfer bound without assuming independent history layers or replacing history operators by powers of a reduced transfer. A direct bounded-density comparison proves a positive finite-Wilson coefficient, but the bound deteriorates exponentially in space-time volume and coupling.
+The exact vacuum score under a local spatial source is `(I-K)^(-1)(I+K) w_centered` at every finite background. Differentiating the actual conditional variances retains a second-order projection-response term, and the slab score includes both true-vacuum endpoint contributions. These are response identities, not volume-uniform bounds on their connected correlations.
 
-An exactly integrated two-dimensional Wilson cylinder has a centered, gauge-invariant boundary-loop observable with conditional-variance eigenvalue `1-[I_2(beta)/I_1(beta)]^L`, tending to zero at fixed circumference L as beta increases. The conditional algebras still intersect exactly at constants. This is a diagnostic Wilson model, NOT the four-dimensional vacuum or a counterexample to its mass gap.
+At ZERO spatial coupling, two shared plaquettes generate two exact temporal representation channels, with eigenvalues `r^6` and `r^6 u`, where `r=I_2(beta_t)/I_1(beta_t)` and `u=I_3(beta_t)/I_1(beta_t)`. Their connected logarithmic-vacuum coefficient is `b(z)=(z-r^8)/[(1-r^4)^2(1-z)]`. The mixed loop-orientation response is nonzero for every beta_t>0. Disconnected source supports cancel at every order by exact tensor factorization; this does not bound all connected coefficients.
 
-Retaining a forest at ONE TIME leaves only constants among physical retained observables, for any gauge-invariant vacuum measure. Combining this with U032 proves a full finite-regulator gap lower bound `-log(tanh(sum_cotree beta_e))/tau`; for a periodic spatial N-cube the uniform-coupling cotree count is `2N^3+1`. The bound is too weak in growing volume. The forest argument does not remove the full retained TIME HISTORY.
+For a FIXED FINITE set of small spatial sources with all exterior spatial couplings zero, a contour proof gives an exterior-volume-independent analyticity radius, an explicit all-order expectation remainder, and a complete physical-space transfer bound. The radius shrinks as `1/beta_t`; homogeneous activation loses volume through the sum of source sizes. Neither an interacting-exterior uniform bound nor the isotropic weak-coupling/continuum regime is covered.
 
-Eleven new exact checks and all twelve U033 checks passed. Run `python checks/U034_history_variance_and_cycle_checks.py --output evidence/U034_checks.json`. The checker includes exact weighted path enumeration, noncommuting SU(2) cylinder geometry, twelve all-tail Bessel-ratio certificates, and a finite-group forest control. The note and manifest distinguish these populations from the universal arguments. Two structural polynomial-equality test defects were repaired and recorded. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. Results are self-reviewed, not formal/expert verification or a novelty claim.
+Twelve new exact checks and all eleven U034 checks passed. Run `python checks/U035_vacuum_cycle_response_checks.py --output evidence/U035_checks.json`. Six named SU(2) response coefficients use complete rational series tails; weighted finite Markov fixtures test identities, not Wilson data. The manifest records preserved inputs, commands, ranges, outward rounding, and warning/clean Wolfram results. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. Self-review only, with no novelty claim.
 
-Next target: an actual-vacuum conditional-variance response for overlapping physical cycle algebras, with connected-correlation control independent of the external volume and appropriate physical scaling. Trivial intersection, gauge invariance alone, and the finite cotree gap do not discharge this estimate. No continuum construction or scale-uniform physical Yang–Mills mass bound is established.
+Next target: an all-order bound on the surviving connected source-support coefficients, independent of the total active volume and with explicit temporal-coupling dependence. Alternatively, bound the arbitrary-background susceptibility directly in the same vacuum. The entire centered history-variance estimate, continuum construction, nontrivial finite physical mass, and all-group target remain unproved.
 
 ## Preserved nearest dependencies
 
-- U033: `research/audits/U033_history_conditioned_sparse_slabs.md` — extensive noncofacial columns, actual endpoint weights, full-history contraction and the retained-history obligation.
-- U032: `research/audits/U032_true_vacuum_local_memory_bound.md` — fixed-set actual-vacuum contraction and all-time memory tail.
-- U031: `research/audits/U031_boundary_time_and_weighted_memory.md` — finite Wilson slabs and finite-moment limitations.
-- U029–U030: unchanged exact link/overlapping integration and temporal-memory records.
-- U026–U028: unchanged small-graph results and their nonuniform-limit limitations.
-- U003: conditional full-space gap transport, not an established Yang–Mills construction.
+- U034: `research/audits/U034_history_variance_and_physical_cycles.md` — exact history-variance target, finite density comparison, physical cylinder diagnostic, forest bound.
+- U033: `research/audits/U033_history_conditioned_sparse_slabs.md` — extensive sparse-column memory conditional on retained histories.
+- U032: `research/audits/U032_true_vacuum_local_memory_bound.md` — fixed-set actual-vacuum contraction and all-time memory.
+- U029–U031: unchanged exact integration, connected-memory, and boundary-time records in `research/audits/`.
+- U026–U028 and U003: unchanged restricted small-graph results and conditional gap transport; not a joint-limit Yang–Mills construction.

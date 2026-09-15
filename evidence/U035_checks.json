@@ -1,0 +1,228 @@
+{
+  "status": "passed",
+  "tests_run": 12,
+  "seconds": 4.68491904199999,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational/symbolic decisions and complete positive-series tails",
+  "seed": null,
+  "max_fixture_paths": 256,
+  "certificates": [
+    {
+      "beta_t": "0",
+      "intervals": {
+        "r_fundamental": [
+          "0.0000000000000000000000",
+          "0.0000000000000000000000"
+        ],
+        "r_adjoint": [
+          "0.0000000000000000000000",
+          "0.0000000000000000000000"
+        ],
+        "one_cycle_score": [
+          "1.0000000000000000000000",
+          "1.0000000000000000000000"
+        ],
+        "b_perimeter": [
+          "0.0000000000000000000000",
+          "0.0000000000000000000000"
+        ],
+        "b_adjoint_shared": [
+          "0.0000000000000000000000",
+          "0.0000000000000000000000"
+        ],
+        "mixed_orientation_expectation_derivative": [
+          "0.0000000000000000000000",
+          "0.0000000000000000000000"
+        ],
+        "mixed_trace_covariance_derivative": [
+          "0.0000000000000000000000",
+          "0.0000000000000000000000"
+        ]
+      },
+      "arithmetic": "exact rational tails and interval operations; outward decimal display",
+      "scope": "derivatives at beta_s=0, not finite-beta_s values or mass gaps"
+    },
+    {
+      "beta_t": "1/2",
+      "intervals": {
+        "r_fundamental": [
+          "0.1237179282783207305848",
+          "0.1237179282783207305849"
+        ],
+        "r_adjoint": [
+          "0.0102565737734341553211",
+          "0.0102565737734341553212"
+        ],
+        "one_cycle_score": [
+          "1.0004686647702363537063",
+          "1.0004686647702363537064"
+        ],
+        "b_perimeter": [
+          "0.0000035326624462238379",
+          "0.0000035326624462238380"
+        ],
+        "b_adjoint_shared": [
+          "-0.0000000181155787516832",
+          "-0.0000000181155787516831"
+        ],
+        "mixed_orientation_expectation_derivative": [
+          "0.0000003328854398414551",
+          "0.0000003328854398414552"
+        ],
+        "mixed_trace_covariance_derivative": [
+          "0.0000001086973659365246",
+          "0.0000001086973659365247"
+        ]
+      },
+      "arithmetic": "exact rational tails and interval operations; outward decimal display",
+      "scope": "derivatives at beta_s=0, not finite-beta_s values or mass gaps"
+    },
+    {
+      "beta_t": "2",
+      "intervals": {
+        "r_fundamental": [
+          "0.4331274267223117583171",
+          "0.4331274267223117583172"
+        ],
+        "r_adjoint": [
+          "0.1337451465553764833656",
+          "0.1337451465553764833657"
+        ],
+        "one_cycle_score": [
+          "1.0729545740466567912318",
+          "1.0729545740466567912319"
+        ],
+        "b_perimeter": [
+          "0.0058004379518784060842",
+          "0.0058004379518784060843"
+        ],
+        "b_adjoint_shared": [
+          "-0.0003823112712653292412",
+          "-0.0003823112712653292411"
+        ],
+        "mixed_orientation_expectation_derivative": [
+          "0.0005796327396697251867",
+          "0.0005796327396697251868"
+        ],
+        "mixed_trace_covariance_derivative": [
+          "0.0001454220043150755737",
+          "0.0001454220043150755738"
+        ]
+      },
+      "arithmetic": "exact rational tails and interval operations; outward decimal display",
+      "scope": "derivatives at beta_s=0, not finite-beta_s values or mass gaps"
+    },
+    {
+      "beta_t": "8",
+      "intervals": {
+        "r_fundamental": [
+          "0.8192494103556205425832",
+          "0.8192494103556205425833"
+        ],
+        "r_adjoint": [
+          "0.5903752948221897287083",
+          "0.5903752948221897287084"
+        ],
+        "one_cycle_score": [
+          "2.6394646394888948531818",
+          "2.6394646394888948531819"
+        ],
+        "b_perimeter": [
+          "0.4718897139390539428715",
+          "0.4718897139390539428716"
+        ],
+        "b_adjoint_shared": [
+          "-0.0984650560724278898471",
+          "-0.0984650560724278898470"
+        ],
+        "mixed_orientation_expectation_derivative": [
+          "0.0534707596885764218173",
+          "0.0534707596885764218174"
+        ],
+        "mixed_trace_covariance_derivative": [
+          "0.0055154545538053210415",
+          "0.0055154545538053210416"
+        ]
+      },
+      "arithmetic": "exact rational tails and interval operations; outward decimal display",
+      "scope": "derivatives at beta_s=0, not finite-beta_s values or mass gaps"
+    },
+    {
+      "beta_t": "32",
+      "intervals": {
+        "r_fundamental": [
+          "0.9535031514532271707174",
+          "0.9535031514532271707175"
+        ],
+        "r_adjoint": [
+          "0.8808121060683466036603",
+          "0.8808121060683466036604"
+        ],
+        "one_cycle_score": [
+          "10.5331557113669424640891",
+          "10.5331557113669424640892"
+        ],
+        "b_perimeter": [
+          "9.1346494498699373654970",
+          "9.1346494498699373654971"
+        ],
+        "b_adjoint_shared": [
+          "-2.0961272864995876393723",
+          "-2.0961272864995876393722"
+        ],
+        "mixed_orientation_expectation_derivative": [
+          "1.0528853190346429692065",
+          "1.0528853190346429692066"
+        ],
+        "mixed_trace_covariance_derivative": [
+          "0.0889458621990992014806",
+          "0.0889458621990992014807"
+        ]
+      },
+      "arithmetic": "exact rational tails and interval operations; outward decimal display",
+      "scope": "derivatives at beta_s=0, not finite-beta_s values or mass gaps"
+    },
+    {
+      "beta_t": "128",
+      "intervals": {
+        "r_fundamental": [
+          "0.9883043188560566446886",
+          "0.9883043188560566446887"
+        ],
+        "r_adjoint": [
+          "0.9691154900357482298534",
+          "0.9691154900357482298535"
+        ],
+        "one_cycle_score": [
+          "42.5081760697927947820330",
+          "42.5081760697927947820331"
+        ],
+        "b_perimeter": [
+          "150.4676505895921062776634",
+          "150.4676505895921062776635"
+        ],
+        "b_adjoint_shared": [
+          "-34.7114383867444629477714",
+          "-34.7114383867444629477713"
+        ],
+        "mixed_orientation_expectation_derivative": [
+          "17.3605395915315533648845",
+          "17.3605395915315533648846"
+        ],
+        "mixed_trace_covariance_derivative": [
+          "1.4479167321674599198234",
+          "1.4479167321674599198235"
+        ]
+      },
+      "arithmetic": "exact rational tails and interval operations; outward decimal display",
+      "scope": "derivatives at beta_s=0, not finite-beta_s values or mass gaps"
+    }
+  ],
+  "nonclaims": [
+    "No numerical vacuum eigenvector is substituted.",
+    "No four-dimensional continuum or uniform interacting-volume gap.",
+    "Finite Markov fixtures do not constitute Wilson simulations.",
+    "Taylor response is at zero spatial coupling with arbitrary finite temporal coupling."
+  ]
+}

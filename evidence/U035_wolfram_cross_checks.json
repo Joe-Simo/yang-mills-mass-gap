@@ -1,0 +1,53 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "initial_call": {
+    "limit_method": "Limit[x^2 expression,x->0]",
+    "warnings": [
+      "Power::infy: 0^(-2)",
+      "Power::infy: 1/0",
+      "General::stop; General::messages"
+    ],
+    "returned_coefficients": [
+      "1/108",
+      "-1/468",
+      "1/936",
+      "1/11232"
+    ],
+    "interpretation": "Warnings retained; not treated as certified evaluation."
+  },
+  "clean_rerun": {
+    "method": "Cancel[Together[x^2 expression]] before substituting x=0",
+    "warnings": [],
+    "LogVacuumMixedResidual": 0,
+    "PerimeterEigenResidual": [
+      0,
+      0
+    ],
+    "SharedAdjointEigenResidual": [
+      0,
+      0
+    ],
+    "HaarSelfAdjointResidual": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "DisjointResidual": 0,
+    "DifferenceFactorResidual": 0,
+    "LargeBetaScaledCoefficients": [
+      "1/108",
+      "-1/468",
+      "1/936",
+      "1/11232"
+    ],
+    "RieszProjectionDifferenceBound": "1/4",
+    "BivariateTailResidual": 0
+  },
+  "nonclaim": "Corroboration of supplied algebra, not independent derivation or formal verification of the full research claim."
+}
