@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-15",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "c6b168b768ed1a10947ad3ace50e24c1672b8b1b",
+  "base_tree": "69142f1c8ac4be8923a5afc9f57e8490ac3ed93b",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed bounded-transfer and finite-regulator proofs with exact rational/polynomial finite audits",
+  "new_tests": 13,
+  "prior_tests_rerun": 11,
+  "commands": [
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python checks/U031_boundary_moment_checks.py --output evidence/U031_checks.json > evidence/U031_checks.log 2>&1",
+    "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python checks/U030_overlap_and_transfer_checks.py > evidence/U031_previous_tests.log 2>&1",
+    "python -m compileall -q checks/U031_boundary_moment_checks.py",
+    "python -m tabnanny checks/U031_boundary_moment_checks.py"
+  ],
+  "exit_codes": {
+    "final_new_tests": 0,
+    "prior_U030": 0,
+    "compileall": 0,
+    "tabnanny": 0
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0",
+    "wolfram": "15.0.1"
+  },
+  "caps": {
+    "new_suite_wall_seconds": 45,
+    "prior_suite_wall_seconds": 45,
+    "wolfram_seconds_per_call": 30,
+    "threads": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 (cooperative)",
+    "moment_order_max": 9,
+    "matching_hankel_depth_max": 3,
+    "infinite_example_prefix_nodes": 8
+  },
+  "preservation": "All nine U030 manifest hashes matched on entry; all eight non-README entries still match. Archive comparison found only the intentionally updated README changed; previous proofs/checkers are untouched.",
+  "stored_evidence": "Core files below are versioned in the private repository. The separate package_only_logs are raw executed command logs included in the downloadable U031 package, with hashes here; they are not listed as remote files.",
+  "static_or_formal_tools": "ruff/mypy/pyright/Bun/Lean unavailable; no successful static lint/typecheck or formal verification claimed",
+  "self_review": "No independent expert verification or novelty claim. Initial implementation failures were repaired before promotion; see U031_checker_repair.json and package log.",
+  "remaining_obligations": [
+    "Gauge-invariant reduced Wilson slab observability in the actual vacuum.",
+    "Regulator/volume-uniform weighted long-time memory tail or equivalent all-depth bound.",
+    "Repeated generated-interaction control, coherent continuum/infinite-volume construction, nontrivial finite physical mass, every eligible group."
+  ],
+  "files": [
+    {
+      "path": "research/audits/U031_boundary_time_and_weighted_memory.md",
+      "bytes": 28354,
+      "sha256": "93c4950996fcc3681e2685fafd05e455065799d36f5d3744f4f34754e4a9b156",
+      "git_blob_sha": "682f1353b0b29bdc173a0dc3b8ff9c7060c9b9ef"
+    },
+    {
+      "path": "checks/U031_boundary_moment_checks.py",
+      "bytes": 15680,
+      "sha256": "c8f53d98ff0028b43440c3c8fb21e7cd27b4a43c403665365ce86d25abd56fdf",
+      "git_blob_sha": "1b6b7cc5e26b0d24bb93c931d168366ab69534d6"
+    },
+    {
+      "path": "checks/U031_wolfram_cross_checks.wl",
+      "bytes": 1175,
+      "sha256": "33dda5f1a843c3c9559a7e60018493b65f57ee163e22a7dca5da00da05211fa7",
+      "git_blob_sha": "57c1587206f032a3eb5b3b7c5a894845f44855ca"
+    },
+    {
+      "path": "evidence/U031_checks.json",
+      "bytes": 1868,
+      "sha256": "83088ee487d72494a5ab3acb64b015469eb16addea59a6730fc67b6d228171b1",
+      "git_blob_sha": "931daec94a21273571ac3821b02b360b7fda9022"
+    },
+    {
+      "path": "evidence/U031_checker_repair.json",
+      "bytes": 697,
+      "sha256": "d9f57500eef4e1151b2910d583fdd4aec08d13407ae95b011f3ed5e9c540e950",
+      "git_blob_sha": "b29508034562096b1cd6203ca67e9e1c3af4f992"
+    },
+    {
+      "path": "evidence/U031_wolfram_cross_checks.json",
+      "bytes": 1371,
+      "sha256": "20faa9a27eb4300be42a9b80435f8e4c7d776aa51a19ff74bb8080906f02f24d",
+      "git_blob_sha": "98ad3eb9c1d76c4ef39da1a4ad89ca9ac1418940"
+    },
+    {
+      "path": "evidence/U031_validation.log",
+      "bytes": 113,
+      "sha256": "6182127b4a7972129e4cc3d83178915208f159c9e5cbe5b05903587d3394cf03",
+      "git_blob_sha": "462f13dc3fe0a4d4e3cec7ed0a14d257b5894e70"
+    },
+    {
+      "path": "README.md",
+      "bytes": 15597,
+      "sha256": "570a9bd9524828a13886c7acdd2c6180055e2428da5b2a3b3f3a0cd175b1588e",
+      "git_blob_sha": "fae62ea6533879e8869c2ac9e732de02402f1586"
+    }
+  ],
+  "package_only_logs": [
+    {
+      "path": "evidence/U031_checks.log",
+      "bytes": 3765,
+      "sha256": "a2ad8e37146f1b32a71521df0103a92ffb3dcf6d0bc49c6e96e36dcf5e49b7b6",
+      "git_blob_sha": "399005922546eecaaa5cc2403dab77c8f370f963"
+    },
+    {
+      "path": "evidence/U031_previous_tests.log",
+      "bytes": 3769,
+      "sha256": "20d04e92de5fb1e3bdc3b14923629560204b39142277c0229186479e1dabd363",
+      "git_blob_sha": "8df488a23713c71be91ee4422f0300050708b11b"
+    },
+    {
+      "path": "evidence/U031_initial_failure.log",
+      "bytes": 8776,
+      "sha256": "900e4d4313e5b8c05dfc7d31f739323ee645e0aad95fb1fefea7335fdaec7676",
+      "git_blob_sha": "cf1c1d4f9d9777128b55bbd79c0613f7cddd13c8"
+    }
+  ]
+}

@@ -8,7 +8,19 @@ Private working repository for a rigorous attempt to resolve the Clay Yang–Mil
 
 The project targets the Jaffe–Witten/Clay assertion: construction of a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in the official scope, satisfying the required axioms and possessing a strictly positive physical mass gap.
 
-## Latest checkpoint — U030, 2026-09-15
+## Latest checkpoint — U031, 2026-09-15
+
+Read `research/audits/U031_boundary_time_and_weighted_memory.md`. Complete finite SU(2) spatial boundary kernels glue exactly into physical-time slabs; their elementary true-vacuum minorization bound is positive but deteriorates exponentially with lattice volume and bare coupling. No continuum bound follows.
+
+A retained-time block-Hankel criterion is exact only at all depths and on the retained cyclic space. For any finite prescribed moment horizon, two explicit positive cyclic spectral models have identical data but arbitrarily different lower mass edges. A separate strictly positive four-state reversible Markov family has total unweighted memory tending to zero while its actual gap collapses.
+
+A weighted all-time memory criterion controls the full centered transfer when all discarded states are detectable, without assuming a strict discarded-sector separation from the target edge. An auxiliary infinite-dimensional example verifies the boundary case with a rigorous polynomial tail bound; it is not Yang–Mills. Actual vacuum-weighted tails and retained-algebra completeness uniformly in regulator and volume remain unproved.
+
+Thirteen exact new checks and eleven rerun U030 checks passed. Run `python checks/U031_boundary_moment_checks.py --output evidence/U031_checks.json`; the note records scopes, three repaired pre-promotion checker defects, clean Wolfram corroboration, and limits. Compilation and indentation checks passed; static lint/typecheck and Lean were unavailable. Earlier mathematical files are unchanged; only README is intentionally updated relative to earlier manifests. Results are self-reviewed, with no formal/expert verification or novelty claim.
+
+Next executable target: derive a weighted long-time tail for a gauge-invariant reduced Wilson slab in its actual vacuum, or prove an adequate substitute for all-depth positivity, while controlling every discarded slow sector. A finite correlation list, small unweighted memory, and the compact finite-volume gap cannot replace this estimate.
+
+## Earlier checkpoint — U030, 2026-09-15
 
 Read `research/audits/U030_overlapping_decimation_and_transfer_memory.md`. An actual three-link cluster gives an exact second conditional integration, including overlapping first-layer factors. With zero central external source its full character expansion has explicit all-tail rational certificates. This is a finite coordinate marginal, not an extensive second RG layer or a physical transfer construction.
 

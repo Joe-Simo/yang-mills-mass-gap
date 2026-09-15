@@ -1,0 +1,13 @@
+{
+  "initial_code_sha256": "db22941acb8114102e457dbb328ad9249c3a9c9018fc807ed0dd5a1b7c0ed02c",
+  "initial_tests": 12,
+  "initial_failures": 2,
+  "repairs": [
+    "Use exact SymPy One as numerator even when the empty Lagrange product is a Python integer (order=0).",
+    "Check zero polynomial residual rather than structural expression-tree equality.",
+    "Compute det(z I-T) with the same symbol, avoiding charpoly silently replacing a real-assumed symbol with an unassumed one."
+  ],
+  "scope": "checker implementation repairs before certificate promotion; no theorem change",
+  "second_code_sha256": "2fe6bafe2799ef5040c3ba6e40b1815747e7625b4117477454716f7a9cf492ef",
+  "second_failures": 1
+}

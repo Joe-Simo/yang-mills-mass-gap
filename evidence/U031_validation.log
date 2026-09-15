@@ -1,0 +1,8 @@
+compileall_exit=0
+tabnanny_exit=0
+Python 3.13.5 SymPy 1.14.0
+ruff None
+mypy None
+pyright None
+lean None
+bun None

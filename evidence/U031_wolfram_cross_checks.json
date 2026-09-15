@@ -1,0 +1,61 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 30,
+  "clean_rerun": {
+    "CharacteristicPolynomial": "-(z-1)(4z-1)(-4+4ep+ep^2+20z-16ep z-16z^2)/64",
+    "MemoryResiduals": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "MomentResiduals": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "AddedWeight": "8192/13348707",
+    "PositiveWeights": true,
+    "WeightedGeometricResidual": 0,
+    "messages": []
+  },
+  "first_call": {
+    "messages": [
+      "MatrixPower::sing (twice)",
+      "Power::infy (twice)",
+      "General::messages"
+    ],
+    "outputs": {
+      "CharacteristicPolynomial": "same as clean rerun",
+      "RowSums": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "MemoryResidualsK0To5": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "MomentResiduals0To3": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "AddedWeight": "8192/13348707",
+      "ExposingLocalizerSign": -1,
+      "ShiftedMemoryExample": "{{3/128}}",
+      "GeometricWeightedTail": "c/(q-r)"
+    },
+    "interpretation": "nondecisive due to warnings; repeated cleanly with finite products/identities instead of MatrixPower and infinite Sum"
+  },
+  "scope": "symbolic corroboration of the explicitly submitted expressions, not an independent proof or a Yang--Mills certificate"
+}
