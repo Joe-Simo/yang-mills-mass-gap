@@ -4,7 +4,21 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U039, 2026-09-15
+## Latest checkpoint — U040, 2026-09-16
+
+Read `research/audits/U040_mesoscopic_axial_gauge_coercivity.md`.
+
+Every U039-good four-dimensional macroblock now has a deterministic two-scale decomposition. With `ell=ceil(alpha^(-1/16))` and mesoscopic action threshold `eps=alpha^(1/2)`, one-cell separators plus internally bad mesoscopic cores occupy only `O(alpha^(1/16))` of the block. No probability or independence assumption is used.
+
+On every remaining regular core an explicit maximal-tree/axial gauge gives an exact noncommutative plaquette-ribbon representation. All tree-gauge links then lie in one exponential chart with radius `O(alpha^(7/32))`. A local Taylor argument yields `||F-dA|| <= O(alpha^(1/16)) ||F||`, and the exact Wilson magnetic action is asymptotic to `||dA||^2/2`. A crude but explicit nonlinear core coercivity bound is `S_C >= (1-kappa)||A||^2/(192 ell^5)`. Independent core gauges are not glued; separator links, bad cores, topology and low collective modes remain explicit.
+
+On U039's diagnostic `alpha=16 log(beta)/beta`, the mesoscopic cores grow in lattice units but are much smaller than the macroblock: `ell/n=O((log beta/beta)^(15/16))`. Under the same conditional logarithmic `beta(a)` diagnostic, their physical diameter tends to zero. This is not a continuum construction.
+
+Nine exact new checks and all seven U039 checks passed. The new checker audits every tested axial-tree ribbon in dimensions 2-4, including an exact noncommutative Q8/SU(2)-subgroup ribbon identity. Wolfram independently corroborated the scale exponents. The result is self-reviewed and not formal/expert verification or a novelty claim.
+
+Next target: condition on the separator/bad-core skeleton, integrate disjoint regular cores while retaining every boundary gauge representation, and prove that the induced skeleton interaction is surface-controlled and compatible with the centered physical transfer form. No continuum construction or physical Yang–Mills mass bound is established.
+
+## Earlier checkpoint — U039, 2026-09-15
 
 Read `research/audits/U039_interior_defect_transfer_suppression.md`.
 
@@ -15,8 +29,6 @@ For `beta>=32`, the adaptive choice `alpha=16 log(beta)/beta` and `n>=2 beta/log
 On every surviving good block, the mean squared plaquette angle is `O(log beta/beta)`; all but `O(sqrt(log beta/beta))` of the plaquettes have vanishing angle, and on that overwhelming fraction the Wilson action is quadratic up to relative `O(sqrt(log beta/beta))` error. Sparse exceptional plaquettes and collective gauge modes are retained, not discarded.
 
 Seven exact new checks and all ten U038 checks passed. Run `python checks/U039_interior_transfer_badblock_checks.py --output evidence/U039_checks.json`. Wolfram independently corroborated the adaptive identities and scaling limits. The result is self-reviewed finite-regulator mathematics, not formal/expert verification or a novelty claim.
-
-Next target: prove a gauge-covariant coercive/background-field estimate for the all-good interior transfer while retaining sparse exceptional plaquettes, boundary representations and low collective modes. No continuum construction or physical Yang–Mills mass bound is established.
 
 ## Earlier checkpoint — U038, 2026-09-15
 
