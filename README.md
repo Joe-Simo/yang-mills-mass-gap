@@ -4,7 +4,21 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U041, 2026-09-16
+## Latest checkpoint — U042, 2026-09-16
+
+Read `research/audits/U042_gauge_covariant_steklov_split.md`.
+
+On the periodic phase-cell slab, the linearized SU(2) Wilson Hessian around an arbitrary flat commuting holonomy now has an exact gauge-covariant Hodge/Steklov decomposition. Before gauge separation its boundary Steklov form has a surface-sized exact zero kernel: at the identity background the kernel dimension is `6 ell^3+3`. Thus U041's bounded-soft-mode picture is false on the unreduced boundary connection space; boundary gauge representation data must be retained rather than projected away.
+
+After separating exact boundary gauge gradients, each adjoint Fourier/color mode has two coexact polarizations with the exact two-face stiffnesses `q_-(lambda)=lambda/2+sinh(gamma)tanh(ell gamma/2)` and `q_+(lambda)=lambda/2+sinh(gamma)coth(ell gamma/2)`, where `cosh(gamma)=1+lambda/2` and the flat holonomy shifts the adjoint momenta. For every fixed `C`, the real coexact/harmonic sector with stiffness at most `C/ell` has dimension bounded independently of both `ell` and the flat holonomy. Global cycle modes remain explicit.
+
+The nonlinear scaling is favorable but not closed: in a fixed logarithmic chart the Wilson Hessian differs from the flat Hessian by an absolute `O(delta)||a||_2^2` term, while the natural slab trace/Poincare amplification is `O(ell^2)`. U041's optimized regular-core scales give `delta ell^2=O(alpha^(3/26))->0`. The missing theorem is the curved-core gauge-equivariant trace/coercivity estimate that carries every boundary representation and permits this perturbation argument in the centered physical transfer.
+
+Nine new focused checks and all nine U041 checks passed. A recorded checker repair replaced one missing-numpy diagnostic implementation without changing any formula or test population; a clean Wolfram rerun corroborated the Hodge, parity, zero-mode and exponent identities. Results are self-reviewed, not formal/expert verification or a novelty claim.
+
+Next target: prove the curved regular-core boundary trace/Poincare estimate on the complement of the bounded flat Steklov-soft sector, then combine it with the `O(alpha^(3/26))` nonlinear perturbation while retaining boundary gauge representation data. No continuum construction or physical Yang-Mills mass bound is established.
+
+## Earlier checkpoint — U041, 2026-09-16
 
 Read `research/audits/U041_boundary_steklov_soft_modes.md`.
 
