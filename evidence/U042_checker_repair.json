@@ -1,0 +1,9 @@
+{
+  "initial_status": "8 tests passed; test_04 errored before its assertion",
+  "initial_error": "NameError: np is not defined",
+  "cause": "the diagnostic used numpy-style 2x2 rotation syntax without importing numpy",
+  "repair": "replaced the 2x2 rotation composition with an explicit elementary matrix/Frobenius calculation using only math",
+  "scientific_claim_changed": false,
+  "test_population_changed": false,
+  "post_repair_status": "9 tests passed"
+}
