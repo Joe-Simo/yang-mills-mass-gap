@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 1.3388887830000158,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational/symbolic for structural identities; labeled floating finite soft-count diagnostics",
+  "seed": null
+}
