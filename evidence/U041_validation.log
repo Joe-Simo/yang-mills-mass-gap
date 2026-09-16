@@ -1,0 +1,7 @@
+new_U041_exit=0; 9 tests passed
+prior_U040_exit=0; 9 tests passed
+compileall_exit=0
+tabnanny_exit=0
+Python 3.13.5; SymPy 1.14.0
+Notebook Python launcher emitted an unrelated artifact_tool spreadsheet warmup warning; checker and validation commands still exited zero.
+ruff/mypy/pyright/Lean not run; no static/formal verification claim.
