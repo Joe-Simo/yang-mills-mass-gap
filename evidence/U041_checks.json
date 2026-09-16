@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.533,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact rational/symbolic except finite Fourier iterator classification",
+  "seed": null,
+  "claims": [
+    "optimized U040 exponent balance",
+    "exact collar-face count",
+    "exact soft boundary trace norm and O(1/ell) quotient",
+    "exact rational slab Dirichlet-to-Neumann Schur complement",
+    "finite low-mode-count diagnostics",
+    "surface-oscillation toy inequality"
+  ],
+  "nonclaims": [
+    "no continuum Yang-Mills theorem",
+    "no nonabelian quantum boundary effective-action coercivity",
+    "finite Fourier counts do not prove the universal count bound"
+  ]
+}
