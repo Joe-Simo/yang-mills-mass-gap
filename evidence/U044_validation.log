@@ -1,0 +1,6 @@
+new_U044_exit=0; 10 tests passed
+prior_U043_exit=0; 9 tests passed
+compileall_exit=0
+tabnanny_exit=0
+Python Python 3.13.5
+SymPy 1.14.0
