@@ -1,0 +1,16 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "initial_call_warnings": [
+    "Symbol::undefined2 warnings from uppercase local symbol names; result algebra was still returned"
+  ],
+  "clean_rerun": {
+    "warnings": [],
+    "LongitudinalCharpolyResidual": "0",
+    "ScaledResolventResidual": "0",
+    "ExponentDeltaEll2": "3/26",
+    "ExponentDeltaEll3": "1/26",
+    "ExponentDelta2Ell2": "5/13"
+  },
+  "scope": "symbolic corroboration of submitted finite identities only; not an independent full-proof verification"
+}
