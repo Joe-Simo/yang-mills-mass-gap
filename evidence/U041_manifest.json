@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-16",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "base_commit": "b4ddd1b0a3130e1865207970b29f0f9c712f2752",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed optimized phase-cell scaling, exact classical SU(2) boundary soft-mode obstruction, and exact linear slab Steklov companion",
+  "new_tests": 9,
+  "prior_tests_rerun": 9,
+  "commands": [
+    "python checks/U041_boundary_steklov_checks.py --output evidence/U041_checks.json",
+    "python checks/U040_mesoscopic_axial_gauge_checks.py --output evidence/U041_previous_checks.json",
+    "python -m compileall -q checks",
+    "python -m tabnanny checks/U041_boundary_steklov_checks.py"
+  ],
+  "results": {
+    "optimized_balance": {
+      "s": "1/13",
+      "t": "8/13",
+      "common_decay": "1/13"
+    },
+    "surface_collar": "B_ell=48 ell^3-72 ell^2+72 ell-24",
+    "surface_effective_action_oscillation": "|Gamma(b)-Gamma(b')| <= 2 beta B_ell for unrestricted interior integration",
+    "soft_boundary_classical_quotient": "<=3/(2 ell+1)",
+    "slab_dtn": "q_ell(lambda)=lambda/2+sinh(gamma)coth(ell gamma), cosh(gamma)=1+lambda/2",
+    "soft_mode_count": "q<=C/ell implies at most [2 floor(C/4)+1]^3 scalar tangential Fourier modes on periodic 3-torus"
+  },
+  "limitations": [
+    "surface oscillation is not small at weak coupling",
+    "hard regular-core truncation can make the admissible interior domain boundary-dependent",
+    "soft-boundary obstruction is classical minimum-action, not exact quantum free energy",
+    "Steklov count is proved for the linear scalar/Maxwell slab companion, not exact nonabelian boundary representations",
+    "no scale-iterated transfer gap, continuum construction, or Yang-Mills mass gap"
+  ],
+  "files": {
+    "research/audits/U041_boundary_steklov_soft_modes.md": "ad0ab3d86da663ba18dd9e91ee79cc97a74be5513338a4119193683155c8a3fd",
+    "checks/U041_boundary_steklov_checks.py": "7227340e3a87ee2eac04dd5865ff312791fcef02dc613abff4f418d08f74b76c",
+    "checks/U041_wolfram_cross_checks.wl": "be895dcf4488a5cd7aa8b40e6e3b2a2f9e27e55c536a2c817212e0a87a9a8e81",
+    "evidence/U041_checks.json": "83d50bac9bb670798aad147494ea53ec4f1d20ed4511719b4dbd6b3ac34ad903",
+    "evidence/U041_checks.log": "e5ca38d705ee784302e01d7cd66169bc7140a11e5183e127d63deb539e83abef",
+    "evidence/U041_previous_checks.json": "b8cee59229507bcd4bd9a27437b573e77a234b05e52a9bf6435bb87600a0bdc7",
+    "evidence/U041_previous_checks.log": "c143292f8fa07d64b709902b4ed471f9fb210707c0871efe74129424ab0a5d46",
+    "evidence/U041_wolfram_cross_checks.json": "11faa8dcfd16abe10713637447e6cd6bfb016e33d9ceba4c7ca86802ff961449",
+    "evidence/U041_validation.log": "52af2791e176b33bc00307a7f11f1db8b01e3e3611ea201b439ac32b4a1048cd"
+  }
+}
