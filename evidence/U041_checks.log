@@ -1,0 +1,14 @@
+test_01_optimized_exponents (__main__.U041Checks.test_01_optimized_exponents) ... ok
+test_02_maximin_upper_identity (__main__.U041Checks.test_02_maximin_upper_identity) ... ok
+test_03_exact_collar_count (__main__.U041Checks.test_03_exact_collar_count) ... ok
+test_04_soft_boundary_norm_formula (__main__.U041Checks.test_04_soft_boundary_norm_formula) ... ok
+test_05_soft_ratio_bound (__main__.U041Checks.test_05_soft_ratio_bound) ... ok
+test_06_dtn_exact_minimization (__main__.U041Checks.test_06_dtn_exact_minimization) ... ok
+test_07_dtn_lower_bounds_finite (__main__.U041Checks.test_07_dtn_lower_bounds_finite) ... ok
+test_08_low_mode_count_bound (__main__.U041Checks.test_08_low_mode_count_bound) ... ok
+test_09_surface_oscillation_toy (__main__.U041Checks.test_09_surface_oscillation_toy) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.533s
+
+OK
