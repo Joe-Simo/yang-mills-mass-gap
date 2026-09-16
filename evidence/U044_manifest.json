@@ -1,0 +1,68 @@
+{
+  "date": "2026-09-16",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "5f947b893b361a597a86d586460d16f2300cd289",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed boundary-fixed periodic-slab SU(2) quadratic Schur stability with bounded interior soft package; exact finite audits",
+  "new_tests": 10,
+  "prior_tests_rerun": 9,
+  "claims": [
+    "boundary-fixed flat Coulomb slice remains transverse to curved interior gauge orbits when delta ell is small",
+    "only one longitudinal-normal k=0 mode per tangential lambda<=Lambda_*/ell^2 must be retained; count is uniformly bounded",
+    "flat high interior Hessian block is >=min(4,Lambda_*)/ell^2",
+    "curved high block remains invertible when K_H delta ell^2 is small",
+    "retained Schur complement differs from flat by O(delta ell^2)",
+    "flat boundary modes with stiffness >=C/ell have relative Schur error O(delta ell^3)=O(alpha^(1/26))"
+  ],
+  "nonclaims": [
+    "no nonlinear high-mode functional integral",
+    "no boundary-dependent determinant bound",
+    "no control of cubic/higher Wilson remainders",
+    "no centered physical-transfer RG recursion",
+    "no continuum construction",
+    "no physical Yang-Mills mass gap",
+    "no all-group theorem"
+  ],
+  "commands": [
+    "python checks/U044_boundary_fixed_schur_checks.py --output evidence/U044_checks.json",
+    "python checks/U043_curved_horizontal_coercivity_checks.py --output evidence/U044_previous_checks.json",
+    "python -m compileall -q checks/U044_boundary_fixed_schur_checks.py",
+    "python -m tabnanny checks/U044_boundary_fixed_schur_checks.py"
+  ],
+  "wolfram": {
+    "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+    "initial_warning": "uppercase local-symbol warning only; clean rerun matched load-bearing residuals",
+    "scope": "symbolic corroboration only"
+  },
+  "files": {
+    "research/audits/U044_boundary_fixed_schur_stability.md": {
+      "sha256": "6c59ac6f03105b37a41a19f4c8991d4737810ee0dec0633f1a35f36f53b4517b",
+      "bytes": 16657
+    },
+    "checks/U044_boundary_fixed_schur_checks.py": {
+      "sha256": "ae3343d9e19dd8631cfd969717b03aa55286d745a522144cdd1b610cf578d2fb",
+      "bytes": 8449
+    },
+    "checks/U044_wolfram_cross_checks.wl": {
+      "sha256": "c3df0cd9a42b25590d4d6287692dc90a3270116d8068170b557f635e75918660",
+      "bytes": 996
+    },
+    "evidence/U044_checks.json": {
+      "sha256": "5c8df3f9e41090cb97ed7b0295c37639ad05899c8a0b82d25314c5850161ffc5",
+      "bytes": 285
+    },
+    "evidence/U044_previous_checks.json": {
+      "sha256": "8ca7a6feef537dd209a4db9f6f1ea82cf40c08595e38cba4f9c5d15185941ee7",
+      "bytes": 888
+    },
+    "evidence/U044_wolfram_cross_checks.json": {
+      "sha256": "cbba7d6b5e24ab0e7611923ba5e5227353dc0169e584c4abe8f0ffd24397bf64",
+      "bytes": 558
+    },
+    "evidence/U044_validation.log": {
+      "sha256": "eecccfe0ac46b94b142ee360e9b8de4930c421ba60c4be9ab1121979e0a63540",
+      "bytes": 135
+    }
+  }
+}
