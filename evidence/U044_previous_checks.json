@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.45325220800009447,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "numpy": "2.3.5",
+  "seed": 7,
+  "arithmetic": "exact symbolic/rational where stated; spectral and subspace fixtures use deterministic float linear algebra",
+  "claims_checked": [
+    "open-path scalar gap nu1",
+    "small 4D cubical Hodge complex and transverse curl gap",
+    "bounded low-mode count diagnostics",
+    "gradient leakage lemma finite fixture",
+    "SU(2) adjoint rotation perturbation bound",
+    "optimized margins delta*ell and delta*ell^2",
+    "horizontal subspace perturbation fixture",
+    "O(ell^2) trace/coercivity corollary algebra"
+  ],
+  "nonclaims": [
+    "finite matrices do not replace written all-ell tensor proof",
+    "no boundary Schur-complement stability theorem",
+    "no continuum mass gap"
+  ]
+}
