@@ -1,0 +1,16 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "warnings": [],
+  "result": {
+    "DtNIdentityResidual": "0",
+    "CollarCountResidual": "0",
+    "BalancedExponents": {
+      "s": "1/13",
+      "t": "8/13"
+    },
+    "SoftQuotientUpper": "3/(1+2 ell)",
+    "SinhGammaSquareIdentity": "lam+lam^2/4"
+  },
+  "scope": "submitted symbolic identities only; not independent verification of the U041 proof"
+}
