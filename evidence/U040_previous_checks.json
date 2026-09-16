@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.02078337900002225,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact Fraction/SymPy decisions; no floating scientific decisions",
+  "seed": null
+}
