@@ -1,0 +1,14 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "initial_limit_call_warning": "Power::infy from directly evaluating alpha^(-1/16) at alpha=0; not used for any decision",
+  "clean_rerun": {
+    "BadCorePowerWithout24": "16 alpha^(1/4)",
+    "CorridorPowerMain": "alpha^(1/16)",
+    "LinkAnglePower": "sqrt(2) alpha^(7/32)",
+    "TaylorPower": "8 alpha^(1/16)",
+    "MicroMacroRatio": "alpha^(15/16)/16",
+    "TreeCoercivityDenominatorCoefficient": 192
+  },
+  "interpretation": "symbolic corroboration of submitted scaling algebra only; not an independent proof of the nonabelian ribbon or Taylor lemmas"
+}
