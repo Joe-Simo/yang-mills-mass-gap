@@ -1,0 +1,12 @@
+test_01_adaptive_parameter_identities (__main__.Checks.test_01_adaptive_parameter_identities) ... ok
+test_02_exact_haar_safety_margin (__main__.Checks.test_02_exact_haar_safety_margin) ... ok
+test_03_box_ratio (__main__.Checks.test_03_box_ratio) ... ok
+test_04_balanced_large_plaquette_fraction (__main__.Checks.test_04_balanced_large_plaquette_fraction) ... ok
+test_05_union_exponent_lower_bound (__main__.Checks.test_05_union_exponent_lower_bound) ... ok
+test_06_binary_interior_event_transfer_fixture (__main__.Checks.test_06_binary_interior_event_transfer_fixture) ... ok
+test_07_joint_event_tower_identity (__main__.Checks.test_07_joint_event_tower_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.021s
+
+OK
