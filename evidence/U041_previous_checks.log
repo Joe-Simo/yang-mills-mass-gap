@@ -1,0 +1,14 @@
+test_01_axial_tree_count (__main__.Checks.test_01_axial_tree_count) ... ok
+test_02_fundamental_ribbon_boundary (__main__.Checks.test_02_fundamental_ribbon_boundary) ... ok
+test_03_noncommutative_ribbon_identity_q8 (__main__.Checks.test_03_noncommutative_ribbon_identity_q8) ... ok
+test_04_four_dimensional_link_bound_constants (__main__.Checks.test_04_four_dimensional_link_bound_constants) ... ok
+test_05_mesoscopic_exponent_balance (__main__.Checks.test_05_mesoscopic_exponent_balance) ... ok
+test_06_separator_coverage_bound (__main__.Checks.test_06_separator_coverage_bound) ... ok
+test_07_bad_core_fraction_algebra (__main__.Checks.test_07_bad_core_fraction_algebra) ... ok
+test_08_quadratic_comparison_scales (__main__.Checks.test_08_quadratic_comparison_scales) ... ok
+test_09_micro_macro_separation (__main__.Checks.test_09_micro_macro_separation) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.120s
+
+OK
