@@ -1,0 +1,81 @@
+{
+  "date": "2026-09-16",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "bb608dd55984b7a8cf4d36e4ce0dd47ca3f47a07",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed flat-holonomy SU(2) linearized Steklov/Hodge theorem with exact gauge-kernel separation, uniform soft-count proof, and nonlinear scaling lemma",
+  "new_tests": 9,
+  "prior_tests_rerun": 9,
+  "commands": [
+    "python checks/U042_gauge_covariant_steklov_checks.py --output evidence/U042_checks.json",
+    "python checks/U041_boundary_steklov_checks.py --output evidence/U042_previous_checks.json",
+    "python -m compileall -q checks/U042_gauge_covariant_steklov_checks.py",
+    "python -m tabnanny checks/U042_gauge_covariant_steklov_checks.py"
+  ],
+  "wolfram": {
+    "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+    "clean_rerun_warnings": [],
+    "scope": "symbolic corroboration only"
+  },
+  "software": {
+    "python": "3.13.5",
+    "sympy": "1.14.0"
+  },
+  "checker_repair": "initial missing-numpy NameError in one diagnostic; repaired without changing formula or tested population",
+  "external_context": [
+    {
+      "source": "T. Balaban, Commun. Math. Phys. 109 (1987) 249-301",
+      "doi": "10.1007/BF01215223",
+      "use": "methodological context only; no theorem imported"
+    }
+  ],
+  "claims": [
+    "surface-sized exact boundary gauge kernel before quotient at the identity background",
+    "exact coexact two-boundary Steklov spectrum around arbitrary flat commuting SU(2) holonomy on a periodic slab",
+    "uniform-in-ell and uniform-in-holonomy bound on the O(1/ell) coexact/harmonic soft-sector dimension after gauge-gradient separation",
+    "local Wilson Hessian absolute perturbation is volume-independent in a fixed log chart",
+    "U041 optimized scaling gives delta ell^2 = O(alpha^(3/26))"
+  ],
+  "nonclaims": [
+    "no curved-background nonabelian Steklov theorem",
+    "no proof that boundary gauge representation data can yet be glued with the high-mode integration",
+    "no continuum construction",
+    "no physical Yang-Mills mass gap",
+    "no all-group theorem"
+  ],
+  "files": {
+    "research/audits/U042_gauge_covariant_steklov_split.md": {
+      "sha256": "87205550258ee6ed4efdb9e67cf3d6f5ad5a32f6465849e986a265b4ce735a5b",
+      "bytes": 16466
+    },
+    "checks/U042_gauge_covariant_steklov_checks.py": {
+      "sha256": "192aeffe80eca397a1aea90387487b959b20f1988526a89d95d6ed98d30ad347",
+      "bytes": 8329
+    },
+    "checks/U042_wolfram_cross_checks.wl": {
+      "sha256": "2c3095fcca80081b5e8c4f95e3d0ef8bb73818944131b8f00accc546d7c84826",
+      "bytes": 855
+    },
+    "evidence/U042_checks.json": {
+      "sha256": "e90d5deba8df20e6d2c99e092783243d3f0fcf388fd986d1d8e37d476fa597c0",
+      "bytes": 850
+    },
+    "evidence/U042_previous_checks.json": {
+      "sha256": "37b4743eee5e2dbc0601a32c76ab972a4607efcb8718edaec234fd43cd6feff4",
+      "bytes": 744
+    },
+    "evidence/U042_checker_repair.json": {
+      "sha256": "91c4dd45a084182789d7ea9b957b2fd2306385bf616a05fd7895d1521c7a9cc3",
+      "bytes": 461
+    },
+    "evidence/U042_wolfram_cross_checks.json": {
+      "sha256": "d7ace98f9dc462b10dda5aef565c80159c6ace9f827efac72201e774aae40440",
+      "bytes": 1013
+    },
+    "evidence/U042_validation.log": {
+      "sha256": "aadd095f02399ed97d2ce9016e04d3194a94ae6964a1ff69722c7e49f6ebae32",
+      "bytes": 181
+    }
+  }
+}
