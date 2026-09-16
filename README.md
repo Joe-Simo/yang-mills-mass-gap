@@ -4,7 +4,21 @@ Private working repository. **No complete verified solution.**
 
 The target is the full Jaffe–Witten/Clay assertion: a nontrivial four-dimensional quantum Yang–Mills theory for every compact simple gauge group in scope, with the required axioms, Yang–Mills identification, continuum/infinite-volume setting, and strictly positive finite physical mass gap.
 
-## Latest checkpoint — U040, 2026-09-16
+## Latest checkpoint — U041, 2026-09-16
+
+Read `research/audits/U041_boundary_steklov_soft_modes.md`.
+
+U040's two-scale exponents are now optimized within that proof template: `ell=ceil(alpha^(-1/13))`, `eps=alpha^(8/13)`. Separator density, bad-core density, and nonlinear curl error all become `O(alpha^(1/13))`; no stronger common power is possible within the same three-constraint balance.
+
+Unrestricted integration of one cell interior produces a gauge-invariant boundary effective action whose dependence is confined to a one-cell collar: with `B_ell=48ell^3-72ell^2+72ell-24`, its oscillation is at most `2 beta B_ell`. This is surface order and independent of exterior volume, but it is not small at weak coupling and does not automatically survive a hard regular-core truncation.
+
+A continuous-SU(2) commuting family inside the regular small-field regime has classical boundary stiffness at most `3/(2ell+1)`. Thus a uniform positive boundary coercivity constant is impossible even after U040 localization. The correct linear companion is a Steklov/Dirichlet-to-Neumann operator. On a periodic slab, `q_ell(lambda)=lambda/2+sinh(gamma)coth(ell gamma)`, `cosh(gamma)=1+lambda/2`; `q<=C/ell` forces tangential momentum `O(1/ell)`, so only a bounded number of scalar Fourier modes per cell are that soft.
+
+Nine new focused checks and all nine U040 checks passed. Wolfram independently corroborated the optimized exponents, collar count, soft quotient and exact slab identity. Results are self-reviewed, not formal/expert verification or a novelty claim.
+
+Next target: construct the analogous **gauge-covariant nonabelian Steklov/Hodge split** on each regular core, retain the bounded soft boundary/cycle sector, and integrate the high boundary modes in the centered physical transfer form. No continuum construction or physical Yang–Mills mass bound is established.
+
+## Earlier checkpoint — U040, 2026-09-16
 
 Read `research/audits/U040_mesoscopic_axial_gauge_coercivity.md`.
 
@@ -30,6 +44,8 @@ On every surviving good block, the mean squared plaquette angle is `O(log beta/b
 
 Seven exact new checks and all ten U038 checks passed. Run `python checks/U039_interior_transfer_badblock_checks.py --output evidence/U039_checks.json`. Wolfram independently corroborated the adaptive identities and scaling limits. The result is self-reviewed finite-regulator mathematics, not formal/expert verification or a novelty claim.
 
+Next target: prove a gauge-covariant coercive/background-field estimate for the all-good interior transfer while retaining sparse exceptional plaquettes, boundary representations and low collective modes. No continuum construction or physical Yang–Mills mass bound is established.
+
 ## Earlier checkpoint — U038, 2026-09-15
 
 Read `research/audits/U038_boundary_surface_correction_and_defect_tail.md`.
@@ -41,6 +57,8 @@ For the original finite Euclidean SU(2) Wilson measure with a common inverse cou
 Uniform conditional bounds also control joint bad-block events and connected clusters without independence. A positive density of strongly frustrated link stars implies the required volume action, providing another concrete event covered by the estimate. These are defect probabilities, not a bound on the complete centered quantum transfer or a proof that all remaining fields are perturbatively small.
 
 Ten exact new checks and all ten U037 checks passed. Run `python checks/U038_boundary_surface_checks.py --output evidence/U038_checks.json`. The checker includes a continuous-SU(2) compact-flux boundary witness, exact geometry and conservative parameter certificates; binary/Q8 fixtures are explicitly not Wilson samples. One symbolic structural-equality assertion was repaired, with its initial outputs retained. Wolfram corroborated finite algebra without warnings; compilation and indentation checks passed. Static lint/typecheck and Lean were unavailable. Self-review only, with no independent expert/formal verification or novelty claim.
+
+Next target: convert the corrected defect-probability input into an energy-relative boundary/transfer estimate while retaining all physical sectors and controlling the collective modes on its complement. A rare event still has an indicator operator of norm one; the required relative estimate remains unproved. No continuum construction or scale-uniform physical mass bound is established.
 
 ## Preserved nearest dependencies
 
