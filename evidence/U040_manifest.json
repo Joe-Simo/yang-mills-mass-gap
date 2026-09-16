@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-16",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "9fd62dca961fc6ca9f3fe4eb3113fa248d50f01e",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed deterministic mesoscopic axial-gauge decomposition and local nonlinear magnetic coercivity on U039-good SU(2) macroblocks; exact finite audits",
+  "new_tests": 9,
+  "prior_tests_rerun": 7,
+  "commands": [
+    "python checks/U040_mesoscopic_axial_gauge_checks.py --output evidence/U040_checks.json",
+    "python checks/U039_interior_transfer_badblock_checks.py --output evidence/U040_previous_checks.json",
+    "python -m compileall -q checks/U040_mesoscopic_axial_gauge_checks.py",
+    "python -m tabnanny checks/U040_mesoscopic_axial_gauge_checks.py"
+  ],
+  "wolfram": "Wolfram 15.0.1; first limit-oriented call produced only a 0^(-1/16) endpoint warning; clean algebra rerun reproduced all stated powers",
+  "literature_check": {
+    "checked": "2026-09-16",
+    "source": "Jaffe-Witten, Quantum Yang-Mills Theory, CMI official PDF, Section 6.5",
+    "use": "contextual only: phase-cell/local multiscale gauges and Balaban 4D large-field control; no external theorem imported",
+    "balaban_primary_metadata": "Commun. Math. Phys. 109 (1987) 249-301, DOI 10.1007/BF01215223"
+  },
+  "files": {
+    "research/audits/U040_mesoscopic_axial_gauge_coercivity.md": {
+      "sha256": "0cd4505e171c9ebfdb407006b7c7319cd29ee60b2beb464d14d7f3745246e132",
+      "bytes": 15375
+    },
+    "checks/U040_mesoscopic_axial_gauge_checks.py": {
+      "sha256": "9c2f69e208a7ce202a8f22aa0fb4197a7c11569be8aa6be52a6ad919382a0e57",
+      "bytes": 10932
+    },
+    "evidence/U040_checks.json": {
+      "sha256": "f07068877c5b37964bc5f3c273d65d5da5fc9558f4cb6d6228ea4844d2b7b158",
+      "bytes": 355
+    },
+    "evidence/U040_checks.log": {
+      "sha256": "de3972cc1e5d3064532f220f590323d28da9a106879498f0db48de70e24ee7c8",
+      "bytes": 961
+    },
+    "evidence/U040_previous_checks.json": {
+      "sha256": "a0b10e8106687e4357a9ce444c2a17916ea567dcb7e9e7bdc1c6bb9d6d3a2347",
+      "bytes": 252
+    },
+    "evidence/U040_previous_checks.log": {
+      "sha256": "9c39f8a88acca1074f0910517b7c8356f5e3050db522017517371d5de633d498",
+      "bytes": 769
+    },
+    "evidence/U040_validation.log": {
+      "sha256": "437e74daadae32229807cfab5f8b3424edc3ac87468b34b7e46bfde07aeabb28",
+      "bytes": 194
+    },
+    "evidence/U040_wolfram_cross_checks.json": {
+      "sha256": "251490dc3ae2a8394301fbf7fb6a5948252e7ade1a72ab249ecfbbb0f4c81048",
+      "bytes": 642
+    },
+    "README.md": {
+      "sha256": "0f82f0fee16587b56d068cb540f3845dffdad0c5991bfef7527e8f489b25a2fd",
+      "bytes": 7814
+    }
+  },
+  "nonclaims": [
+    "no full-transfer spectral gap on the all-good sector",
+    "no separator-skeleton Dirichlet or Schur estimate",
+    "no continuum or infinite-volume construction",
+    "no physical Yang-Mills mass gap",
+    "no compact-simple-group generalization beyond the present SU(2) route",
+    "no independent expert or formal verification",
+    "no novelty claim"
+  ]
+}
