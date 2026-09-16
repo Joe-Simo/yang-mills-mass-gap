@@ -1,0 +1,29 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "initial_call": {
+    "status": "returned correct identities with limit warnings",
+    "warnings": ["Power::infy", "Infinity::indet"],
+    "outputs": {
+      "HodgeResidual": [[0,0,0],[0,0,0],[0,0,0]],
+      "SymmetricParityResidual": 0,
+      "AntisymmetricParityResidual": 0,
+      "ZeroModeSymmetricLimit": 0,
+      "ZeroModeAntisymmetricLimit": "2/l",
+      "OptimizedPerturbationExponent": "3/26"
+    }
+  },
+  "clean_rerun": {
+    "method": "replace singular zero-mode limits by exact series at gamma=0",
+    "warnings": [],
+    "outputs": {
+      "HodgeResidual": [[0,0,0],[0,0,0],[0,0,0]],
+      "SymmetricParityResidual": 0,
+      "AntisymmetricParityResidual": 0,
+      "ZeroModeSymmetricSeries": 0,
+      "ZeroModeAntisymmetricSeries": "2/l",
+      "OptimizedPerturbationExponent": "3/26"
+    }
+  },
+  "scope": "symbolic corroboration of submitted identities only; not an independent proof of the full U042 theorem"
+}
