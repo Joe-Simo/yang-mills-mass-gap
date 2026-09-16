@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.1324347070000158,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact integer/Fraction/SymPy combinatorics; no floating scientific decisions",
+  "finite_geometry_range": "all edges for d=2,3,4 and n=1,2,3; additional d=4 count cases",
+  "seed": null
+}
