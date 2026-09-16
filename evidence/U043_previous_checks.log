@@ -1,0 +1,14 @@
+test_01_hodge_symbol_identity (__main__.U042Checks.test_01_hodge_symbol_identity) ... ok
+test_02_boundary_kernel_dimension_formula (__main__.U042Checks.test_02_boundary_kernel_dimension_formula) ... ok
+test_03_two_boundary_scalar_schur (__main__.U042Checks.test_03_two_boundary_scalar_schur) ... ok
+test_04_flat_holonomy_shift_matches_adjoint_rotation (__main__.U042Checks.test_04_flat_holonomy_shift_matches_adjoint_rotation) ... ok
+test_05_uniform_soft_count_diagnostics (__main__.U042Checks.test_05_uniform_soft_count_diagnostics) ... ok
+test_06_holonomy_count_bound_independent_of_ell (__main__.U042Checks.test_06_holonomy_count_bound_independent_of_ell) ... ok
+test_07_trace_poincare_amplification (__main__.U042Checks.test_07_trace_poincare_amplification) ... ok
+test_08_optimized_nonlinear_stability_exponent (__main__.U042Checks.test_08_optimized_nonlinear_stability_exponent) ... ok
+test_09_two_boundary_parity_at_zero_mode (__main__.U042Checks.test_09_two_boundary_parity_at_zero_mode) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 14.681s
+
+OK

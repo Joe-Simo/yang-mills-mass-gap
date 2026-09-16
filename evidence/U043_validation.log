@@ -1,0 +1,6 @@
+new_U043_exit=0; 9 tests passed after recorded diagnostic repair
+prior_U042_exit=0; 9 tests passed
+compileall_exit=0
+tabnanny_exit=0
+Python 3.13.5; SymPy 1.14.0; NumPy 2.3.5
+ruff/mypy/pyright/lean not checked here

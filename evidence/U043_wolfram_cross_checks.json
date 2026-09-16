@@ -1,0 +1,16 @@
+{
+  "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+  "cap_seconds": 20,
+  "warnings": [],
+  "outputs": {
+    "Nu1": "4 Sin[Pi/(2(ell+1))]^2",
+    "MuTransverse": "8 Sin[Pi/(2(ell+1))]^2",
+    "AtEll1": [2, 4],
+    "LeakageEtaUpper": "2 delta (ell+1)",
+    "LeakageSquare": "4 delta^2 (ell+1)^2",
+    "ExponentDeltaEll": "5/26",
+    "ExponentDeltaEll2": "3/26",
+    "HalfGapLowerTemplate": "4/(ell+1)^2"
+  },
+  "scope": "symbolic corroboration of submitted formulas; the sine lower bound and universal proofs are written arguments"
+}

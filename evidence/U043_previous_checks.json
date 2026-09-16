@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "tests_run": 9,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 14.680692199000077,
+  "python": "3.13.5",
+  "sympy": "1.14.0",
+  "arithmetic": "exact symbolic/rational except explicitly labeled Fourier/rotation diagnostics",
+  "seed": null,
+  "claims_checked": [
+    "3D tangential Hodge symbol and gradient kernel",
+    "two-boundary scalar DtN Schur complement and zero-mode parities",
+    "flat SU(2) holonomy adjoint momentum shift",
+    "finite diagnostics for ell-independent coexact soft-mode count",
+    "trace/Poincare amplification inequality",
+    "optimized nonlinear perturbation exponent alpha^(3/26)"
+  ],
+  "nonclaims": [
+    "finite mode counts do not replace the written universal count proof",
+    "no exact curved-background nonabelian Steklov theorem",
+    "no continuum or physical mass-gap theorem"
+  ]
+}

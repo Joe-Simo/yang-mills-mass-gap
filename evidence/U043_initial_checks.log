@@ -1,0 +1,15 @@
+test_01_path_spectral_gap_formula (__main__.U043Checks.test_01_path_spectral_gap_formula) ... ok
+test_02_small_open_4d_hodge_spectrum (__main__.U043Checks.test_02_small_open_4d_hodge_spectrum) ... ok
+test_03_dimension_formula_low_modes_is_bounded (__main__.U043Checks.test_03_dimension_formula_low_modes_is_bounded) ... FAIL
+test_04_exact_gradient_leakage_lemma_fixture (__main__.U043Checks.test_04_exact_gradient_leakage_lemma_fixture) ... ok
+test_05_adjoint_rotation_perturbation_bound (__main__.U043Checks.test_05_adjoint_rotation_perturbation_bound) ... ok
+test_06_elementary_lower_bounds (__main__.U043Checks.test_06_elementary_lower_bounds) ... ok
+test_07_optimized_margin_exponents (__main__.U043Checks.test_07_optimized_margin_exponents) ... ok
+test_08_horizontal_flat_curl_bound_fixture (__main__.U043Checks.test_08_horizontal_flat_curl_bound_fixture) ... ok
+test_09_trace_corollary_algebra (__main__.U043Checks.test_09_trace_corollary_algebra) ... ok
+
+FAIL: test_03_dimension_formula_low_modes_is_bounded
+AssertionError: 0 not greater than 0
+
+Ran 9 tests in 0.206s
+FAILED (failures=1)

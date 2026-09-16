@@ -1,0 +1,50 @@
+{
+  "date": "2026-09-16",
+  "repository": "Joe-Simo/yang-mills-mass-gap",
+  "workspace": "/mnt/data/yang-mills-mass-gap",
+  "base_commit": "fb1f9ef783591eb71a1bb235828b6327177f9691",
+  "status": "No complete verified solution",
+  "evidence_class": "self-reviewed curved regular-core SU(2) gauge-horizontal magnetic Hessian coercivity and O(ell^2) trace estimate; exact tensor-spectrum proof and finite audits",
+  "new_tests": 9,
+  "prior_tests_rerun": 9,
+  "claims": [
+    "actual-gauge-horizontal vectors have flat-gradient leakage <=4 delta/sigma_ell",
+    "flat open-4-cube transverse curl gap mu_ell=8 sin^2(pi/[2(ell+1)])",
+    "local Wilson Hessian perturbation has operator size O(delta) independent of cell volume",
+    "optimized scales give delta ell=O(alpha^(5/26)) and delta ell^2=O(alpha^(3/26))",
+    "for sufficiently small alpha the curved horizontal Hessian is >=4/(ell+1)^2 times the link L2 norm",
+    "boundary trace on horizontal directions obeys an O(ell^2) coercive estimate"
+  ],
+  "nonclaims": [
+    "no fixed-boundary curved Schur/Steklov comparison",
+    "no quantum high-boundary-mode integration",
+    "no continuum construction",
+    "no physical Yang-Mills mass gap",
+    "no all-group theorem"
+  ],
+  "checker_repair": "initial C=4 nonempty-low-mode assertion was mathematically inappropriate because sqrt(2)pi>4; diagnostic cutoffs changed to 6,8,12 without changing the theorem",
+  "commands": [
+    "python checks/U043_curved_horizontal_coercivity_checks.py --output evidence/U043_checks.json",
+    "python checks/U042_gauge_covariant_steklov_checks.py --output evidence/U043_previous_checks.json",
+    "python -m compileall -q checks/U043_curved_horizontal_coercivity_checks.py",
+    "python -m tabnanny checks/U043_curved_horizontal_coercivity_checks.py"
+  ],
+  "wolfram": {
+    "engine": "15.0.1 for Linux x86 (64-bit) (July 2, 2026)",
+    "warnings": [],
+    "scope": "symbolic corroboration only"
+  },
+  "files": {
+    "research/audits/U043_curved_horizontal_coercivity.md": {"sha256": "90e9b8fdf37a8960984f2c484a2775381617c96d9c4c39f4c9d698630c5b5a70", "bytes": 14424},
+    "checks/U043_curved_horizontal_coercivity_checks.py": {"sha256": "ee01b80b564a75e9b13f936986c7a8b4014691dc949ce6191830636edfd025e5", "bytes": 8982},
+    "checks/U043_wolfram_cross_checks.wl": {"sha256": "07d9581296800410b4f7bb2655f729978453fe800b3e7d8631f9d86f02d54234", "bytes": 439},
+    "evidence/U043_checks.json": {"sha256": "8e21544a5f244df70ad9098a32d0f0d98822bc6f14952233631a6c698a519380", "bytes": 887},
+    "evidence/U043_checks.log": {"sha256": "2e121bc93e9bfa1b510cad61ed164749ea1099861e22938bef077f2cea2e0c8d", "bytes": 1057},
+    "evidence/U043_previous_checks.json": {"sha256": "f04273acab8094602ff3ad503684062ed64188ac6553038424db2b2e028920d2", "bytes": 850},
+    "evidence/U043_previous_checks.log": {"sha256": "b5df2036d4af260072e384aa2a4543343d130241e5237343e3c476c4c9d08d7a", "bytes": 1102},
+    "evidence/U043_checker_repair.json": {"sha256": "b1a4ad1872429d9c64aaf1272379eec77020704e5fdd4679997ff09b8759f074", "bytes": 548},
+    "evidence/U043_wolfram_cross_checks.json": {"sha256": "263a02005bfd1d3acde5d0547d965e21ae8a5d729065807f87a11ea5996dc9f2", "bytes": 544},
+    "evidence/U043_validation.log": {"sha256": "3780274553978f554c7da9f61a4180d88556328da352ac9fa14af5c736753a4c", "bytes": 214},
+    "evidence/U043_initial_checks.log": {"sha256": "95cec8b41025cc672d7f0f5f4aed98da9785963bef98fedcc34e023f0cced3d8", "bytes": 1095}
+  }
+}
