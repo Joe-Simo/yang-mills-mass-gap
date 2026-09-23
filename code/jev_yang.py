@@ -46,6 +46,11 @@ def build_screening_questions() -> dict[str, Any]:
             true="Reflection positive on time-slice hyperplanes, yielding positive-definite metric and physical Hamiltonian",
             false="Breaks reflection positivity, introducing negative-norm ghosts or non-Hermitian transfer operator"
         ),
+        "respects_haag_and_u1_barriers": jev.noul(
+            "Does the argument respect Haag's theorem and avoid false analogies with compact U(1) roughening?",
+            true="Works outside free Fock space and relies on non-abelian asymptotic freedom",
+            false="Assumes free Fock space interaction picture or treats compact U(1) confinement as proof of continuum gap"
+        ),
         "methodology": jev.choice(
             "What is the mathematical foundation of this approach?",
             criteria={

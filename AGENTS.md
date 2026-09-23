@@ -36,6 +36,7 @@ Jev decisions that are fast, cheap, and mandatory:
 | `code/autonomous_yang_engine.py` | Multi-core autonomous research daemon. |
 | `formalization/YangMillsPlaquette.lean` | Lean 4 machine-checked proof of $SU(2)$ plaquette gauge invariance & cyclicity. |
 | `sources/NO_GO_REGISTER.md` | Primary register of disproved frameworks and structural barriers. |
+| `sources/FAILED_CALCULATIONS_REGISTER.md` | Authoritative register of refuted literature calculations, retracted papers, and excluded heuristics. |
 | `CHECKPOINT.json` | Persistent machine-readable project state. |
 
 ## Standing Discipline
