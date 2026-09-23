@@ -116,21 +116,22 @@ def run_cycle(state: dict[str, Any]) -> dict[str, Any]:
     print(f"Focus: 4D SU(2) Lattice Plaquette Sieve, Green Trace Scaling & Formal Proofs")
     print("=" * 75)
 
-    # Step 0: Jev Advisory
-    print(f"\n>>> [Step 0] JevGenius Yang-Mills Advisory & Hypothesis Triage (Cycle {cycle})...")
-    try:
-        triage = jev_yang.screen_candidate(
-            f"cycle_{cycle}_yang_screen",
-            f"Auditing whether multiscale phase-cell cluster expansion with U046 boundary Green trace scaling O(ell^3) rigorously avoids U045 determinant divergence and preserves reflection positivity."
-        )
-        score = triage.get("answers", {}).get("viability_score", {}).get("score", "ok")
-        print(f"         [Step 0] Jev Triage completed successfully (viability score: {score}).")
-    except Exception as e:
-        print(f"         [Step 0] Jev call note: {e}")
+    # Step 0: Jev Advisory (Epoch-based every 10 cycles or initial cycle)
+    if cycle % 10 == 1 or cycle <= 2:
+        print(f"\n>>> [Step 0] JevGenius Yang-Mills Advisory & Hypothesis Triage (Cycle {cycle})...")
+        try:
+            triage = jev_yang.screen_candidate(
+                f"cycle_{cycle}_yang_screen",
+                f"Auditing whether multiscale phase-cell cluster expansion with U046 boundary Green trace scaling O(ell^3) rigorously avoids U045 determinant divergence and preserves reflection positivity."
+            )
+            score = triage.get("answers", {}).get("viability_score", {}).get("score", "ok")
+            print(f"         [Step 0] Jev Triage completed successfully (viability score: {score}).")
+        except Exception as e:
+            print(f"         [Step 0] Jev call note: {e}")
 
-    # Step 1: OpenMP Lattice Kernel
-    vol_size = 12 + (cycle % 3) * 2  # 12, 14, 16
-    print(f"\n>>> [Step 1] OpenMP Hardware-Accelerated 4D SU(2) Lattice Kernel (L={vol_size})...")
+    # Step 1: OpenMP High-Intensity Lattice Kernel (L=18 to 26, up to 2.7M plaquettes, All 8 Cores)
+    vol_size = 18 + ((cycle - 1) % 3) * 4  # 18, 22, 26
+    print(f"\n>>> [Step 1] OpenMP Hardware-Accelerated 4D SU(2) Lattice Kernel (L={vol_size}, All 8 Cores)...")
     binary = REPO_ROOT / "code" / "yang_mills_lattice_fast"
     if not binary.exists():
         cmd = (
@@ -271,7 +272,7 @@ def main() -> None:
             print(f"\n[Engine] Reached target max cycles ({args.max_cycles}). Stopping cleanly.")
             break
 
-        time.sleep(0.5)
+        time.sleep(0.02)
 
 
 if __name__ == "__main__":
