@@ -1,9 +1,9 @@
 """Yang-Mills Failure-Mode & Candidate Screener (code/jev_yang.py).
 
-Uses TypeSafe Jev API to screen Yang-Mills existence and mass gap claims
-against canonical failure modes:
+Screens mathematical claims, proof strategies, and candidate bounds
+against canonical Yang-Mills traps:
 1. Perturbative Confinement & Asymptotic Freedom Conflation
-2. Gribov Horizon & Singer Non-Existence of Global Gauge Sections
+2. Gribov Horizon & Singer Global Gauge-Fixing Obstruction
 3. Haag's Theorem & Free Fock Representation Fallacy
 4. Reflection Positivity Breakdown (Osterwalder-Schrader Axiom)
 5. Determinant Locality Overreach (U045 trap vs U046 Green trace scaling)
@@ -74,16 +74,31 @@ def screen_candidate(candidate_id: str, proposal_text: str) -> dict[str, Any]:
         "proposal_text": proposal_text
     }
     questions = build_screening_questions()
-    return jev.ask(state, questions)
+    resp = jev.ask(state, questions)
+    try:
+        jev.persist(candidate_id, state, questions, resp)
+    except Exception:
+        pass
+    return resp
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Jev Yang-Mills Candidate Screener")
-    parser.add_argument("--id", required=True, help="Candidate ID (e.g. U046-boundary-green)")
-    parser.add_argument("--text", required=True, help="Text description of proof strategy or theorem")
+    parser.add_argument("command", nargs="?", default="screen", choices=["screen", "triage", "cache-stats", "clear-cache"])
+    parser.add_argument("--id", default="candidate", help="Candidate identifier")
+    parser.add_argument("--text", help="Text description of proof strategy or theorem")
     args = parser.parse_args()
 
-    res = screen_candidate(args.id, args.text)
-    print(json.dumps(res, indent=2))
+    if args.command == "cache-stats":
+        print(json.dumps(jev.cache_stats(), indent=2))
+    elif args.command == "clear-cache":
+        count = jev.clear_cache()
+        print(f"Cleared {count} cache entries")
+    else:
+        if not args.text:
+            print("Error: --text required for screening", file=sys.stderr)
+            sys.exit(1)
+        res = screen_candidate(args.id, args.text)
+        print(json.dumps(res, indent=2))
 
 if __name__ == "__main__":
     main()

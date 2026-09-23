@@ -9,7 +9,10 @@
  *    Delta = ln(C(t) / C(t+1)).
  * 4. Reflection positivity verification on spatial hyperplanes.
  *
- * Multi-threaded OpenMP kernel testing tens of millions of plaquette traces/sec.
+ * Optimizations:
+ * - Half-trace multiplication shortcut: eliminates computation of imaginary components of P.
+ * - Inlined quaternion inversion and multiplication.
+ * - Cache-friendly contiguous link layout.
  */
 
 #include <stdio.h>
@@ -20,9 +23,8 @@
 #include <string.h>
 #include <omp.h>
 
-// SU(2) element represented as unit quaternion: u0 + i*u1*sigma_1 + i*u2*sigma_2 + i*u3*sigma_3
 typedef struct {
-    double q[4]; // q[0] = real part (half-trace), q[1..3] = imaginary parts
+    double q[4]; // q[0] = real part (half-trace), q[1..3] = imaginary components
 } SU2;
 
 static inline SU2 su2_identity(void) {
@@ -49,6 +51,11 @@ static inline SU2 su2_mul(SU2 a, SU2 b) {
     return r;
 }
 
+// Fast half-trace of product A * B without computing imaginary components of the product
+static inline double su2_half_trace_mul(SU2 a, SU2 b) {
+    return a.q[0]*b.q[0] - a.q[1]*b.q[1] - a.q[2]*b.q[2] - a.q[3]*b.q[3];
+}
+
 static inline double su2_half_trace(SU2 u) {
     return u.q[0];
 }
@@ -64,7 +71,7 @@ static inline SU2 su2_normalize(SU2 u) {
     return r;
 }
 
-// 4D lattice indexing
+// 4D lattice structure
 typedef struct {
     int L; // spatial size
     int T; // temporal size
@@ -100,14 +107,12 @@ static void free_lattice(Lattice4D* lat) {
     }
 }
 
-// Initialize lattice with warm/cold or random gauge field
 static void init_lattice(Lattice4D* lat, double disorder, uint64_t seed) {
     #pragma omp parallel for
     for (int i = 0; i < 4 * lat->volume; ++i) {
         if (disorder == 0.0) {
             lat->links[i] = su2_identity();
         } else {
-            // Splitmix PRNG seeded by index
             uint64_t s = seed + i * 0x9e3779b97f4a7c15ULL;
             s = (s ^ (s >> 30)) * 0xbf58476d1ce4e5b9ULL;
             s = (s ^ (s >> 27)) * 0x94d049bb133111ebULL;
@@ -160,7 +165,6 @@ static void compute_plaquette_action(
             int mu = mu_nu_pairs[p][0];
             int nu = mu_nu_pairs[p][1];
 
-            // Site coordinates for neighbor displacement
             int x_mu = x + (mu == 0), y_mu = y + (mu == 1), z_mu = z + (mu == 2), t_mu = t + (mu == 3);
             int x_nu = x + (nu == 0), y_nu = y + (nu == 1), z_nu = z + (nu == 2), t_nu = t + (nu == 3);
 
@@ -170,11 +174,14 @@ static void compute_plaquette_action(
             // Plaquette: U_{x, mu} * U_{x+mu, nu} * U_{x+nu, mu}^{-1} * U_{x, nu}^{-1}
             SU2 U1 = lat->links[link_index(s, mu)];
             SU2 U2 = lat->links[link_index(s_mu, nu)];
-            SU2 U3 = su2_inv(lat->links[link_index(s_nu, mu)]);
-            SU2 U4 = su2_inv(lat->links[link_index(s, nu)]);
+            SU2 U3_inv = su2_inv(lat->links[link_index(s_nu, mu)]);
+            SU2 U4_inv = su2_inv(lat->links[link_index(s, nu)]);
 
-            SU2 P = su2_mul(su2_mul(U1, U2), su2_mul(U3, U4));
-            sum_plaq += su2_half_trace(P);
+            SU2 A = su2_mul(U1, U2);
+            SU2 B = su2_mul(U3_inv, U4_inv);
+
+            // Fast half-trace shortcut
+            sum_plaq += su2_half_trace_mul(A, B);
         }
     }
 
@@ -207,7 +214,7 @@ static double compute_polyakov_loop(Lattice4D* lat) {
         SU2 P = su2_identity();
         for (int t = 0; t < T; ++t) {
             int s_idx = site_index(x, y, z, t, L, T);
-            SU2 U_t = lat->links[link_index(s_idx, 3)]; // mu=3 is time
+            SU2 U_t = lat->links[link_index(s_idx, 3)];
             P = su2_mul(P, U_t);
         }
         sum_polyakov += su2_half_trace(P);
@@ -218,8 +225,8 @@ static double compute_polyakov_loop(Lattice4D* lat) {
 int main(int argc, char** argv) {
     int L = 12;
     int T = 12;
-    double beta = 2.30; // standard SU(2) scaling window
-    double disorder = 0.15; // small field perturbation around vacuum
+    double beta = 2.30;
+    double disorder = 0.15;
 
     for (int i = 1; i < argc; ++i) {
         if (strcmp(argv[i], "--L") == 0 && i + 1 < argc) L = atoi(argv[++i]);
@@ -240,8 +247,6 @@ int main(int argc, char** argv) {
 
     double polyakov = compute_polyakov_loop(lat);
 
-    // Approximate mass gap from plaquette correlation in time
-    // In weakly-coupled SU(2), Delta_glueball ~ const * sqrt(sigma)
     double mass_gap_est = -log(fabs(avg_plaq) + 1e-12) / 2.0;
     if (mass_gap_est < 0.0) mass_gap_est = 0.5;
 
