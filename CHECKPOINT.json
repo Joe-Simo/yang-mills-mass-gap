@@ -1,0 +1,17 @@
+{
+  "project": "Yang-Mills Existence and Mass Gap",
+  "checkpoint_version": "1.0",
+  "status": "UNRESOLVED",
+  "active_audit": "U046",
+  "verified_foundations": {
+    "boundary_green_trace_scaling": "O(ell^3) first-order confirmed",
+    "schur_stability_u044": "bounded interior soft package verified",
+    "lattice_gauge_invariance": "machine-checked in Lean 4",
+    "osterwalder_schrader_reflection_positivity": "verified on time-slice hyperplanes"
+  },
+  "open_barriers": [
+    "Non-perturbative continuum limit existence",
+    "Trace-ideal control of higher log-determinant terms",
+    "Uniform positive mass gap across infinite volume limit"
+  ]
+}

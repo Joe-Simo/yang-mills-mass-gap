@@ -1,0 +1,10 @@
+.env.local
+.cache/
+__pycache__/
+*.pyc
+code/yang_mills_lattice_fast
+results/
+*.log
+state/
+evidence/*_run.json
+evidence/*_daemon.json
