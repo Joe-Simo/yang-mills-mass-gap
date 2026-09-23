@@ -228,22 +228,34 @@ int main(int argc, char** argv) {
     double beta = 2.30;
     double disorder = 0.15;
 
+    int sweeps = 1;
+
     for (int i = 1; i < argc; ++i) {
         if (strcmp(argv[i], "--L") == 0 && i + 1 < argc) L = atoi(argv[++i]);
         else if (strcmp(argv[i], "--T") == 0 && i + 1 < argc) T = atoi(argv[++i]);
         else if (strcmp(argv[i], "--beta") == 0 && i + 1 < argc) beta = atof(argv[++i]);
         else if (strcmp(argv[i], "--disorder") == 0 && i + 1 < argc) disorder = atof(argv[++i]);
+        else if (strcmp(argv[i], "--sweeps") == 0 && i + 1 < argc) sweeps = atoi(argv[++i]);
         else if (strcmp(argv[i], "--benchmark") == 0) {
             L = 16;
             T = 16;
         }
     }
 
+    if (sweeps < 1) sweeps = 1;
+
     Lattice4D* lat = create_lattice(L, T);
     init_lattice(lat, disorder, 42);
 
     double avg_plaq = 0.0, action = 0.0, rate = 0.0;
-    compute_plaquette_action(lat, beta, &avg_plaq, &action, &rate);
+    double t_start = omp_get_wtime();
+    for (int s = 0; s < sweeps; ++s) {
+        compute_plaquette_action(lat, beta, &avg_plaq, &action, &rate);
+    }
+    double t_end = omp_get_wtime();
+    double total_elapsed = t_end - t_start;
+    double total_plaquettes_computed = (double)lat->volume * 6.0 * (double)sweeps;
+    double sustained_rate = (total_elapsed > 0.0) ? (total_plaquettes_computed / total_elapsed) : 0.0;
 
     double polyakov = compute_polyakov_loop(lat);
 
@@ -254,13 +266,15 @@ int main(int argc, char** argv) {
     printf("  \"lattice_dimensions\": [%d, %d, %d, %d],\n", L, L, L, T);
     printf("  \"total_lattice_sites\": %d,\n", lat->volume);
     printf("  \"total_plaquettes\": %d,\n", lat->volume * 6);
+    printf("  \"sweeps\": %d,\n", sweeps);
     printf("  \"beta\": %.4f,\n", beta);
     printf("  \"disorder\": %.4f,\n", disorder);
     printf("  \"average_plaquette_trace\": %.8f,\n", avg_plaq);
     printf("  \"total_wilson_action\": %.6f,\n", action);
     printf("  \"polyakov_loop_average\": %.8f,\n", polyakov);
     printf("  \"effective_mass_gap_est\": %.6f,\n", mass_gap_est);
-    printf("  \"plaquettes_per_second\": %.2f\n", rate);
+    printf("  \"elapsed_seconds\": %.6f,\n", total_elapsed);
+    printf("  \"plaquettes_per_second\": %.2f\n", sustained_rate);
     printf("}\n");
 
     free_lattice(lat);
